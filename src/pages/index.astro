@@ -1,5 +1,6 @@
 ---
 import Footer from "@components/Footer.astro";
+import UnderscorePromo from "@components/UnderscorePromo.astro";
 ---
 
 <html id="home" lang="en">
@@ -9,11 +10,6 @@ import Footer from "@components/Footer.astro";
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="/styles/screen.css" />
-
-    <!--[if lt IE 9]>
-  <link rel="stylesheet" href="/styles/ie8.css">
-  <script src="/scripts/html5shiv.js"></script>
-  <![endif]-->
   </head>
 
   <body>
@@ -61,42 +57,7 @@ import Footer from "@components/Footer.astro";
       </nav>
     </div>
 
-    <section id="underscore">
-      <div class="shadow top"></div>
 
-      <div class="container">
-        <h2>
-          <a href="http://underscore.io/">
-            <img
-              class="logo"
-              style="max-width: 360px"
-              src="/styles/images/underscore-logo-text-below.png"
-              alt="Underscore"
-            />
-          </a>
-        </h2>
-
-        <div class="row">
-          <div class="span6">
-            <p>
-              Untyped is a founding partner of <a href="http://underscore.io/"
-                >Underscore</a
-              > - a team of Scala experts providing consultancy, training, and software
-              development services to businesses of all sizes.
-            </p>
-          </div>
-
-          <div class="span6">
-            <p>
-              We run regular public and on-site training courses in Scala, Play,
-              and agile development. See our <a href="http://underscore.io/"
-                >web site</a
-              > for details and bookings.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <Footer title="Stay in touch!" />
 
@@ -107,7 +68,6 @@ import Footer from "@components/Footer.astro";
       _uacct = "UA-183641-1";
       urchinTracker();
     </script>
-
     <script is:inline src="//code.jquery.com/jquery-1.8.0.min.js"></script>
     <script is:inline src="/scripts/untyped.js"></script>
   </body>
