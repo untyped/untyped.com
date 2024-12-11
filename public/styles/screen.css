@@ -8157,6 +8157,7 @@ nav li {
   padding: 0;
 }
 footer {
+  text-align: center;
   background: #222222 url(/styles/images/footer-background.jpg) repeat center center fixed;
   color: #eeeeee;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
@@ -8169,74 +8170,27 @@ footer a:hover {
   text-decoration: underline;
   color: #ffff00;
 }
-footer h1,
-footer h2,
-footer h3,
-footer h4,
-footer h5,
-footer h6 {
-  color: #ffffff;
-}
-footer h1 a,
-footer h2 a,
-footer h3 a,
-footer h4 a,
-footer h5 a,
-footer h6 a {
-  color: #ffffff;
-  text-decoration: none;
-}
-footer h1 a:hover,
-footer h2 a:hover,
-footer h3 a:hover,
-footer h4 a:hover,
-footer h5 a:hover,
-footer h6 a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-footer h2 {
-  margin: 0;
-  text-align: center;
-}
 footer dl {
   width: 500px;
   margin: 40px auto;
 }
 footer dl dt {
-  clear: left;
-  float: left;
-  width: 240px;
   margin: 0;
-  text-align: right;
+  text-align: center;
   color: #fff;
 }
 footer dl dd {
-  float: left;
-  width: 240px;
-  margin: 0 0 0 20px;
-  text-align: left;
+  margin: 0 0 40px;
+  text-align: center;
 }
 @media (max-width: 480px) {
   footer dl {
     width: 100%;
   }
-  footer dl dt {
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
-  footer dl dd {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
 }
 footer .copyright {
   clear: both;
-  padding: 40px 0;
+  padding: 20px 0 40px;
   text-align: center;
   font-size: .9em;
   color: #fff;
