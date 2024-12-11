@@ -9118,3 +9118,6 @@ html#not-found h1 {
   font-size: 100pt;
   line-height: 1em;
 }
+.center {
+  text-align: center;
+}
