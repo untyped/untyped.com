@@ -1,279 +1,1102 @@
 <!DOCTYPE html>
 <html id="untyping" lang="en">
+  <head>
+    <title>Untyping &#8211; Untyping</title>
 
-<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Untyping &#8211;  Untyping</title>
+    <link rel="stylesheet" type="text/css" href="/styles/screen.css" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="/styles/ie8.css" />
+      <script src="/scripts/html5shiv.js"></script>
+    <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="/styles/screen.css">
+    <!--<link rel="stylesheet" href="/styles/pygments.css" type="text/css" media="screen">-->
 
-<!--[if lt IE 9]>
-<link rel="stylesheet" href="/styles/ie8.css">
-<script src="/scripts/html5shiv.js"></script>
-<![endif]-->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Untyped RSS Feed"
+      href="/feed/"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Untyped Atom Feed"
+      href="/feed/atom/"
+    />
+    <link rel="pingback" href="/xmlrpc.php" />
 
-<!--<link rel="stylesheet" href="/styles/pygments.css" type="text/css" media="screen">-->
+    <meta name="robots" content="max-image-preview:large" />
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji: "\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2",
+        },
+      };
+      /*! This file is auto-generated */
+      !(function (i, n) {
+        var o, s, e;
+        function c(e) {
+          try {
+            var t = { supportTests: e, timestamp: new Date().valueOf() };
+            sessionStorage.setItem(o, JSON.stringify(t));
+          } catch (e) {}
+        }
+        function p(e, t, n) {
+          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0);
+          var t = new Uint32Array(
+              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+            ),
+            r =
+              (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+              e.fillText(n, 0, 0),
+              new Uint32Array(
+                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+              ));
+          return t.every(function (e, t) {
+            return e === r[t];
+          });
+        }
+        function u(e, t, n) {
+          switch (t) {
+            case "flag":
+              return n(e, "🏳️‍⚧️", "🏳️​⚧️")
+                ? !1
+                : !n(e, "🇺🇳", "🇺​🇳") && !n(e, "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");
+            case "emoji":
+              return !n(e, "🐦‍⬛", "🐦​⬛");
+          }
+          return !1;
+        }
+        function f(e, t, n) {
+          var r =
+              "undefined" != typeof WorkerGlobalScope &&
+              self instanceof WorkerGlobalScope
+                ? new OffscreenCanvas(300, 150)
+                : i.createElement("canvas"),
+            a = r.getContext("2d", { willReadFrequently: !0 }),
+            o = ((a.textBaseline = "top"), (a.font = "600 32px Arial"), {});
+          return (
+            e.forEach(function (e) {
+              o[e] = t(a, e, n);
+            }),
+            o
+          );
+        }
+        function t(e) {
+          var t = i.createElement("script");
+          (t.src = e), (t.defer = !0), i.head.appendChild(t);
+        }
+        "undefined" != typeof Promise &&
+          ((o = "wpEmojiSettingsSupports"),
+          (s = ["flag", "emoji"]),
+          (n.supports = { everything: !0, everythingExceptFlag: !0 }),
+          (e = new Promise(function (e) {
+            i.addEventListener("DOMContentLoaded", e, { once: !0 });
+          })),
+          new Promise(function (t) {
+            var n = (function () {
+              try {
+                var e = JSON.parse(sessionStorage.getItem(o));
+                if (
+                  "object" == typeof e &&
+                  "number" == typeof e.timestamp &&
+                  new Date().valueOf() < e.timestamp + 604800 &&
+                  "object" == typeof e.supportTests
+                )
+                  return e.supportTests;
+              } catch (e) {}
+              return null;
+            })();
+            if (!n) {
+              if (
+                "undefined" != typeof Worker &&
+                "undefined" != typeof OffscreenCanvas &&
+                "undefined" != typeof URL &&
+                URL.createObjectURL &&
+                "undefined" != typeof Blob
+              )
+                try {
+                  var e =
+                      "postMessage(" +
+                      f.toString() +
+                      "(" +
+                      [JSON.stringify(s), u.toString(), p.toString()].join(
+                        ","
+                      ) +
+                      "));",
+                    r = new Blob([e], { type: "text/javascript" }),
+                    a = new Worker(URL.createObjectURL(r), {
+                      name: "wpTestEmojiSupports",
+                    });
+                  return void (a.onmessage = function (e) {
+                    c((n = e.data)), a.terminate(), t(n);
+                  });
+                } catch (e) {}
+              c((n = f(s, u, p)));
+            }
+            t(n);
+          })
+            .then(function (e) {
+              for (var t in e)
+                (n.supports[t] = e[t]),
+                  (n.supports.everything =
+                    n.supports.everything && n.supports[t]),
+                  "flag" !== t &&
+                    (n.supports.everythingExceptFlag =
+                      n.supports.everythingExceptFlag && n.supports[t]);
+              (n.supports.everythingExceptFlag =
+                n.supports.everythingExceptFlag && !n.supports.flag),
+                (n.DOMReady = !1),
+                (n.readyCallback = function () {
+                  n.DOMReady = !0;
+                });
+            })
+            .then(function () {
+              return e;
+            })
+            .then(function () {
+              var e;
+              n.supports.everything ||
+                (n.readyCallback(),
+                (e = n.source || {}).concatemoji
+                  ? t(e.concatemoji)
+                  : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
+            }));
+      })((window, document), window._wpemojiSettings);
+      /* ]]> */
+    </script>
+    <style id="wp-emoji-styles-inline-css" type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="wp-block-library-css"
+      href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2"
+      type="text/css"
+      media="all"
+    />
+    <style id="classic-theme-styles-inline-css" type="text/css">
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em;
+      }
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+      :root {
+        --wp--preset--aspect-ratio--square: 1;
+        --wp--preset--aspect-ratio--4-3: 4/3;
+        --wp--preset--aspect-ratio--3-4: 3/4;
+        --wp--preset--aspect-ratio--3-2: 3/2;
+        --wp--preset--aspect-ratio--2-3: 2/3;
+        --wp--preset--aspect-ratio--16-9: 16/9;
+        --wp--preset--aspect-ratio--9-16: 9/16;
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+          6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+      }
+      :where(.is-layout-flex) {
+        gap: 0.5em;
+      }
+      :where(.is-layout-grid) {
+        gap: 0.5em;
+      }
+      body .is-layout-flex {
+        display: flex;
+      }
+      .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .is-layout-flex > :is(*, div) {
+        margin: 0;
+      }
+      body .is-layout-grid {
+        display: grid;
+      }
+      .is-layout-grid > :is(*, div) {
+        margin: 0;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :root :where(.wp-block-pullquote) {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+    </style>
+    <link rel="https://api.w.org/" href="/wp-json/" />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      title="RSD"
+      href="/xmlrpc.php?rsd"
+    />
+    <style type="text/css">
+      .recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    </style>
+  </head>
 
-<link rel="alternate" type="application/rss+xml" title="Untyped RSS Feed" href="/feed/">
-<link rel="alternate" type="application/atom+xml" title="Untyped Atom Feed" href="/feed/atom/">
-<link rel="pingback" href="/xmlrpc.php">
-
-
-<meta name="robots" content="max-image-preview:large">
-<script type="text/javascript">
-/* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
-/*! This file is auto-generated */
-!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-/* ]]> */
-</script>
-<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}</style>
-<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2" type="text/css" media="all">
-<style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
-<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
-:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
-<link rel="https://api.w.org/" href="/wp-json/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-</head>
-
-<body class="myna" data-goal="load">
-
-<header id="top">
-  <div class="container">
-    <div class="row">
-      <div class="span5 offset7">
-        <div class="overlay title">
-          <a href="/untyping">
-            <h1><img src="/styles/images/untyping-logo.png" alt="Untyping"></h1>
-            <span class="strapline">The Untyped Weblog.</span>
-          </a>
-        </div>
-
-        <div class="overlay about">
-          Read on and leave a comment<br>
-          or <a href="/">return to our portfolio.</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="shadow bottom"></div>
-</header>
-
-<div id="navbar-wrapper">
-  <nav id="navbar" class="navbar">
-    <div class="navbar-inner">
+  <body class="myna" data-goal="load">
+    <header id="top">
       <div class="container">
-        <ul class="nav">
-          <li><a href="/#top">Home</a></li>
-          <li><a href="/jobs">Jobs</a></li>
-          <li><a href="/untyping">Weblog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
+        <div class="row">
+          <div class="span5 offset7">
+            <div class="overlay title">
+              <a href="/untyping">
+                <h1>
+                  <img src="/styles/images/untyping-logo.png" alt="Untyping" />
+                </h1>
+                <span class="strapline">The Untyped Weblog.</span>
+              </a>
+            </div>
 
-<div class="shadow-wrapper">
-  <div class="shadow top light"></div>
-
-<div class="container">
-<div class="row">
-<div id="blog" class="span10">
-<section id="post-220" class="post-220 post type-post status-publish format-standard hentry category-fun">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">2 Feb 2007</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2007/02/02/functional-graphics-fun/" rel="bookmark" title="Permanent Link to Functional Graphics = Fun!">Functional Graphics = Fun!</a></h2>
-
-      <div class="entry">
-        <p>Ezra blogs on something I’ve often thought. Wouldn’t it be cool if<a title="Ezra's Research: Programming Graphics and Getting Eyeballs" href="http://ezrakilty.net/research/2007/01/frp-meets-processing.html">Processing had a better programming model</a>. For better you should read: functional reactive. Imagine how easy it would be to code great animations. As he notes, it would make a good Master’s project, but it probably wouldn’t work as a PhD as I don’t think there is enough originality.</p>
-<p>He closes with:</p>
-<blockquote><p>If I were just starting now on my PhD, I’d find a way to include this in my work, or I’d put off the PhD until I could get this done! Tinkering with graphics demos and slapping them up on the web is the kind of hacking I’d really like to be doing. As it is, I’ll have to leave it to some young whippersnapper, alas.</p></blockquote>
-<p>You mean a PhD <em>isn’t</em> about pursuing your own side projects? Why didn’t some one tell me! ‘sides Ezra, your PhD is really cool already. I don’t think it would be fair if you got all the toys.</p>
+            <div class="overlay about">
+              Read on and leave a comment<br />
+              or <a href="/">return to our portfolio.</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/fun/" rel="category tag">Fun</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Functional Graphics = Fun!</span></span>      </p>
-    </div>
-  </div>
-</section>
+      <div class="shadow bottom"></div>
+    </header>
 
-<section id="post-218" class="post-218 post type-post status-publish format-standard hentry category-business">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">2 Feb 2007</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2007/02/02/simplicity-at-work/" rel="bookmark" title="Permanent Link to Simplicity at Work">Simplicity at Work</a></h2>
-
-      <div class="entry">
-        <p><a title="Founders At Work: The Interviews" href="http://www.foundersatwork.com/interviews.html">Founders At Work</a> is a collection of interviews with the founders of successful high-tech companies. They have two interviews online, one with Woz and one with Joel Spolsky.</p>
-<p>Some good quotes:</p>
-<blockquote><p>All the best things that I did at Apple came from (a) not having money and (b) not having done it before, ever. Every single thing that we came out with that was really great, I’d never once done that thing in my life.</p></blockquote>
-<blockquote><p>I think what makes a good hack is the observation that you can do without something that everybody else thinks you need. To me, the most elegant hack is when somebody says, “These 2,000 lines of code end up doing the same thing as those 2 lines of code would do. I know it seems complicated, but arithmetically it’s really the same.” When someone cuts through a lot of crap and says, “You know, it doesn’t really matter.”</p></blockquote>
-<p>There is a remarkable similarity to the two interviews. Both emphasize simplicity and working under constraints.</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/business/" rel="category tag">Business</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Simplicity at Work</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-222" class="post-222 post type-post status-publish format-standard hentry category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">22 Jan 2007</p>
-      <p class="author">by Noel</p>
+    <div id="navbar-wrapper">
+      <nav id="navbar" class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li><a href="/#top">Home</a></li>
+              <li><a href="/untyping">Weblog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2007/01/22/large-scale-web-site-development/" rel="bookmark" title="Permanent Link to Large Scale Web Site Development">Large Scale Web Site Development</a></h2>
+    <div class="shadow-wrapper">
+      <div class="shadow top light"></div>
 
-      <div class="entry">
-        <p>Two interesting case studies on large web sites: <a href="http://www.baselinemag.com/print_article2/0,1217,a=198614,00.asp">MySpace</a> and <a href="http://www.addsimplicity.com/downloads/eBaySDForum2006-11-29.pdf%3Cbr%20/%3E">EBay</a>. They are remarkably similar. Or perhaps it should be unremarkable. You don’t get many chances to get that sort of system wrong, so it is natural that different groups should converge to tried and tested solutions. Ezra Kilty <a href="http://ezrakilty.net/research/2006/12/transactions.html">offers some thoughts on EBay and the great Goog</a>, who of course have a system way different and way cooler than anyone else’s.</p>
-      </div>
+      <div class="container">
+        <div class="row">
+          <div id="blog" class="span10">
+            <section
+              id="post-220"
+              class="post-220 post type-post status-publish format-standard hentry category-fun"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">2 Feb 2007</p>
+                  <p class="author">by Noel</p>
+                </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Large Scale Web Site Development</span></span>      </p>
-    </div>
-  </div>
-</section>
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2007/02/02/functional-graphics-fun/"
+                      rel="bookmark"
+                      title="Permanent Link to Functional Graphics = Fun!"
+                      >Functional Graphics = Fun!</a
+                    >
+                  </h2>
 
-<section id="post-224" class="post-224 post type-post status-publish format-standard hentry category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">19 Jan 2007</p>
-      <p class="author">by Noel</p>
-    </div>
+                  <div class="entry">
+                    <p>
+                      Ezra blogs on something I’ve often thought. Wouldn’t it be
+                      cool if<a
+                        title="Ezra's Research: Programming Graphics and Getting Eyeballs"
+                        href="http://ezrakilty.net/research/2007/01/frp-meets-processing.html"
+                        >Processing had a better programming model</a
+                      >. For better you should read: functional reactive.
+                      Imagine how easy it would be to code great animations. As
+                      he notes, it would make a good Master’s project, but it
+                      probably wouldn’t work as a PhD as I don’t think there is
+                      enough originality.
+                    </p>
+                    <p>He closes with:</p>
+                    <blockquote>
+                      <p>
+                        If I were just starting now on my PhD, I’d find a way to
+                        include this in my work, or I’d put off the PhD until I
+                        could get this done! Tinkering with graphics demos and
+                        slapping them up on the web is the kind of hacking I’d
+                        really like to be doing. As it is, I’ll have to leave it
+                        to some young whippersnapper, alas.
+                      </p>
+                    </blockquote>
+                    <p>
+                      You mean a PhD <em>isn’t</em> about pursuing your own side
+                      projects? Why didn’t some one tell me! ‘sides Ezra, your
+                      PhD is really cool already. I don’t think it would be fair
+                      if you got all the toys.
+                    </p>
+                  </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2007/01/19/flapjax-in-action/" rel="bookmark" title="Permanent Link to Flapjax in Action">Flapjax in Action</a></h2>
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/fun/" rel="category tag">Fun</a>
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Functional Graphics = Fun!</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
 
-      <div class="entry">
-        <p>In a few days we’ll be releasing our first code using <a href="http://www.flapjax-lang.org/">Flapjax</a> to drive the user interface. The core of the system is a <a href="http://en.wikipedia.org/wiki/Grid_view">grid view</a> that runs in the browser. The user can edit data in place, and when they move to a new row changes are sent to the server. Invalid data is flagged in the grid, and mousing over shows the reason for the error. Given we’re probably the first people in the world to release commercial code using Flapjax a few notes on our experience are worthwhile.</p>
-<p>The summary is: Flapjax worked very well for us. Flapjax code is much smaller and faster to write than the equivalent plain Javasscript, and Flapjax insulates you from most of the cross-browser issues. If your application revolves around events, and most Javscript applications do, Flapjax will probably be a good fit. However current Javascript implementations are so slow that they can limit how much you can take advantage of Flapjax.</p>
-<p>Now, the details. We went through two design. Our first prototype rendered the <code>TABLE</code> that contained the grid data as one enormous Behaviour. Every field was an “edit in place” field, using more Flapjax code. (See <a href="http://josephscott.org/code/js/eip/example.html">here</a> if you don’t know what an edit in place field is, though note that this isn’t the code we used.) This plays very nicely with the Flapjax model, as changes to any part grid automatically get updated in the browser. It worked fine for small tables, but scaled really badly; for large tables it was so slow to load and redraw that the browser would kill the script.</p>
-<p>The main problem with our first prototype is that <a href="http://www.quirksmode.org/dom/innerhtml.html">browsers are really slow at rendering elements inserted using the DOM</a>. Our second design made two major changes to overcome these problems. First we dropped edit in place fields in favour of plain old <code>INPUT</code> elements, and then got the server to render the HTML instead of building the grid dynamically on the client side. So essentially we used Flapjax to handle events from the grid, but not to render the grid. This design is much faster; for example a grid with a thousand cells renders in about a second.</p>
-<p>As with any new technology, the community still has to develop best practices and design patterns to make it easier to adopt Flapjax. The best design for error handling is <a href="http://groups.google.com/group/flapjax/browse_frm/thread/dd3da7c6991d6d6e/#">still an open issue</a>. Architectures for mixing OO and FRP (Flapjax) code are not well defined, though there is <a href="http://www.cs.brown.edu/~sk/Publications/Papers/Published/ick-adapt-oo-fwk-frp/">prior work</a>. However we feel the benefit we got from Flapjax, in terms of shorter code and a faster development cycle, outweighed the cost.</p>
-      </div>
+            <section
+              id="post-218"
+              class="post-218 post type-post status-publish format-standard hentry category-business"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">2 Feb 2007</p>
+                  <p class="author">by Noel</p>
+                </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Flapjax in Action</span></span>      </p>
-    </div>
-  </div>
-</section>
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2007/02/02/simplicity-at-work/"
+                      rel="bookmark"
+                      title="Permanent Link to Simplicity at Work"
+                      >Simplicity at Work</a
+                    >
+                  </h2>
 
-<section id="post-226" class="post-226 post type-post status-publish format-standard hentry category-general">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">13 Dec 2006</p>
-      <p class="author">by Noel</p>
-    </div>
+                  <div class="entry">
+                    <p>
+                      <a
+                        title="Founders At Work: The Interviews"
+                        href="http://www.foundersatwork.com/interviews.html"
+                        >Founders At Work</a
+                      > is a collection of interviews with the founders of
+                      successful high-tech companies. They have two interviews
+                      online, one with Woz and one with Joel Spolsky.
+                    </p>
+                    <p>Some good quotes:</p>
+                    <blockquote>
+                      <p>
+                        All the best things that I did at Apple came from (a)
+                        not having money and (b) not having done it before,
+                        ever. Every single thing that we came out with that was
+                        really great, I’d never once done that thing in my life.
+                      </p>
+                    </blockquote>
+                    <blockquote>
+                      <p>
+                        I think what makes a good hack is the observation that
+                        you can do without something that everybody else thinks
+                        you need. To me, the most elegant hack is when somebody
+                        says, “These 2,000 lines of code end up doing the same
+                        thing as those 2 lines of code would do. I know it seems
+                        complicated, but arithmetically it’s really the same.”
+                        When someone cuts through a lot of crap and says, “You
+                        know, it doesn’t really matter.”
+                      </p>
+                    </blockquote>
+                    <p>
+                      There is a remarkable similarity to the two interviews.
+                      Both emphasize simplicity and working under constraints.
+                    </p>
+                  </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2006/12/13/s3-ssl-and-s3sync/" rel="bookmark" title="Permanent Link to S3, SSL, and s3sync">S3, SSL, and s3sync</a></h2>
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/business/" rel="category tag"
+                      >Business</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Simplicity at Work</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
 
-      <div class="entry">
-        <p><a href="http://www.amazon.com/S3-AWS-home-page-Money/b/ref=sc_fe_l_2/104-9771698-9847941?ie=UTF8&amp;node=16427261&amp;no=3435361&amp;me=A36L942TSJ2AJA">S3</a> is Amazon’s rather awesome data storage service. I’ll just note that it makes a great way of backing up your data; if you want to know more read <a href="http://www.sububi.org/2006/10/20/amazon-s3-for-the-busy-worker-bee/">Matt’s excellent overview</a>.</p>
-<p>We ran into problems setting up <code><a href="http://s3sync.net/">s3sync</a></code> on a client’s system. Specifically SSL didn’t work, with the handy error message <code>SSL Error:</code>. That’s right, we were told there was an error put <code>s3sync</code>wouldn’t tell us what the error was. We tried using <code>wget</code> which <em>was</em>nice enough to tell us we had a certificate problem. An hour of Googling later and the solution was this:</p>
-<ul>
-<li>Grab the CA Cert file (<code>cacert.pem</code>) from any one of the bazillion places on the Internet that mirror it.</li>
-<li>Copy it to <code>/usr/lib/ssl/certs/cert.pem</code>
-</li>
-<li>Set <code>SSL_CERT_DIR</code> and <code>SSL_CERT_FILE</code> to <code>/usr/lib/ssl/certs/</code> and<code>/usr/lib/ssl/certs/cert.pem</code> respectively.</li>
-<li>Nothing more to do!</li>
-</ul>
-<p>I found the <a href="http://lynx.isc.org/current/README.sslcerts">Lynx documentation</a> the most useful. The OpenSSL documentation was much less helpful.</p>
-      </div>
+            <section
+              id="post-222"
+              class="post-222 post type-post status-publish format-standard hentry category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">22 Jan 2007</p>
+                  <p class="author">by Noel</p>
+                </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/general/" rel="category tag">General</a> |
-                <span>Comments Off<span class="screen-reader-text"> on S3, SSL, and s3sync</span></span>      </p>
-    </div>
-  </div>
-</section>
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2007/01/22/large-scale-web-site-development/"
+                      rel="bookmark"
+                      title="Permanent Link to Large Scale Web Site Development"
+                      >Large Scale Web Site Development</a
+                    >
+                  </h2>
 
-<section id="post-228" class="post-228 post type-post status-publish format-standard hentry category-general">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">15 Nov 2006</p>
-      <p class="author">by Noel</p>
-    </div>
+                  <div class="entry">
+                    <p>
+                      Two interesting case studies on large web sites: <a
+                        href="http://www.baselinemag.com/print_article2/0,1217,a=198614,00.asp"
+                        >MySpace</a
+                      > and <a
+                        href="http://www.addsimplicity.com/downloads/eBaySDForum2006-11-29.pdf%3Cbr%20/%3E"
+                        >EBay</a
+                      >. They are remarkably similar. Or perhaps it should be
+                      unremarkable. You don’t get many chances to get that sort
+                      of system wrong, so it is natural that different groups
+                      should converge to tried and tested solutions. Ezra
+                      Kilty <a
+                        href="http://ezrakilty.net/research/2006/12/transactions.html"
+                        >offers some thoughts on EBay and the great Goog</a
+                      >, who of course have a system way different and way
+                      cooler than anyone else’s.
+                    </p>
+                  </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2006/11/15/fix-your-mac/" rel="bookmark" title="Permanent Link to Fix your Mac">Fix your Mac</a></h2>
+                  <p class="tags">
+                    Posted in
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Large Scale Web Site Development</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
 
-      <div class="entry">
-        <p>If there is one downside to owning Apple hardware it’s the cost of repairs. I’ve just come across <a href="http://www.ifixit.com/Guide/Mac/">iFixit</a>, which has excellent do-it-yourself guides to replacing all the major components in your Mac. Yay!</p>
-      </div>
+            <section
+              id="post-224"
+              class="post-224 post type-post status-publish format-standard hentry category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">19 Jan 2007</p>
+                  <p class="author">by Noel</p>
+                </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/general/" rel="category tag">General</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Fix your Mac</span></span>      </p>
-    </div>
-  </div>
-</section>
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2007/01/19/flapjax-in-action/"
+                      rel="bookmark"
+                      title="Permanent Link to Flapjax in Action"
+                      >Flapjax in Action</a
+                    >
+                  </h2>
 
-<section id="post-230" class="post-230 post type-post status-publish format-standard hentry category-code">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">13 Nov 2006</p>
-      <p class="author">by Noel</p>
-    </div>
+                  <div class="entry">
+                    <p>
+                      In a few days we’ll be releasing our first code using <a
+                        href="http://www.flapjax-lang.org/"
+                        >Flapjax</a
+                      > to drive the user interface. The core of the system is
+                      a <a href="http://en.wikipedia.org/wiki/Grid_view"
+                        >grid view</a
+                      > that runs in the browser. The user can edit data in
+                      place, and when they move to a new row changes are sent to
+                      the server. Invalid data is flagged in the grid, and
+                      mousing over shows the reason for the error. Given we’re
+                      probably the first people in the world to release
+                      commercial code using Flapjax a few notes on our
+                      experience are worthwhile.
+                    </p>
+                    <p>
+                      The summary is: Flapjax worked very well for us. Flapjax
+                      code is much smaller and faster to write than the
+                      equivalent plain Javasscript, and Flapjax insulates you
+                      from most of the cross-browser issues. If your application
+                      revolves around events, and most Javscript applications
+                      do, Flapjax will probably be a good fit. However current
+                      Javascript implementations are so slow that they can limit
+                      how much you can take advantage of Flapjax.
+                    </p>
+                    <p>
+                      Now, the details. We went through two design. Our first
+                      prototype rendered the <code>TABLE</code> that contained
+                      the grid data as one enormous Behaviour. Every field was
+                      an “edit in place” field, using more Flapjax code. (See <a
+                        href="http://josephscott.org/code/js/eip/example.html"
+                        >here</a
+                      > if you don’t know what an edit in place field is, though
+                      note that this isn’t the code we used.) This plays very
+                      nicely with the Flapjax model, as changes to any part grid
+                      automatically get updated in the browser. It worked fine
+                      for small tables, but scaled really badly; for large
+                      tables it was so slow to load and redraw that the browser
+                      would kill the script.
+                    </p>
+                    <p>
+                      The main problem with our first prototype is that <a
+                        href="http://www.quirksmode.org/dom/innerhtml.html"
+                        >browsers are really slow at rendering elements inserted
+                        using the DOM</a
+                      >. Our second design made two major changes to overcome
+                      these problems. First we dropped edit in place fields in
+                      favour of plain old <code>INPUT</code> elements, and then
+                      got the server to render the HTML instead of building the
+                      grid dynamically on the client side. So essentially we
+                      used Flapjax to handle events from the grid, but not to
+                      render the grid. This design is much faster; for example a
+                      grid with a thousand cells renders in about a second.
+                    </p>
+                    <p>
+                      As with any new technology, the community still has to
+                      develop best practices and design patterns to make it
+                      easier to adopt Flapjax. The best design for error
+                      handling is <a
+                        href="http://groups.google.com/group/flapjax/browse_frm/thread/dd3da7c6991d6d6e/#"
+                        >still an open issue</a
+                      >. Architectures for mixing OO and FRP (Flapjax) code are
+                      not well defined, though there is <a
+                        href="http://www.cs.brown.edu/~sk/Publications/Papers/Published/ick-adapt-oo-fwk-frp/"
+                        >prior work</a
+                      >. However we feel the benefit we got from Flapjax, in
+                      terms of shorter code and a faster development cycle,
+                      outweighed the cost.
+                    </p>
+                  </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2006/11/13/new-software-for-you/" rel="bookmark" title="Permanent Link to New Software, For You!">New Software, For You!</a></h2>
+                  <p class="tags">
+                    Posted in
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Flapjax in Action</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
 
-      <div class="entry">
-        <p>We released two bits of code a little while ago, both at<br>
-<a href="http://planet.plt-scheme.org/">PLaneT</a>:</p>
-<ul>
-<li>A new minor version of &lt;a<br>
-href=&#8221;http://planet.plt-scheme.org/300/#schemeunit.plt&#8221;&gt;SchemeUnit<br>
-that adds a <code>check-=</code> form for comparing numbers<br>
-within a specified tolerance, and fixes a few bugs.</li>
-<li>A new add-on to SchemeUnit, called &lt;a<br>
-href=&#8221;http://planet.plt-scheme.org/300/#benchmark.plt&#8221;&gt;Benchmark<br>
-that, as the name suggests, adds forms for benchmarking<br>
-code.</li>
-</ul>
-<p>A simple example of using the Benchmark library:</p>
-<p>Suppose you were benchmarking some functions that worked<br>
-on vectors of numbers, and you wanted to see if the SRFI-43<br>
-<code>vector-map</code> was faster than writing a loop by<br>
-hand. You can test this assumption using the<br>
-<code>check-faster</code> form:</p>
-<pre>(module test mzscheme
+            <section
+              id="post-226"
+              class="post-226 post type-post status-publish format-standard hentry category-general"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">13 Dec 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/12/13/s3-ssl-and-s3sync/"
+                      rel="bookmark"
+                      title="Permanent Link to S3, SSL, and s3sync"
+                      >S3, SSL, and s3sync</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      <a
+                        href="http://www.amazon.com/S3-AWS-home-page-Money/b/ref=sc_fe_l_2/104-9771698-9847941?ie=UTF8&amp;node=16427261&amp;no=3435361&amp;me=A36L942TSJ2AJA"
+                        >S3</a
+                      > is Amazon’s rather awesome data storage service. I’ll
+                      just note that it makes a great way of backing up your
+                      data; if you want to know more read <a
+                        href="http://www.sububi.org/2006/10/20/amazon-s3-for-the-busy-worker-bee/"
+                        >Matt’s excellent overview</a
+                      >.
+                    </p>
+                    <p>
+                      We ran into problems setting up <code
+                        ><a href="http://s3sync.net/">s3sync</a></code
+                      > on a client’s system. Specifically SSL didn’t work, with
+                      the handy error message <code>SSL Error:</code>. That’s
+                      right, we were told there was an error
+                      put <code>s3sync</code>wouldn’t tell us what the error
+                      was. We tried
+                      using <code>wget</code> which <em>was</em>nice enough to
+                      tell us we had a certificate problem. An hour of Googling
+                      later and the solution was this:
+                    </p>
+                    <ul>
+                      <li>
+                        Grab the CA Cert file (<code>cacert.pem</code>) from any
+                        one of the bazillion places on the Internet that mirror
+                        it.
+                      </li>
+                      <li>
+                        Copy it to <code>/usr/lib/ssl/certs/cert.pem</code>
+                      </li>
+                      <li>
+                        Set <code>SSL_CERT_DIR</code> and <code>SSL_CERT_FILE</code> to <code>/usr/lib/ssl/certs/</code> and<code>/usr/lib/ssl/certs/cert.pem</code> respectively.
+                      </li>
+                      <li>Nothing more to do!</li>
+                    </ul>
+                    <p>
+                      I found the <a
+                        href="http://lynx.isc.org/current/README.sslcerts"
+                        >Lynx documentation</a
+                      > the most useful. The OpenSSL documentation was much less
+                      helpful.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on S3, SSL, and s3sync</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-228"
+              class="post-228 post type-post status-publish format-standard hentry category-general"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">15 Nov 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/11/15/fix-your-mac/"
+                      rel="bookmark"
+                      title="Permanent Link to Fix your Mac"
+                      >Fix your Mac</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      If there is one downside to owning Apple hardware it’s the
+                      cost of repairs. I’ve just come across <a
+                        href="http://www.ifixit.com/Guide/Mac/"
+                        >iFixit</a
+                      >, which has excellent do-it-yourself guides to replacing
+                      all the major components in your Mac. Yay!
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Fix your Mac</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-230"
+              class="post-230 post type-post status-publish format-standard hentry category-code"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">13 Nov 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/11/13/new-software-for-you/"
+                      rel="bookmark"
+                      title="Permanent Link to New Software, For You!"
+                      >New Software, For You!</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      We released two bits of code a little while ago, both
+                      at<br />
+                      <a href="http://planet.plt-scheme.org/">PLaneT</a>:
+                    </p>
+                    <ul>
+                      <li>
+                        A new minor version of &lt;a<br />
+                        href=&#8221;http://planet.plt-scheme.org/300/#schemeunit.plt&#8221;&gt;SchemeUnit<br />
+                        that adds a <code>check-=</code> form for comparing
+                        numbers<br />
+                        within a specified tolerance, and fixes a few bugs.
+                      </li>
+                      <li>
+                        A new add-on to SchemeUnit, called &lt;a<br />
+                        href=&#8221;http://planet.plt-scheme.org/300/#benchmark.plt&#8221;&gt;Benchmark<br />
+                        that, as the name suggests, adds forms for
+                        benchmarking<br />
+                        code.
+                      </li>
+                    </ul>
+                    <p>A simple example of using the Benchmark library:</p>
+                    <p>
+                      Suppose you were benchmarking some functions that
+                      worked<br />
+                      on vectors of numbers, and you wanted to see if the
+                      SRFI-43<br />
+                      <code>vector-map</code> was faster than writing a loop
+                      by<br />
+                      hand. You can test this assumption using the<br />
+                      <code>check-faster</code> form:
+                    </p>
+                    <pre>
+(module test mzscheme
 
 (require
 (lib "vector-lib.ss" "srfi" "43")
@@ -304,346 +1127,532 @@ vec
 (loop vec idx)))))))))
 
 (test/text-ui check-map)
-)</pre>
-<p>On my computer the hand-written loop is a fraction faster<br>
-than <code>vector-map</code>, so if performance is essential<br>
-than the loop is to be preferred.</p>
-<p>By formalising assumptions as tests you automatically get<br>
-notified when implementation changes render them invalid.<br>
-So if changes in the JIT compiler made<br>
-<code>vector-map</code> faster this test would fail and I<br>
-would know to rewrite my performance critical code.</p>
-<p>Often it isn’t convenient to keep two versions of a<br>
-function around, perhaps because the implementation depends<br>
-on many modules. In this case it is useful to benchmark the<br>
-implementation against its past performance. You can do<br>
-this by creating a <code>benchmark-case</code> where you<br>
-would otherwise create a <code>test-case</code>. An example<br>
-is in order: Say you have a complicated function<br>
-<code>foo</code> and you want to ensure your optimisations<br>
-are making it faster. Then you simply write:</p>
-<pre>(benchmark-case
+)</pre
+                    >
+                    <p>
+                      On my computer the hand-written loop is a fraction
+                      faster<br />
+                      than <code>vector-map</code>, so if performance is
+                      essential<br />
+                      than the loop is to be preferred.
+                    </p>
+                    <p>
+                      By formalising assumptions as tests you automatically
+                      get<br />
+                      notified when implementation changes render them
+                      invalid.<br />
+                      So if changes in the JIT compiler made<br />
+                      <code>vector-map</code> faster this test would fail and
+                      I<br />
+                      would know to rewrite my performance critical code.
+                    </p>
+                    <p>
+                      Often it isn’t convenient to keep two versions of a<br />
+                      function around, perhaps because the implementation
+                      depends<br />
+                      on many modules. In this case it is useful to benchmark
+                      the<br />
+                      implementation against its past performance. You can do<br />
+                      this by creating a <code>benchmark-case</code> where
+                      you<br />
+                      would otherwise create a <code>test-case</code>. An
+                      example<br />
+                      is in order: Say you have a complicated function<br />
+                      <code>foo</code> and you want to ensure your
+                      optimisations<br />
+                      are making it faster. Then you simply write:
+                    </p>
+                    <pre>
+(benchmark-case
 "foo benchmark 1"
-(foo some-big-input))</pre>
-<p>The Benchmark library automatically saves performance<br>
-data and fails this test if <code>foo</code> becomes slower.<br>
-The name of the test case is important, as this is what<br>
-the Benchmark library uses to find historical data.</p>
-<p>That’s it. As you can see the Benchmark library is quite simple, but I have found it very useful when optimising code. I hope you do as well!</p>
+(foo some-big-input))</pre
+                    >
+                    <p>
+                      The Benchmark library automatically saves performance<br />
+                      data and fails this test if <code>foo</code> becomes
+                      slower.<br />
+                      The name of the test case is important, as this is what<br />
+                      the Benchmark library uses to find historical data.
+                    </p>
+                    <p>
+                      That’s it. As you can see the Benchmark library is quite
+                      simple, but I have found it very useful when optimising
+                      code. I hope you do as well!
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on New Software, For You!</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-236"
+              class="post-236 post type-post status-publish format-standard hentry category-general"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">6 Nov 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/11/06/does-engineeringmathscience-education-in-suck/"
+                      rel="bookmark"
+                      title="Permanent Link to Does engineering/math/science education in suck?"
+                      >Does engineering/math/science education in suck?</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      Kathy Sierra asks <a
+                        title="Creating Passionate Users: Why does engineering/math/science education in the US suck?"
+                        href="http://headrush.typepad.com/creating_passionate_users/2006/11/why_does_engine.html"
+                        >why does engineering/math/science education in the US
+                        suck?</a
+                      > Nice of her to limit that to the US. I guess we’re ok
+                      here in the UK. “Education sucks” is a meme that has a lot
+                      of mileage. We’ve posted along these lines before. I’m
+                      willing to accept that the average educational experience
+                      is only average, but so is the average student. I think
+                      the passionate will always be disappointed with those who
+                      don’t share their passion. I know I have been in my time
+                      at University, but on the flip side I’ve been a pretty
+                      poor student in some classes that I found boring. However,
+                      as an engineering/science graduate I must ask “where’s the
+                      evidence” in response to this claim. There is definitely
+                      something to be said about the issues of teaching and
+                      teaching standards, but I find this post too simplistic.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Does engineering/math/science education in
+                        suck?</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-234"
+              class="post-234 post type-post status-publish format-standard hentry category-general"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">6 Nov 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/11/06/voting-systems-theory-meets-practice/"
+                      rel="bookmark"
+                      title="Permanent Link to Voting Systems: Theory Meets Practice"
+                      >Voting Systems: Theory Meets Practice</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      Suresh posts on <a
+                        title="The Geomblog: Tamper-proof voting systems"
+                        href="http://geomblog.blogspot.com/2006/11/tamper-proof-voting-systems.html"
+                        >tamper-proof voting systems</a
+                      >. Why do you care? Apart from the application to
+                      democratic government, it’s a problem that all Internet
+                      companies that aggregate user behaviour (for example,
+                      social networking sites) face. Be sure to read the
+                      comments.
+                    </p>
+                    <p>
+                      I love applying theory to real-world problems, if only
+                      because it justifies my over-education <img
+                        decoding="async"
+                        src="http://untyped.wpengine.com/wp-includes/images/smilies/icon_smile.gif"
+                        alt=":)"
+                      />
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Voting Systems: Theory Meets Practice</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-232"
+              class="post-232 post type-post status-publish format-standard hentry category-general"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">6 Nov 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/11/06/a-farewell-to-alms/"
+                      rel="bookmark"
+                      title="Permanent Link to A Farewell to Alms"
+                      >A Farewell to Alms</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      Tyler Cowen <a
+                        href="http://www.marginalrevolution.com/marginalrevolution/2006/11/what_makes_a_na.html"
+                        >writes</a
+                      >
+                    </p>
+                    <blockquote>
+                      <p>
+                        The book is not yet out, but it is the best of its kind
+                        since Guns, Germs, and Steel.
+                      </p>
+                    </blockquote>
+                    <p>
+                      The book in question is <a
+                        href="http://www.econ.ucdavis.edu/faculty/gclark/Farewell%20to%20Alms/ftahome.html"
+                        >A Farewell to Alms</a
+                      >, and 4 pages into the draft I’m hooked.
+                    </p>
+                    <p>
+                      cp&gt;Till a few days ago a full PDF draft was available
+                      online. This has been replaced with a few PDFs of
+                      individual chapters. The author tells me this was done at
+                      the request of the <a href="http://pup.princeton.edu/"
+                        >publisher</a
+                      >, and he intends to put the first eight chapters online.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on A Farewell to Alms</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <nav>
+              <div class="row">
+                <div class="span8 offset2">
+                  <span class="newer"
+                    ><a href="/untyping/page/10/"
+                      >&laquo; Newer Entries</a
+                    ></span
+                  >
+                  <span class="older"
+                    ><a href="/untyping/page/12/"
+                      >Older Entries &raquo;</a
+                    ></span
+                  >
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="span2">
+            <div id="sidebar" class="small column two-of-two width300">
+              <ul>
+                <li id="search-2" class="widget widget_search">
+                  <form
+                    role="search"
+                    method="get"
+                    id="searchform"
+                    class="searchform"
+                    action="/"
+                  >
+                    <div>
+                      <label class="screen-reader-text" for="s"
+                        >Search for:</label
+                      >
+                      <input type="text" value="" name="s" id="s" />
+                      <input type="submit" id="searchsubmit" value="Search" />
+                    </div>
+                  </form>
+                </li>
+                <li id="recent-posts-2" class="widget widget_recent_entries">
+                  <h2 class="widgettitle">Recent Posts</h2>
+                  <ul>
+                    <li>
+                      <a
+                        href="/untyping/2013/08/07/writing-documentation-using-grunt-and-jekyll/"
+                        >Writing Documentation using Grunt and Jekyll</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2012/10/19/meanwhile-at-untyped-hq/"
+                        >Meanwhile, at Untyped HQ&#8230;</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2012/08/28/new-site/">New site</a>
+                    </li>
+                    <li>
+                      <a
+                        href="/untyping/2012/06/06/myna-for-wordpress-available-now/"
+                        >Myna for WordPress available now!</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2011/10/20/the-circus-is-in-town/"
+                        >The Circus is in Town</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  id="recent-comments-2"
+                  class="widget widget_recent_comments"
+                >
+                  <h2 class="widgettitle">Recent Comments</h2>
+                  <ul id="recentcomments"></ul>
+                </li>
+                <li id="archives-2" class="widget widget_archive">
+                  <h2 class="widgettitle">Archives</h2>
+                  <ul>
+                    <li><a href="/untyping/2013/08/">August 2013</a></li>
+                    <li><a href="/untyping/2012/10/">October 2012</a></li>
+                    <li><a href="/untyping/2012/08/">August 2012</a></li>
+                    <li><a href="/untyping/2012/06/">June 2012</a></li>
+                    <li><a href="/untyping/2011/10/">October 2011</a></li>
+                    <li><a href="/untyping/2011/09/">September 2011</a></li>
+                    <li><a href="/untyping/2011/08/">August 2011</a></li>
+                    <li><a href="/untyping/2011/05/">May 2011</a></li>
+                    <li><a href="/untyping/2011/03/">March 2011</a></li>
+                    <li><a href="/untyping/2011/02/">February 2011</a></li>
+                    <li><a href="/untyping/2011/01/">January 2011</a></li>
+                    <li><a href="/untyping/2010/12/">December 2010</a></li>
+                    <li><a href="/untyping/2010/11/">November 2010</a></li>
+                    <li><a href="/untyping/2010/10/">October 2010</a></li>
+                    <li><a href="/untyping/2010/07/">July 2010</a></li>
+                    <li><a href="/untyping/2010/06/">June 2010</a></li>
+                    <li><a href="/untyping/2010/05/">May 2010</a></li>
+                    <li><a href="/untyping/2010/04/">April 2010</a></li>
+                    <li><a href="/untyping/2010/03/">March 2010</a></li>
+                    <li><a href="/untyping/2010/02/">February 2010</a></li>
+                    <li><a href="/untyping/2010/01/">January 2010</a></li>
+                    <li><a href="/untyping/2009/07/">July 2009</a></li>
+                    <li><a href="/untyping/2009/06/">June 2009</a></li>
+                    <li><a href="/untyping/2009/04/">April 2009</a></li>
+                    <li><a href="/untyping/2009/03/">March 2009</a></li>
+                    <li><a href="/untyping/2009/01/">January 2009</a></li>
+                    <li><a href="/untyping/2008/11/">November 2008</a></li>
+                    <li><a href="/untyping/2008/10/">October 2008</a></li>
+                    <li><a href="/untyping/2008/09/">September 2008</a></li>
+                    <li><a href="/untyping/2008/08/">August 2008</a></li>
+                    <li><a href="/untyping/2008/07/">July 2008</a></li>
+                    <li><a href="/untyping/2008/06/">June 2008</a></li>
+                    <li><a href="/untyping/2008/05/">May 2008</a></li>
+                    <li><a href="/untyping/2008/04/">April 2008</a></li>
+                    <li><a href="/untyping/2008/03/">March 2008</a></li>
+                    <li><a href="/untyping/2008/02/">February 2008</a></li>
+                    <li><a href="/untyping/2008/01/">January 2008</a></li>
+                    <li><a href="/untyping/2007/12/">December 2007</a></li>
+                    <li><a href="/untyping/2007/11/">November 2007</a></li>
+                    <li><a href="/untyping/2007/10/">October 2007</a></li>
+                    <li><a href="/untyping/2007/09/">September 2007</a></li>
+                    <li><a href="/untyping/2007/08/">August 2007</a></li>
+                    <li><a href="/untyping/2007/07/">July 2007</a></li>
+                    <li><a href="/untyping/2007/06/">June 2007</a></li>
+                    <li><a href="/untyping/2007/05/">May 2007</a></li>
+                    <li><a href="/untyping/2007/04/">April 2007</a></li>
+                    <li><a href="/untyping/2007/03/">March 2007</a></li>
+                    <li><a href="/untyping/2007/02/">February 2007</a></li>
+                    <li><a href="/untyping/2007/01/">January 2007</a></li>
+                    <li><a href="/untyping/2006/12/">December 2006</a></li>
+                    <li><a href="/untyping/2006/11/">November 2006</a></li>
+                    <li><a href="/untyping/2006/10/">October 2006</a></li>
+                    <li><a href="/untyping/2006/09/">September 2006</a></li>
+                    <li><a href="/untyping/2006/08/">August 2006</a></li>
+                    <li><a href="/untyping/2006/07/">July 2006</a></li>
+                    <li><a href="/untyping/2006/06/">June 2006</a></li>
+                    <li><a href="/untyping/2006/05/">May 2006</a></li>
+                    <li><a href="/untyping/2006/04/">April 2006</a></li>
+                    <li><a href="/untyping/2006/03/">March 2006</a></li>
+                    <li><a href="/untyping/2006/02/">February 2006</a></li>
+                    <li><a href="/untyping/2006/01/">January 2006</a></li>
+                    <li><a href="/untyping/2005/12/">December 2005</a></li>
+                    <li><a href="/untyping/2005/11/">November 2005</a></li>
+                    <li><a href="/untyping/2005/10/">October 2005</a></li>
+                    <li><a href="/untyping/2005/09/">September 2005</a></li>
+                    <li><a href="/untyping/2005/08/">August 2005</a></li>
+                    <li><a href="/untyping/2005/07/">July 2005</a></li>
+                    <li><a href="/untyping/2005/06/">June 2005</a></li>
+                    <li><a href="/untyping/2005/05/">May 2005</a></li>
+                    <li><a href="/untyping/2005/04/">April 2005</a></li>
+                  </ul>
+                </li>
+                <li id="categories-2" class="widget widget_categories">
+                  <h2 class="widgettitle">Categories</h2>
+                  <ul>
+                    <li class="cat-item cat-item-10">
+                      <a href="/untyping/category/business/">Business</a>
+                    </li>
+                    <li class="cat-item cat-item-7">
+                      <a href="/untyping/category/code/">Code</a>
+                    </li>
+                    <li class="cat-item cat-item-11">
+                      <a href="/untyping/category/design/">Design</a>
+                    </li>
+                    <li class="cat-item cat-item-3">
+                      <a href="/untyping/category/front-page/">Front page</a>
+                    </li>
+                    <li class="cat-item cat-item-9">
+                      <a href="/untyping/category/fun/">Fun</a>
+                    </li>
+                    <li class="cat-item cat-item-6">
+                      <a href="/untyping/category/functional-programming/"
+                        >Functional Programming</a
+                      >
+                    </li>
+                    <li class="cat-item cat-item-1">
+                      <a href="/untyping/category/general/">General</a>
+                    </li>
+                    <li class="cat-item cat-item-12">
+                      <a href="/untyping/category/javascript/">Javascript</a>
+                    </li>
+                    <li class="cat-item cat-item-14">
+                      <a href="/untyping/category/kahu/">Kahu</a>
+                    </li>
+                    <li class="cat-item cat-item-4">
+                      <a href="/untyping/category/myna/">Myna</a>
+                    </li>
+                    <li class="cat-item cat-item-13">
+                      <a href="/untyping/category/racket/">Racket</a>
+                    </li>
+                    <li class="cat-item cat-item-8">
+                      <a href="/untyping/category/scala/">Scala</a>
+                    </li>
+                    <li class="cat-item cat-item-5">
+                      <a href="/untyping/category/web-development/"
+                        >Web development</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li id="meta-2" class="widget widget_meta">
+                  <h2 class="widgettitle">Meta</h2>
+                  <ul>
+                    <li><a href="/wp-login.php">Log in</a></li>
+                    <li><a href="/feed/">Entries feed</a></li>
+                    <li><a href="/comments/feed/">Comments feed</a></li>
+
+                    <li>
+                      <a href="https://en-gb.wordpress.org/">WordPress.org</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/code/" rel="category tag">Code</a> |
-                <span>Comments Off<span class="screen-reader-text"> on New Software, For You!</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-236" class="post-236 post type-post status-publish format-standard hentry category-general">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">6 Nov 2006</p>
-      <p class="author">by Noel</p>
     </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2006/11/06/does-engineeringmathscience-education-in-suck/" rel="bookmark" title="Permanent Link to Does engineering/math/science education in suck?">Does engineering/math/science education in suck?</a></h2>
+    <footer id="contact">
+      <div class="shadow top"></div>
 
-      <div class="entry">
-        <p>Kathy Sierra asks <a title="Creating Passionate Users: Why does engineering/math/science education in the US suck?" href="http://headrush.typepad.com/creating_passionate_users/2006/11/why_does_engine.html">why does engineering/math/science education in the US suck?</a> Nice of her to limit that to the US. I guess we’re ok here in the UK. “Education sucks” is a meme that has a lot of mileage. We’ve posted along these lines before. I’m willing to accept that the average educational experience is only average, but so is the average student. I think the passionate will always be disappointed with those who don’t share their passion. I know I have been in my time at University, but on the flip side I’ve been a pretty poor student in some classes that I found boring. However, as an engineering/science graduate I must ask “where’s the evidence” in response to this claim. There is definitely something to be said about the issues of teaching and teaching standards, but I find this post too simplistic.</p>
+      <div class="container">
+        <h2>Stay in touch</h2>
+
+        <dl>
+          <dt>Telephone</dt>
+          <dd><a href="callto:+441212857400">0121 285 7400</a></dd>
+
+          <dt>Email</dt>
+          <dd>
+            <span class="email"
+              ><span class="recipient">info</span> at
+              <span class="domain">untyped</span></span
+            >
+          </dd>
+
+          <dt>Twitter</dt>
+          <dd><a href="http://twitter.com/untyped">@untyped</a></dd>
+
+          <dt>Address</dt>
+          <dd>
+            <address>
+              Untyped<br />
+              The Skiff<br />
+              30 Cheapside<br />
+              Brighton BN1 4GD
+            </address>
+          </dd>
+
+          <dt>UK company number</dt>
+          <dd>06226466</dd>
+
+          <dt>UK VAT number</dt>
+          <dd>941 0528 46</dd>
+        </dl>
+
+        <p class="copyright">
+          Copyright 2009 to 2017 <a href="/">Untyped Ltd</a>. Powered by
+          <a href="http://wordpress.org/" class="nocolor">WordPress</a>.
+          <a href="/terms" class="nocolor">Terms of use</a>.
+        </p>
       </div>
+    </footer>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/general/" rel="category tag">General</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Does engineering/math/science education in suck?</span></span>      </p>
-    </div>
-  </div>
-</section>
+    <script
+      src="http://www.google-analytics.com/urchin.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      _uacct = "UA-183641-1";
+      urchinTracker();
+    </script>
 
-<section id="post-234" class="post-234 post type-post status-publish format-standard hentry category-general">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">6 Nov 2006</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2006/11/06/voting-systems-theory-meets-practice/" rel="bookmark" title="Permanent Link to Voting Systems: Theory Meets Practice">Voting Systems: Theory Meets Practice</a></h2>
-
-      <div class="entry">
-        <p>Suresh posts on <a title="The Geomblog: Tamper-proof voting systems" href="http://geomblog.blogspot.com/2006/11/tamper-proof-voting-systems.html">tamper-proof voting systems</a>. Why do you care? Apart from the application to democratic government, it’s a problem that all Internet companies that aggregate user behaviour (for example, social networking sites) face. Be sure to read the comments.</p>
-<p>I love applying theory to real-world problems, if only because it justifies my over-education <img decoding="async" src="http://untyped.wpengine.com/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/general/" rel="category tag">General</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Voting Systems: Theory Meets Practice</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-232" class="post-232 post type-post status-publish format-standard hentry category-general">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">6 Nov 2006</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2006/11/06/a-farewell-to-alms/" rel="bookmark" title="Permanent Link to A Farewell to Alms">A Farewell to Alms</a></h2>
-
-      <div class="entry">
-        <p>Tyler Cowen <a href="http://www.marginalrevolution.com/marginalrevolution/2006/11/what_makes_a_na.html">writes</a></p>
-<blockquote><p>The book is not yet out, but it is the best of its kind since Guns, Germs, and Steel.</p></blockquote>
-<p>The book in question is <a href="http://www.econ.ucdavis.edu/faculty/gclark/Farewell%20to%20Alms/ftahome.html">A Farewell to Alms</a>, and 4 pages into the draft I’m hooked.</p>
-<p>cp&gt;Till a few days ago a full PDF draft was available online. This has been replaced with a few PDFs of individual chapters. The author tells me this was done at the request of the <a href="http://pup.princeton.edu/">publisher</a>, and he intends to put the first eight chapters online.</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/general/" rel="category tag">General</a> |
-                <span>Comments Off<span class="screen-reader-text"> on A Farewell to Alms</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<nav>
-  <div class="row">
-    <div class="span8 offset2">
-      <span class="newer"><a href="/untyping/page/10/">&laquo; Newer Entries</a></span>
-      <span class="older"><a href="/untyping/page/12/">Older Entries &raquo;</a></span>
-      <div class="clear"></div>
-    </div>
-  </div>
-</nav>
-
-
-</div>
-<div class="span2">
-
-<div id="sidebar" class="small column two-of-two width300">
-
-<ul>
-<li id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
-				<div>
-					<label class="screen-reader-text" for="s">Search for:</label>
-					<input type="text" value="" name="s" id="s">
-					<input type="submit" id="searchsubmit" value="Search">
-				</div>
-			</form></li>
-		<li id="recent-posts-2" class="widget widget_recent_entries">
-		<h2 class="widgettitle">Recent Posts</h2>
-		<ul>
-											<li>
-					<a href="/untyping/2013/08/07/writing-documentation-using-grunt-and-jekyll/">Writing Documentation using Grunt and Jekyll</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/10/19/meanwhile-at-untyped-hq/">Meanwhile, at Untyped HQ&#8230;</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/08/28/new-site/">New site</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/06/06/myna-for-wordpress-available-now/">Myna for WordPress available now!</a>
-									</li>
-											<li>
-					<a href="/untyping/2011/10/20/the-circus-is-in-town/">The Circus is in Town</a>
-									</li>
-					</ul>
-
-		</li>
-<li id="recent-comments-2" class="widget widget_recent_comments">
-<h2 class="widgettitle">Recent Comments</h2>
-<ul id="recentcomments"></ul>
-</li>
-<li id="archives-2" class="widget widget_archive">
-<h2 class="widgettitle">Archives</h2>
-			<ul>
-					<li><a href="/untyping/2013/08/">August 2013</a></li>
-	<li><a href="/untyping/2012/10/">October 2012</a></li>
-	<li><a href="/untyping/2012/08/">August 2012</a></li>
-	<li><a href="/untyping/2012/06/">June 2012</a></li>
-	<li><a href="/untyping/2011/10/">October 2011</a></li>
-	<li><a href="/untyping/2011/09/">September 2011</a></li>
-	<li><a href="/untyping/2011/08/">August 2011</a></li>
-	<li><a href="/untyping/2011/05/">May 2011</a></li>
-	<li><a href="/untyping/2011/03/">March 2011</a></li>
-	<li><a href="/untyping/2011/02/">February 2011</a></li>
-	<li><a href="/untyping/2011/01/">January 2011</a></li>
-	<li><a href="/untyping/2010/12/">December 2010</a></li>
-	<li><a href="/untyping/2010/11/">November 2010</a></li>
-	<li><a href="/untyping/2010/10/">October 2010</a></li>
-	<li><a href="/untyping/2010/07/">July 2010</a></li>
-	<li><a href="/untyping/2010/06/">June 2010</a></li>
-	<li><a href="/untyping/2010/05/">May 2010</a></li>
-	<li><a href="/untyping/2010/04/">April 2010</a></li>
-	<li><a href="/untyping/2010/03/">March 2010</a></li>
-	<li><a href="/untyping/2010/02/">February 2010</a></li>
-	<li><a href="/untyping/2010/01/">January 2010</a></li>
-	<li><a href="/untyping/2009/07/">July 2009</a></li>
-	<li><a href="/untyping/2009/06/">June 2009</a></li>
-	<li><a href="/untyping/2009/04/">April 2009</a></li>
-	<li><a href="/untyping/2009/03/">March 2009</a></li>
-	<li><a href="/untyping/2009/01/">January 2009</a></li>
-	<li><a href="/untyping/2008/11/">November 2008</a></li>
-	<li><a href="/untyping/2008/10/">October 2008</a></li>
-	<li><a href="/untyping/2008/09/">September 2008</a></li>
-	<li><a href="/untyping/2008/08/">August 2008</a></li>
-	<li><a href="/untyping/2008/07/">July 2008</a></li>
-	<li><a href="/untyping/2008/06/">June 2008</a></li>
-	<li><a href="/untyping/2008/05/">May 2008</a></li>
-	<li><a href="/untyping/2008/04/">April 2008</a></li>
-	<li><a href="/untyping/2008/03/">March 2008</a></li>
-	<li><a href="/untyping/2008/02/">February 2008</a></li>
-	<li><a href="/untyping/2008/01/">January 2008</a></li>
-	<li><a href="/untyping/2007/12/">December 2007</a></li>
-	<li><a href="/untyping/2007/11/">November 2007</a></li>
-	<li><a href="/untyping/2007/10/">October 2007</a></li>
-	<li><a href="/untyping/2007/09/">September 2007</a></li>
-	<li><a href="/untyping/2007/08/">August 2007</a></li>
-	<li><a href="/untyping/2007/07/">July 2007</a></li>
-	<li><a href="/untyping/2007/06/">June 2007</a></li>
-	<li><a href="/untyping/2007/05/">May 2007</a></li>
-	<li><a href="/untyping/2007/04/">April 2007</a></li>
-	<li><a href="/untyping/2007/03/">March 2007</a></li>
-	<li><a href="/untyping/2007/02/">February 2007</a></li>
-	<li><a href="/untyping/2007/01/">January 2007</a></li>
-	<li><a href="/untyping/2006/12/">December 2006</a></li>
-	<li><a href="/untyping/2006/11/">November 2006</a></li>
-	<li><a href="/untyping/2006/10/">October 2006</a></li>
-	<li><a href="/untyping/2006/09/">September 2006</a></li>
-	<li><a href="/untyping/2006/08/">August 2006</a></li>
-	<li><a href="/untyping/2006/07/">July 2006</a></li>
-	<li><a href="/untyping/2006/06/">June 2006</a></li>
-	<li><a href="/untyping/2006/05/">May 2006</a></li>
-	<li><a href="/untyping/2006/04/">April 2006</a></li>
-	<li><a href="/untyping/2006/03/">March 2006</a></li>
-	<li><a href="/untyping/2006/02/">February 2006</a></li>
-	<li><a href="/untyping/2006/01/">January 2006</a></li>
-	<li><a href="/untyping/2005/12/">December 2005</a></li>
-	<li><a href="/untyping/2005/11/">November 2005</a></li>
-	<li><a href="/untyping/2005/10/">October 2005</a></li>
-	<li><a href="/untyping/2005/09/">September 2005</a></li>
-	<li><a href="/untyping/2005/08/">August 2005</a></li>
-	<li><a href="/untyping/2005/07/">July 2005</a></li>
-	<li><a href="/untyping/2005/06/">June 2005</a></li>
-	<li><a href="/untyping/2005/05/">May 2005</a></li>
-	<li><a href="/untyping/2005/04/">April 2005</a></li>
-			</ul>
-
-			</li>
-<li id="categories-2" class="widget widget_categories">
-<h2 class="widgettitle">Categories</h2>
-			<ul>
-					<li class="cat-item cat-item-10">
-<a href="/untyping/category/business/">Business</a>
-</li>
-	<li class="cat-item cat-item-7">
-<a href="/untyping/category/code/">Code</a>
-</li>
-	<li class="cat-item cat-item-11">
-<a href="/untyping/category/design/">Design</a>
-</li>
-	<li class="cat-item cat-item-3">
-<a href="/untyping/category/front-page/">Front page</a>
-</li>
-	<li class="cat-item cat-item-9">
-<a href="/untyping/category/fun/">Fun</a>
-</li>
-	<li class="cat-item cat-item-6">
-<a href="/untyping/category/functional-programming/">Functional Programming</a>
-</li>
-	<li class="cat-item cat-item-1">
-<a href="/untyping/category/general/">General</a>
-</li>
-	<li class="cat-item cat-item-12">
-<a href="/untyping/category/javascript/">Javascript</a>
-</li>
-	<li class="cat-item cat-item-14">
-<a href="/untyping/category/kahu/">Kahu</a>
-</li>
-	<li class="cat-item cat-item-4">
-<a href="/untyping/category/myna/">Myna</a>
-</li>
-	<li class="cat-item cat-item-13">
-<a href="/untyping/category/racket/">Racket</a>
-</li>
-	<li class="cat-item cat-item-8">
-<a href="/untyping/category/scala/">Scala</a>
-</li>
-	<li class="cat-item cat-item-5">
-<a href="/untyping/category/web-development/">Web development</a>
-</li>
-			</ul>
-
-			</li>
-<li id="meta-2" class="widget widget_meta">
-<h2 class="widgettitle">Meta</h2>
-		<ul>
-						<li><a href="/wp-login.php">Log in</a></li>
-			<li><a href="/feed/">Entries feed</a></li>
-			<li><a href="/comments/feed/">Comments feed</a></li>
-
-			<li><a href="https://en-gb.wordpress.org/">WordPress.org</a></li>
-		</ul>
-
-		</li>
-</ul>
-</div>
-
-
-</div>
-</div>
-</div>
-
-</div>
-
-<footer id="contact">
-  <div class="shadow top"></div>
-
-  <div class="container">
-    <h2>Stay in touch</h2>
-
-    <dl>
-      <dt>Telephone</dt>
-      <dd><a href="callto:+441212857400">0121 285 7400</a></dd>
-
-      <dt>Email</dt>
-      <dd><span class="email"><span class="recipient">info</span> at <span class="domain">untyped</span></span></dd>
-
-      <dt>Twitter</dt>
-      <dd><a href="http://twitter.com/untyped">@untyped</a></dd>
-
-      <dt>Address</dt>
-      <dd>
-        <address>
-          Untyped<br>
-          The Skiff<br>
-          30 Cheapside<br>
-          Brighton BN1 4GD
-        </address>
-      </dd>
-
-      <dt>UK company number</dt>
-      <dd>06226466</dd>
-
-      <dt>UK VAT number</dt>
-      <dd>941 0528 46</dd>
-    </dl>
-
-    <p class="copyright">
-      Copyright 2009 to 2017 <a href="/">Untyped Ltd</a>.
-      Powered by <a href="http://wordpress.org/" class="nocolor">WordPress</a>.
-      <a href="/terms" class="nocolor">Terms of use</a>.
-    </p>
-  </div>
-</footer>
-
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">_uacct = "UA-183641-1";
-urchinTracker();</script>
-
-<script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
-<script src="/scripts/untyped.js"></script>
-
-</body>
+    <script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="/scripts/untyped.js"></script>
+  </body>
 </html>

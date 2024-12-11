@@ -1,240 +1,1088 @@
 <!DOCTYPE html>
 <html id="untyping" lang="en">
+  <head>
+    <title>Scala &#8211; Untyping</title>
 
-<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Scala &#8211;  Untyping</title>
+    <link rel="stylesheet" type="text/css" href="/styles/screen.css" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="/styles/ie8.css" />
+      <script src="/scripts/html5shiv.js"></script>
+    <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="/styles/screen.css">
+    <!--<link rel="stylesheet" href="/styles/pygments.css" type="text/css" media="screen">-->
 
-<!--[if lt IE 9]>
-<link rel="stylesheet" href="/styles/ie8.css">
-<script src="/scripts/html5shiv.js"></script>
-<![endif]-->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Untyped RSS Feed"
+      href="/feed/"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Untyped Atom Feed"
+      href="/feed/atom/"
+    />
+    <link rel="pingback" href="/xmlrpc.php" />
 
-<!--<link rel="stylesheet" href="/styles/pygments.css" type="text/css" media="screen">-->
+    <meta name="robots" content="max-image-preview:large" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Untyped &raquo; Scala Category Feed"
+      href="/untyping/category/scala/feed/"
+    />
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji: "\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2",
+        },
+      };
+      /*! This file is auto-generated */
+      !(function (i, n) {
+        var o, s, e;
+        function c(e) {
+          try {
+            var t = { supportTests: e, timestamp: new Date().valueOf() };
+            sessionStorage.setItem(o, JSON.stringify(t));
+          } catch (e) {}
+        }
+        function p(e, t, n) {
+          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0);
+          var t = new Uint32Array(
+              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+            ),
+            r =
+              (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+              e.fillText(n, 0, 0),
+              new Uint32Array(
+                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+              ));
+          return t.every(function (e, t) {
+            return e === r[t];
+          });
+        }
+        function u(e, t, n) {
+          switch (t) {
+            case "flag":
+              return n(e, "🏳️‍⚧️", "🏳️​⚧️")
+                ? !1
+                : !n(e, "🇺🇳", "🇺​🇳") && !n(e, "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");
+            case "emoji":
+              return !n(e, "🐦‍⬛", "🐦​⬛");
+          }
+          return !1;
+        }
+        function f(e, t, n) {
+          var r =
+              "undefined" != typeof WorkerGlobalScope &&
+              self instanceof WorkerGlobalScope
+                ? new OffscreenCanvas(300, 150)
+                : i.createElement("canvas"),
+            a = r.getContext("2d", { willReadFrequently: !0 }),
+            o = ((a.textBaseline = "top"), (a.font = "600 32px Arial"), {});
+          return (
+            e.forEach(function (e) {
+              o[e] = t(a, e, n);
+            }),
+            o
+          );
+        }
+        function t(e) {
+          var t = i.createElement("script");
+          (t.src = e), (t.defer = !0), i.head.appendChild(t);
+        }
+        "undefined" != typeof Promise &&
+          ((o = "wpEmojiSettingsSupports"),
+          (s = ["flag", "emoji"]),
+          (n.supports = { everything: !0, everythingExceptFlag: !0 }),
+          (e = new Promise(function (e) {
+            i.addEventListener("DOMContentLoaded", e, { once: !0 });
+          })),
+          new Promise(function (t) {
+            var n = (function () {
+              try {
+                var e = JSON.parse(sessionStorage.getItem(o));
+                if (
+                  "object" == typeof e &&
+                  "number" == typeof e.timestamp &&
+                  new Date().valueOf() < e.timestamp + 604800 &&
+                  "object" == typeof e.supportTests
+                )
+                  return e.supportTests;
+              } catch (e) {}
+              return null;
+            })();
+            if (!n) {
+              if (
+                "undefined" != typeof Worker &&
+                "undefined" != typeof OffscreenCanvas &&
+                "undefined" != typeof URL &&
+                URL.createObjectURL &&
+                "undefined" != typeof Blob
+              )
+                try {
+                  var e =
+                      "postMessage(" +
+                      f.toString() +
+                      "(" +
+                      [JSON.stringify(s), u.toString(), p.toString()].join(
+                        ","
+                      ) +
+                      "));",
+                    r = new Blob([e], { type: "text/javascript" }),
+                    a = new Worker(URL.createObjectURL(r), {
+                      name: "wpTestEmojiSupports",
+                    });
+                  return void (a.onmessage = function (e) {
+                    c((n = e.data)), a.terminate(), t(n);
+                  });
+                } catch (e) {}
+              c((n = f(s, u, p)));
+            }
+            t(n);
+          })
+            .then(function (e) {
+              for (var t in e)
+                (n.supports[t] = e[t]),
+                  (n.supports.everything =
+                    n.supports.everything && n.supports[t]),
+                  "flag" !== t &&
+                    (n.supports.everythingExceptFlag =
+                      n.supports.everythingExceptFlag && n.supports[t]);
+              (n.supports.everythingExceptFlag =
+                n.supports.everythingExceptFlag && !n.supports.flag),
+                (n.DOMReady = !1),
+                (n.readyCallback = function () {
+                  n.DOMReady = !0;
+                });
+            })
+            .then(function () {
+              return e;
+            })
+            .then(function () {
+              var e;
+              n.supports.everything ||
+                (n.readyCallback(),
+                (e = n.source || {}).concatemoji
+                  ? t(e.concatemoji)
+                  : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
+            }));
+      })((window, document), window._wpemojiSettings);
+      /* ]]> */
+    </script>
+    <style id="wp-emoji-styles-inline-css" type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="wp-block-library-css"
+      href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2"
+      type="text/css"
+      media="all"
+    />
+    <style id="classic-theme-styles-inline-css" type="text/css">
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em;
+      }
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+      :root {
+        --wp--preset--aspect-ratio--square: 1;
+        --wp--preset--aspect-ratio--4-3: 4/3;
+        --wp--preset--aspect-ratio--3-4: 3/4;
+        --wp--preset--aspect-ratio--3-2: 3/2;
+        --wp--preset--aspect-ratio--2-3: 2/3;
+        --wp--preset--aspect-ratio--16-9: 16/9;
+        --wp--preset--aspect-ratio--9-16: 9/16;
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+          6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+      }
+      :where(.is-layout-flex) {
+        gap: 0.5em;
+      }
+      :where(.is-layout-grid) {
+        gap: 0.5em;
+      }
+      body .is-layout-flex {
+        display: flex;
+      }
+      .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .is-layout-flex > :is(*, div) {
+        margin: 0;
+      }
+      body .is-layout-grid {
+        display: grid;
+      }
+      .is-layout-grid > :is(*, div) {
+        margin: 0;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :root :where(.wp-block-pullquote) {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+    </style>
+    <link rel="https://api.w.org/" href="/wp-json/" />
+    <link
+      rel="alternate"
+      title="JSON"
+      type="application/json"
+      href="/wp-json/wp/v2/categories/8"
+    />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      title="RSD"
+      href="/xmlrpc.php?rsd"
+    />
+    <style type="text/css">
+      .recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    </style>
+  </head>
 
-<link rel="alternate" type="application/rss+xml" title="Untyped RSS Feed" href="/feed/">
-<link rel="alternate" type="application/atom+xml" title="Untyped Atom Feed" href="/feed/atom/">
-<link rel="pingback" href="/xmlrpc.php">
-
-
-<meta name="robots" content="max-image-preview:large">
-<link rel="alternate" type="application/rss+xml" title="Untyped &raquo; Scala Category Feed" href="/untyping/category/scala/feed/">
-<script type="text/javascript">
-/* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
-/*! This file is auto-generated */
-!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-/* ]]> */
-</script>
-<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}</style>
-<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2" type="text/css" media="all">
-<style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
-<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
-:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
-<link rel="https://api.w.org/" href="/wp-json/">
-<link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/categories/8">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-</head>
-
-<body class="myna" data-goal="load">
-
-<header id="top">
-  <div class="container">
-    <div class="row">
-      <div class="span5 offset7">
-        <div class="overlay title">
-          <a href="/untyping">
-            <h1><img src="/styles/images/untyping-logo.png" alt="Untyping"></h1>
-            <span class="strapline">The Untyped Weblog.</span>
-          </a>
-        </div>
-
-        <div class="overlay about">
-          Read on and leave a comment<br>
-          or <a href="/">return to our portfolio.</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="shadow bottom"></div>
-</header>
-
-<div id="navbar-wrapper">
-  <nav id="navbar" class="navbar">
-    <div class="navbar-inner">
+  <body class="myna" data-goal="load">
+    <header id="top">
       <div class="container">
-        <ul class="nav">
-          <li><a href="/#top">Home</a></li>
-          <li><a href="/jobs">Jobs</a></li>
-          <li><a href="/untyping">Weblog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
+        <div class="row">
+          <div class="span5 offset7">
+            <div class="overlay title">
+              <a href="/untyping">
+                <h1>
+                  <img src="/styles/images/untyping-logo.png" alt="Untyping" />
+                </h1>
+                <span class="strapline">The Untyped Weblog.</span>
+              </a>
+            </div>
 
-<div class="shadow-wrapper">
-  <div class="shadow top light"></div>
-
-<div class="container">
-
-<h1 class="pagetitle">Posts in the &#8216;Scala&#8217; category</h1>
-
-<div class="row">
-<div id="blog" class="span10">
-<section id="post-11" class="post-11 post type-post status-publish format-standard hentry category-code category-functional-programming category-scala category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">20 Oct 2011</p>
-      <p class="author">by Dave</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2011/10/20/the-circus-is-in-town/" rel="bookmark" title="Permanent Link to The Circus is in Town">The Circus is in Town</a></h2>
-
-      <div class="entry">
-        <p>Following a couple of late caffeinated nights, we are pleased to announce that our latest project, <a href="http://bigtopweb.com/">Bigtop</a>, is finally set for beta release!</p>
-<p>Bigtop is a collection of libraries for web developers. Included in the first beta release are:</p>
-<ul>
-<li>
-<a href="http://bigtopweb.com/routes">Bigtop Routes</a> – a library for creating type-safe bidirectional mappings between URLs and Scala code;</li>
-<li>
-<a href="http://bigtopweb.com/routes">Bigtop Core</a> – a library for generating and manipulating URLs and hyperlinks in a functional style.</li>
-</ul>
-<p>Routes uses the <em>HList</em>-based approach to bidirectional pattern matching that Dave <a href="http://untyped.wpengine.com/2011/10/10/reading-writing-and-the-rest/">presented</a> at <em>Scala Lift-Off London 2011</em>. There are versions of the library for use with <a href="http://liftweb.net/">Lift</a>, <a href="https://github.com/scalatra/scalatra">Scalatra</a>, and plain old Java servlets.</p>
-<p>Check the <a href="http://bigtopweb.com/">Bigtop</a> web site for a getting started guide, API documentation, and links to the code and Maven repository.</p>
+            <div class="overlay about">
+              Read on and leave a comment<br />
+              or <a href="/">return to our portfolio.</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/code/" rel="category tag">Code</a>, <a href="/untyping/category/functional-programming/" rel="category tag">Functional Programming</a>, <a href="/untyping/category/scala/" rel="category tag">Scala</a>, <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on The Circus is in Town</span></span>      </p>
-    </div>
-  </div>
-</section>
+      <div class="shadow bottom"></div>
+    </header>
 
-<section id="post-13" class="post-13 post type-post status-publish format-standard hentry category-code category-front-page category-functional-programming category-scala category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">10 Oct 2011</p>
-      <p class="author">by Dave</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2011/10/10/reading-writing-and-the-rest/" rel="bookmark" title="Permanent Link to Reading, Writing, and the REST">Reading, Writing, and the REST</a></h2>
-
-      <div class="entry">
-        <p>I’ve just finished preparing the slides for my talk at <a href="http://skillsmatter.com/event/scala/scala-lift-off-london-2011">Scala Lift-Off London 2011</a> next week. The title of the talk is <em>A Route to the Three ‘R’s: Reading, Writing, and the REST</em>. Here’s the abstract:</p>
-<blockquote>
-<p>The mappings between URLs and code form an integral part of any web application. Many web frameworks help map from URLs to code, but the reverse mapping is often neglected, leaving developers to construct URLs via haphazard string manipulation. Furthermore, many frameworks do not match URLs in a type-safe manner.</p>
-<p>Scala provides all the tools we need to address this problem in a more comprehensive manner. In this talk we will walk through the creation of <a href="http://bigtopweb.com/routes">Bigtop Routes</a>, a bidirectional mapping library that is both type-safe and developer-friendly. We will pay particular attention to the ways in which Scala language features, such as flexible syntax, implicit conversions, and a touch of type-level programming, help to simplify the task at hand.</p>
-</blockquote>
-<p>The slides and code samples are all available from my <a href="https://github.com/davegurnell/scalalol-2011-talk">Github page</a>. Skills Matter have posted a <a href="http://skillsmatter.com/podcast/scala/reading-writing-rest">video of the talk</a> on their web site.</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/code/" rel="category tag">Code</a>, <a href="/untyping/category/front-page/" rel="category tag">Front page</a>, <a href="/untyping/category/functional-programming/" rel="category tag">Functional Programming</a>, <a href="/untyping/category/scala/" rel="category tag">Scala</a>, <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Reading, Writing, and the REST</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-19" class="post-19 post type-post status-publish format-standard hentry category-code category-fun category-scala">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">27 May 2011</p>
-      <p class="author">by Dave</p>
+    <div id="navbar-wrapper">
+      <nav id="navbar" class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li><a href="/#top">Home</a></li>
+              <li><a href="/untyping">Weblog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2011/05/27/friday-fun-with-scala-syntax/" rel="bookmark" title="Permanent Link to Friday fun with Scala syntax">Friday fun with Scala syntax</a></h2>
+    <div class="shadow-wrapper">
+      <div class="shadow top light"></div>
 
-      <div class="entry">
-        <p>It’s Friday – time to kick back and relax with two fun Scala programs we put together for your amusement.</p>
-<p>Scala has a pretty flexible syntax (although not as flexible as <a href="http://www.ccs.neu.edu/scheme/pubs/scheme2007-ctf.pdf">Racket’s</a>, of course) that makes it popular amongst proponents of <a href="http://www.scala-lang.org/node/1403">DSLs</a>. Not all DSLs have to be serious, however, as I’m about to prove.</p>
-<p>First up is Noel’s original concept – proof of his love for DSLs, expressed in purest code:</p>
-<div>
-<pre><code> class A(num: Int) { def Scala = "It's s" + ("o" * num) + " much fun!" } object I { def &lt;(num: Int) = new A(num) } I &lt;3 Scala // ==&gt; "It's sooo much fun!" </code></pre>
-</div>
-<p>Second is a simpler work that I call “The Startled Lolcat”:</p>
-<div>
-<pre><code> object O { def o = "What has been seen, cannot be unseen." } O.o // ==&gt; "What has been seen, cannot be unseen."</code></pre>
-<pre><code>
+      <div class="container">
+        <h1 class="pagetitle">Posts in the &#8216;Scala&#8217; category</h1>
+
+        <div class="row">
+          <div id="blog" class="span10">
+            <section
+              id="post-11"
+              class="post-11 post type-post status-publish format-standard hentry category-code category-functional-programming category-scala category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">20 Oct 2011</p>
+                  <p class="author">by Dave</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2011/10/20/the-circus-is-in-town/"
+                      rel="bookmark"
+                      title="Permanent Link to The Circus is in Town"
+                      >The Circus is in Town</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      Following a couple of late caffeinated nights, we are
+                      pleased to announce that our latest project, <a
+                        href="http://bigtopweb.com/"
+                        >Bigtop</a
+                      >, is finally set for beta release!
+                    </p>
+                    <p>
+                      Bigtop is a collection of libraries for web developers.
+                      Included in the first beta release are:
+                    </p>
+                    <ul>
+                      <li>
+                        <a href="http://bigtopweb.com/routes">Bigtop Routes</a
+                        > – a library for creating type-safe bidirectional
+                        mappings between URLs and Scala code;
+                      </li>
+                      <li>
+                        <a href="http://bigtopweb.com/routes">Bigtop Core</a> –
+                        a library for generating and manipulating URLs and
+                        hyperlinks in a functional style.
+                      </li>
+                    </ul>
+                    <p>
+                      Routes uses the <em>HList</em>-based approach to
+                      bidirectional pattern matching that Dave <a
+                        href="http://untyped.wpengine.com/2011/10/10/reading-writing-and-the-rest/"
+                        >presented</a
+                      > at <em>Scala Lift-Off London 2011</em>. There are
+                      versions of the library for use with <a
+                        href="http://liftweb.net/"
+                        >Lift</a
+                      >, <a href="https://github.com/scalatra/scalatra"
+                        >Scalatra</a
+                      >, and plain old Java servlets.
+                    </p>
+                    <p>
+                      Check the <a href="http://bigtopweb.com/">Bigtop</a> web
+                      site for a getting started guide, API documentation, and
+                      links to the code and Maven repository.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >,
+                    <a
+                      href="/untyping/category/functional-programming/"
+                      rel="category tag"
+                      >Functional Programming</a
+                    >,
+                    <a href="/untyping/category/scala/" rel="category tag"
+                      >Scala</a
+                    >,
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on The Circus is in Town</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-13"
+              class="post-13 post type-post status-publish format-standard hentry category-code category-front-page category-functional-programming category-scala category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">10 Oct 2011</p>
+                  <p class="author">by Dave</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2011/10/10/reading-writing-and-the-rest/"
+                      rel="bookmark"
+                      title="Permanent Link to Reading, Writing, and the REST"
+                      >Reading, Writing, and the REST</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      I’ve just finished preparing the slides for my talk at <a
+                        href="http://skillsmatter.com/event/scala/scala-lift-off-london-2011"
+                        >Scala Lift-Off London 2011</a
+                      > next week. The title of the talk is <em
+                        >A Route to the Three ‘R’s: Reading, Writing, and the
+                        REST</em
+                      >. Here’s the abstract:
+                    </p>
+                    <blockquote>
+                      <p>
+                        The mappings between URLs and code form an integral part
+                        of any web application. Many web frameworks help map
+                        from URLs to code, but the reverse mapping is often
+                        neglected, leaving developers to construct URLs via
+                        haphazard string manipulation. Furthermore, many
+                        frameworks do not match URLs in a type-safe manner.
+                      </p>
+                      <p>
+                        Scala provides all the tools we need to address this
+                        problem in a more comprehensive manner. In this talk we
+                        will walk through the creation of <a
+                          href="http://bigtopweb.com/routes"
+                          >Bigtop Routes</a
+                        >, a bidirectional mapping library that is both
+                        type-safe and developer-friendly. We will pay particular
+                        attention to the ways in which Scala language features,
+                        such as flexible syntax, implicit conversions, and a
+                        touch of type-level programming, help to simplify the
+                        task at hand.
+                      </p>
+                    </blockquote>
+                    <p>
+                      The slides and code samples are all available from my <a
+                        href="https://github.com/davegurnell/scalalol-2011-talk"
+                        >Github page</a
+                      >. Skills Matter have posted a <a
+                        href="http://skillsmatter.com/podcast/scala/reading-writing-rest"
+                        >video of the talk</a
+                      > on their web site.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >,
+                    <a href="/untyping/category/front-page/" rel="category tag"
+                      >Front page</a
+                    >,
+                    <a
+                      href="/untyping/category/functional-programming/"
+                      rel="category tag"
+                      >Functional Programming</a
+                    >,
+                    <a href="/untyping/category/scala/" rel="category tag"
+                      >Scala</a
+                    >,
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Reading, Writing, and the REST</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-19"
+              class="post-19 post type-post status-publish format-standard hentry category-code category-fun category-scala"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">27 May 2011</p>
+                  <p class="author">by Dave</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2011/05/27/friday-fun-with-scala-syntax/"
+                      rel="bookmark"
+                      title="Permanent Link to Friday fun with Scala syntax"
+                      >Friday fun with Scala syntax</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      It’s Friday – time to kick back and relax with two fun
+                      Scala programs we put together for your amusement.
+                    </p>
+                    <p>
+                      Scala has a pretty flexible syntax (although not as
+                      flexible as <a
+                        href="http://www.ccs.neu.edu/scheme/pubs/scheme2007-ctf.pdf"
+                        >Racket’s</a
+                      >, of course) that makes it popular amongst proponents
+                      of <a href="http://www.scala-lang.org/node/1403">DSLs</a>.
+                      Not all DSLs have to be serious, however, as I’m about to
+                      prove.
+                    </p>
+                    <p>
+                      First up is Noel’s original concept – proof of his love
+                      for DSLs, expressed in purest code:
+                    </p>
+                    <div>
+                      <pre><code> class A(num: Int) { def Scala = "It's s" + ("o" * num) + " much fun!" } object I { def &lt;(num: Int) = new A(num) } I &lt;3 Scala // ==&gt; "It's sooo much fun!" </code></pre>
+                    </div>
+                    <p>
+                      Second is a simpler work that I call “The Startled
+                      Lolcat”:
+                    </p>
+                    <div>
+                      <pre><code> object O { def o = "What has been seen, cannot be unseen." } O.o // ==&gt; "What has been seen, cannot be unseen."</code></pre>
+                      <pre><code>
 </code></pre>
-</div>
-      </div>
+                    </div>
+                  </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/code/" rel="category tag">Code</a>, <a href="/untyping/category/fun/" rel="category tag">Fun</a>, <a href="/untyping/category/scala/" rel="category tag">Scala</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Friday fun with Scala syntax</span></span>      </p>
-    </div>
-  </div>
-</section>
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >,
+                    <a href="/untyping/category/fun/" rel="category tag">Fun</a
+                    >,
+                    <a href="/untyping/category/scala/" rel="category tag"
+                      >Scala</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Friday fun with Scala syntax</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
 
-<section id="post-23" class="post-23 post type-post status-publish format-standard hentry category-business category-code category-design category-functional-programming category-scala">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">23 May 2011</p>
-      <p class="author">by Noel</p>
-    </div>
+            <section
+              id="post-23"
+              class="post-23 post type-post status-publish format-standard hentry category-business category-code category-design category-functional-programming category-scala"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">23 May 2011</p>
+                  <p class="author">by Noel</p>
+                </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2011/05/23/the-future-of-voip-phone-configuration-interfaces/" rel="bookmark" title="Permanent Link to The Future of VoIP Phone Configuration Interfaces">The Future of VoIP Phone Configuration Interfaces</a></h2>
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2011/05/23/the-future-of-voip-phone-configuration-interfaces/"
+                      rel="bookmark"
+                      title="Permanent Link to The Future of VoIP Phone Configuration Interfaces"
+                      >The Future of VoIP Phone Configuration Interfaces</a
+                    >
+                  </h2>
 
-      <div class="entry">
-        <p>We’ve recently completed a very fun and interesting job working on a new interface for managing <a href="http://en.wikipedia.org/wiki/Voice_over_IP">VoIP</a> phone systems. We have a VoIP phone, provided by <a href="http://loho.co.uk/">Loho</a>, who were also our client for this project. It’s great — we can forward calls to our mobiles, cart the phone around with us (plug it into a network connections and it just works), and it even emails us our voice messages. The only thing not great about our phone is the configuration interface. Luckily, that’s what this project set out to solve.</p>
-<p>The brief was to implement an elegant online phone configuration system. Alex, Director at Loho, provided the vision. We provided two weeks of development time, which was enough to create a working prototype. Alex has asked us to not give away too many details about the system, but I can show you a few screenshots. First up, here’s the main screen:</p>
-<p><a href="http://untyped.wpengine.com/wp-content/uploads/2011/05/loho-main-menu-sml.png"><img fetchpriority="high" decoding="async" title="loho-main-menu-sml" src="http://untyped.wpengine.com/wp-content/uploads/2011/05/loho-main-menu-sml.png" alt="The very stylish main menu of the VoIP administration tool we've built for Loho." width="420" height="197"></a></p>
-<p>The very stylish main menu of the VoIP administration tool we&#8217;ve built for Loho.</p>
-<p>Doesn’t give away much, does it? A bit more interesting is a detail of editing a configuration:</p>
-<p><a href="http://untyped.wpengine.com/wp-content/uploads/2011/05/loho-editor-sml.png"><img decoding="async" title="loho-editor-sml" src="http://untyped.wpengine.com/wp-content/uploads/2011/05/loho-editor-sml.png" alt="Also very stylish: editing the configuration of a voice menu" width="420" height="366"></a></p>
-<p>Also very stylish: editing the configuration of a voice menu</p>
-<p>Here I’m editing a voice menu — one of those “Press 1 if you’re interested in giving us all your money” type things.</p>
-<p>We think we’ve created a very nice system. Loho tell us they were overwhelmed with interest at a recent tradefair, suggesting we’re not alone in our opinion. While the interface is an important aspect of the work, the backend (which I can talk about!) is just as important. The main task was defining a data model to capture the rich feature set that Loho provide. This turned out to be very similar to designing a programming language and its intermediate representation. For example, we use a <a href="http://en.wikipedia.org/wiki/Continuation-passing_style">continuation-passing style</a> representation to avoid maintaining a stack on the server side. Our representation distinguishes between tail calls and normal function calls to avoid excessive resource consumption on the VoIP side. Relational databases don’t do a very good job of storing recursive datastructures, like the <a href="http://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> of a programming language, so we used Mongo for the data store. In addition to its flexible data model, <a href="http://www.youtube.com/watch?v=b2F-DItXtZs">Mongo is web scale</a> which has given us an immediate status boost at local programmer meetups.</p>
-<p>The backend code is implemented in Scala and Lift. There are actually two interfaces to the service. One is the nice interface the users see, and the other is a REST interface that is called by the Asterisk AGI scripts that implement the VoIP functionality. The Asterisk system doesn’t handle all the functionality we represent internally, so the REST interface includes a small interpreter that executes intermediate steps till we arrive at something Asterisk deals with.</p>
-      </div>
+                  <div class="entry">
+                    <p>
+                      We’ve recently completed a very fun and interesting job
+                      working on a new interface for managing <a
+                        href="http://en.wikipedia.org/wiki/Voice_over_IP"
+                        >VoIP</a
+                      > phone systems. We have a VoIP phone, provided by <a
+                        href="http://loho.co.uk/"
+                        >Loho</a
+                      >, who were also our client for this project. It’s great —
+                      we can forward calls to our mobiles, cart the phone around
+                      with us (plug it into a network connections and it just
+                      works), and it even emails us our voice messages. The only
+                      thing not great about our phone is the configuration
+                      interface. Luckily, that’s what this project set out to
+                      solve.
+                    </p>
+                    <p>
+                      The brief was to implement an elegant online phone
+                      configuration system. Alex, Director at Loho, provided the
+                      vision. We provided two weeks of development time, which
+                      was enough to create a working prototype. Alex has asked
+                      us to not give away too many details about the system, but
+                      I can show you a few screenshots. First up, here’s the
+                      main screen:
+                    </p>
+                    <p>
+                      <a
+                        href="http://untyped.wpengine.com/wp-content/uploads/2011/05/loho-main-menu-sml.png"
+                        ><img
+                          fetchpriority="high"
+                          decoding="async"
+                          title="loho-main-menu-sml"
+                          src="http://untyped.wpengine.com/wp-content/uploads/2011/05/loho-main-menu-sml.png"
+                          alt="The very stylish main menu of the VoIP administration tool we've built for Loho."
+                          width="420"
+                          height="197"
+                      /></a>
+                    </p>
+                    <p>
+                      The very stylish main menu of the VoIP administration tool
+                      we&#8217;ve built for Loho.
+                    </p>
+                    <p>
+                      Doesn’t give away much, does it? A bit more interesting is
+                      a detail of editing a configuration:
+                    </p>
+                    <p>
+                      <a
+                        href="http://untyped.wpengine.com/wp-content/uploads/2011/05/loho-editor-sml.png"
+                        ><img
+                          decoding="async"
+                          title="loho-editor-sml"
+                          src="http://untyped.wpengine.com/wp-content/uploads/2011/05/loho-editor-sml.png"
+                          alt="Also very stylish: editing the configuration of a voice menu"
+                          width="420"
+                          height="366"
+                      /></a>
+                    </p>
+                    <p>
+                      Also very stylish: editing the configuration of a voice
+                      menu
+                    </p>
+                    <p>
+                      Here I’m editing a voice menu — one of those “Press 1 if
+                      you’re interested in giving us all your money” type
+                      things.
+                    </p>
+                    <p>
+                      We think we’ve created a very nice system. Loho tell us
+                      they were overwhelmed with interest at a recent tradefair,
+                      suggesting we’re not alone in our opinion. While the
+                      interface is an important aspect of the work, the backend
+                      (which I can talk about!) is just as important. The main
+                      task was defining a data model to capture the rich feature
+                      set that Loho provide. This turned out to be very similar
+                      to designing a programming language and its intermediate
+                      representation. For example, we use a <a
+                        href="http://en.wikipedia.org/wiki/Continuation-passing_style"
+                        >continuation-passing style</a
+                      > representation to avoid maintaining a stack on the
+                      server side. Our representation distinguishes between tail
+                      calls and normal function calls to avoid excessive
+                      resource consumption on the VoIP side. Relational
+                      databases don’t do a very good job of storing recursive
+                      datastructures, like the <a
+                        href="http://en.wikipedia.org/wiki/Abstract_syntax_tree"
+                        >AST</a
+                      > of a programming language, so we used Mongo for the data
+                      store. In addition to its flexible data model, <a
+                        href="http://www.youtube.com/watch?v=b2F-DItXtZs"
+                        >Mongo is web scale</a
+                      > which has given us an immediate status boost at local
+                      programmer meetups.
+                    </p>
+                    <p>
+                      The backend code is implemented in Scala and Lift. There
+                      are actually two interfaces to the service. One is the
+                      nice interface the users see, and the other is a REST
+                      interface that is called by the Asterisk AGI scripts that
+                      implement the VoIP functionality. The Asterisk system
+                      doesn’t handle all the functionality we represent
+                      internally, so the REST interface includes a small
+                      interpreter that executes intermediate steps till we
+                      arrive at something Asterisk deals with.
+                    </p>
+                  </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/business/" rel="category tag">Business</a>, <a href="/untyping/category/code/" rel="category tag">Code</a>, <a href="/untyping/category/design/" rel="category tag">Design</a>, <a href="/untyping/category/functional-programming/" rel="category tag">Functional Programming</a>, <a href="/untyping/category/scala/" rel="category tag">Scala</a> |
-                <span>Comments Off<span class="screen-reader-text"> on The Future of VoIP Phone Configuration Interfaces</span></span>      </p>
-    </div>
-  </div>
-</section>
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/business/" rel="category tag"
+                      >Business</a
+                    >,
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >,
+                    <a href="/untyping/category/design/" rel="category tag"
+                      >Design</a
+                    >,
+                    <a
+                      href="/untyping/category/functional-programming/"
+                      rel="category tag"
+                      >Functional Programming</a
+                    >,
+                    <a href="/untyping/category/scala/" rel="category tag"
+                      >Scala</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on The Future of VoIP Phone Configuration
+                        Interfaces</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
 
-<section id="post-25" class="post-25 post type-post status-publish format-standard hentry category-code category-front-page category-javascript category-scala category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">6 Mar 2011</p>
-      <p class="author">by Dave</p>
-    </div>
+            <section
+              id="post-25"
+              class="post-25 post type-post status-publish format-standard hentry category-code category-front-page category-javascript category-scala category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">6 Mar 2011</p>
+                  <p class="author">by Dave</p>
+                </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2011/03/06/javascript-compilation-for-sbt/" rel="bookmark" title="Permanent Link to Javascript compilation for SBT">Javascript compilation for SBT</a></h2>
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2011/03/06/javascript-compilation-for-sbt/"
+                      rel="bookmark"
+                      title="Permanent Link to Javascript compilation for SBT"
+                      >Javascript compilation for SBT</a
+                    >
+                  </h2>
 
-      <div class="entry">
-        <p>Over the weekend I knocked up a little <a href="https://github.com/davegurnell/sbt-closure">SBT plugin</a> to wrap up the Javascript resources in our <a href="http://liftweb.net/">Lift</a> projects and deploy them as one big minified file. Read on to find out how it works, then grab yourself a copy and take it for a spin.</p>
-<p>The plugin scans your <tt>webapps</tt> directory and looks for files with the extensions <tt>.jsm</tt> or <tt>.jsmanifest</tt>. These files, called <em>Javascript Manifests</em>, describe lists of Javascript sources that should be combined into a single file. For example:</p>
-<pre># You can specify remote files using URLs...
+                  <div class="entry">
+                    <p>
+                      Over the weekend I knocked up a little <a
+                        href="https://github.com/davegurnell/sbt-closure"
+                        >SBT plugin</a
+                      > to wrap up the Javascript resources in our <a
+                        href="http://liftweb.net/"
+                        >Lift</a
+                      > projects and deploy them as one big minified file. Read
+                      on to find out how it works, then grab yourself a copy and
+                      take it for a spin.
+                    </p>
+                    <p>
+                      The plugin scans your <tt>webapps</tt> directory and looks
+                      for files with the
+                      extensions <tt>.jsm</tt> or <tt>.jsmanifest</tt>. These
+                      files, called <em>Javascript Manifests</em>, describe
+                      lists of Javascript sources that should be combined into a
+                      single file. For example:
+                    </p>
+                    <pre>
+# You can specify remote files using URLs...
 
 http://code.jquery.com/jquery-1.5.1.js
 
@@ -244,367 +1092,772 @@ http://code.jquery.com/jquery-1.5.1.js
 lib/foo.js
 bar.js
 
-# Blank lines and bash-style comments are also supported</pre>
-<p>Manifest compilation happens in two phases: first, the plugin downloads and caches any remote scripts specified using URLs. Second, it feeds all of the sources (remote and local) into Google’s<a href="http://code.google.com/closure/compiler/">Closure Compiler</a>, which concatenates them and minifies everything (and provides excellent services like static type checking to boot). The output from the compiler is a <tt>.js</tt> file with the same base name and relative path as the original manifest.</p>
-<p>There’s not a lot more to it than that. The plugin hooks into SBT’s standard compile and package phases, so your Javascript gets rebuilt automatically alongside your Scala code. If this sounds useful to you, please feel free to grab a copy and take it for a spin. Full details are available in the README on <a href="https://github.com/davegurnell/sbt-closure">Github</a>.</p>
-<p>I should point out that there are other useful SBT plugins that do a similar job. For example, I plagiarised extensively from Jon Hoffman’s<a href="https://github.com/hoffrocket/sbt-yui">YUI Compressor plugin</a> and Luke Amdor’s <a href="https://github.com/rubbish/coffee-script-sbt-plugin">Coffee Script plugin</a> when writing my code. These two particular examples don’t do file combination, though, and that was an important feature for our specific use case.</p>
+# Blank lines and bash-style comments are also supported</pre
+                    >
+                    <p>
+                      Manifest compilation happens in two phases: first, the
+                      plugin downloads and caches any remote scripts specified
+                      using URLs. Second, it feeds all of the sources (remote
+                      and local) into Google’s<a
+                        href="http://code.google.com/closure/compiler/"
+                        >Closure Compiler</a
+                      >, which concatenates them and minifies everything (and
+                      provides excellent services like static type checking to
+                      boot). The output from the compiler is a <tt>.js</tt> file
+                      with the same base name and relative path as the original
+                      manifest.
+                    </p>
+                    <p>
+                      There’s not a lot more to it than that. The plugin hooks
+                      into SBT’s standard compile and package phases, so your
+                      Javascript gets rebuilt automatically alongside your Scala
+                      code. If this sounds useful to you, please feel free to
+                      grab a copy and take it for a spin. Full details are
+                      available in the README on <a
+                        href="https://github.com/davegurnell/sbt-closure"
+                        >Github</a
+                      >.
+                    </p>
+                    <p>
+                      I should point out that there are other useful SBT plugins
+                      that do a similar job. For example, I plagiarised
+                      extensively from Jon Hoffman’s<a
+                        href="https://github.com/hoffrocket/sbt-yui"
+                        >YUI Compressor plugin</a
+                      > and Luke Amdor’s <a
+                        href="https://github.com/rubbish/coffee-script-sbt-plugin"
+                        >Coffee Script plugin</a
+                      > when writing my code. These two particular examples
+                      don’t do file combination, though, and that was an
+                      important feature for our specific use case.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >,
+                    <a href="/untyping/category/front-page/" rel="category tag"
+                      >Front page</a
+                    >,
+                    <a href="/untyping/category/javascript/" rel="category tag"
+                      >Javascript</a
+                    >,
+                    <a href="/untyping/category/scala/" rel="category tag"
+                      >Scala</a
+                    >,
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Javascript compilation for SBT</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-30"
+              class="post-30 post type-post status-publish format-standard hentry category-code category-scala category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">2 Mar 2011</p>
+                  <p class="author">by Dave</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2011/03/02/setting-the-run-mode-in-lift-web-apps/"
+                      rel="bookmark"
+                      title="Permanent Link to Setting the run.mode in Lift web apps"
+                      >Setting the run.mode in Lift web apps</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      <strong
+                        >Update: You can now set the run mode easy and
+                        conveniently using our <a
+                          href="https://github.com/untyped/sbt-plugins/tree/master/sbt-runmode"
+                          >sbt-runmode</a
+                        > plugin for SBT.</strong
+                      >
+                    </p>
+                    <div>
+                      <p>
+                        Setting the <a
+                          href="http://www.assembla.com/wiki/show/liftweb/Run_Modes"
+                          ><code>run.mode</code></a
+                        > in Lift applications is the source of a surprising
+                        number of questions. The documentation recommends
+                        passing it as a parameter when the JVM is invoked. This
+                        can be hard to achieve for various reasons. In our case
+                        our deployment is automated using <a
+                          href="http://www.opscode.com/"
+                          >Chef</a
+                        >, and scripts to start and stop the Jetty web server
+                        are installed by the package manager. We don’t really
+                        want to monkey around with these scripts, so we had to
+                        find another way. Jetty is written in Java, which means
+                        it must have a ridiculously complex XML configuration
+                        language. The Jetty developers turned it up to 11 by
+                        making their configuration language Turing complete, so
+                        we can actually set the system properties in a
+                        configuration file. The file we want to create
+                        is<code>WEB-INF/jetty-web.xml</code> and we want it to
+                        contain this:
+                      </p>
+                      <p>&nbsp;</p>
+                      <div id="gist-851037">
+                        <div>
+                          <div>
+                            <div>
+                              <div id="LC1">
+                                &lt;?xml version=&#8221;1.0&#8243;?&gt;
+                              </div>
+                              <div id="LC2">
+                                &lt;!DOCTYPE Configure PUBLIC &#8220;-//Mort Bay
+                                Consulting//DTD Configure//EN&#8221;
+                                &#8220;http://jetty.mortbay.org/configure.dtd&#8221;&gt;
+                              </div>
+                              <div id="LC3">
+                                &lt;Configure
+                                class=&#8221;org.mortbay.jetty.webapp.WebAppContext&#8221;&gt;
+                              </div>
+                              <div id="LC4">
+                                  &lt;Call class=&#8221;java.lang.System&#8221;
+                                name=&#8221;setProperty&#8221;&gt;
+                              </div>
+                              <div id="LC5">
+                                    &lt;Arg&gt;run.mode&lt;/Arg&gt;
+                              </div>
+                              <div id="LC6">
+                                    &lt;Arg&gt;production&lt;/Arg&gt;
+                              </div>
+                              <div id="LC7">  &lt;/Call&gt;</div>
+                              <div id="LC8">&lt;/Configure&gt;</div>
+                            </div>
+                          </div>
+                          <div>
+                            <a
+                              href="https://gist.github.com/raw/851037/c5a9010f6878f41cf1076b0b3ee93560c1aa374a/jetty-web.xml"
+                              >view raw</a
+                            ><a
+                              href="https://gist.github.com/851037#file_jetty_web.xml"
+                              >jetty-web.xml</a
+                            ><a href="https://gist.github.com/851037"
+                              >This Gist</a
+                            > brought to you by <a href="http://github.com/"
+                              >GitHub</a
+                            >.
+                          </div>
+                        </div>
+                      </div>
+                      <p>&nbsp;</p>
+                      <p>
+                        If we leave this around then our application will always
+                        run in production mode. We don’t want this when we’re
+                        developing as we won’t, for instance, get stack traces
+                        printed to the browser. Thus we should copy this file in
+                        when we package up the project, and remove it when the
+                        packaging step completes. Assuming you’re using SBT,
+                        store the above text
+                        in <code>project/jetty-web.xml</code> and add the
+                        following to your SBT project file to get this
+                        functionality:
+                      </p>
+                      <p>&nbsp;</p>
+                      <div id="gist-851037">
+                        <div>
+                          <div>
+                            <div>
+                              <div id="LC1">
+                                  val jettyWebPath = &#8220;src&#8221; /
+                                &#8220;main&#8221; / &#8220;webapp&#8221; /
+                                &#8220;WEB-INF&#8221; /
+                                &#8220;jetty-web.xml&#8221;
+                              </div>
+                              <div id="LC2"></div>
+                              <div id="LC3">
+                                  lazy val installProductionRunMode = task {
+                              </div>
+                              <div id="LC4">
+                                    FileUtilities.copyFile(&#8220;project&#8221;
+                                / &#8220;jetty-web.xml&#8221;,
+                              </div>
+                              <div id="LC5">
+                                                           jettyWebPath,
+                              </div>
+                              <div id="LC6">
+                                                           log)
+                              </div>
+                              <div id="LC7">
+                                    log.info(&#8220;Copied jetty-web.xml into
+                                place&#8221;)
+                              </div>
+                              <div id="LC8">    None</div>
+                              <div id="LC9">
+                                  } describedAs(&#8220;Install a jetty-web.xml
+                                that sets the run mode to production&#8221;)
+                              </div>
+                              <div id="LC10"></div>
+                              <div id="LC11">
+                                  lazy val superPackage = super.packageAction
+                                dependsOn(installProductionRunMode)
+                              </div>
+                              <div id="LC12"></div>
+                              <div id="LC13">
+                                  lazy val removeProductionRunMode = task {
+                              </div>
+                              <div id="LC14">
+                                    FileUtilities.clean(jettyWebPath, log)
+                              </div>
+                              <div id="LC15">    None</div>
+                              <div id="LC16">
+                                  } describedAs(&#8220;Remove jetty-web.xml and
+                                hence set run mode back to testing&#8221;)
+                              </div>
+                              <div id="LC17"></div>
+                              <div id="LC18">
+                                  override def packageAction =
+                                removeProductionRunMode dependsOn(superPackage)
+                                describedAs
+                                BasicWebScalaProject.PackageWarDescription
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <a
+                              href="https://gist.github.com/raw/851037/b5bb3e118e97dfe443d9b8b26a3fca011c8d25e7/Project.scala"
+                              >view raw</a
+                            ><a
+                              href="https://gist.github.com/851037#file_project.scala"
+                              >Project.scala</a
+                            ><a href="https://gist.github.com/851037"
+                              >This Gist</a
+                            > brought to you by <a href="http://github.com/"
+                              >GitHub</a
+                            >.
+                          </div>
+                        </div>
+                      </div>
+                      <p>&nbsp;</p>
+                      <p>
+                        This is pretty simple code. Basically it redefines
+                        the <code>package</code> action to first copy in
+                        the <code>jetty-web.xml</code> file, then it runs the
+                        original package action, and finally it deletes
+                        the <code>jetty-web.xml</code>. Now
+                        any <code>WAR</code>files you run under Jetty will
+                        automatically be in production mode, but calling<code
+                          >sbt jetty-run</code
+                        > will still give you development mode.
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >,
+                    <a href="/untyping/category/scala/" rel="category tag"
+                      >Scala</a
+                    >,
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Setting the run.mode in Lift web apps</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-46"
+              class="post-46 post type-post status-publish format-standard hentry category-code category-functional-programming category-scala category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">1 Dec 2010</p>
+                  <p class="author">by Dave</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2010/12/01/file-upload-using-comet-actors/"
+                      rel="bookmark"
+                      title="Permanent Link to File upload using Comet Actors"
+                      >File upload using Comet Actors</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      We’ve been using the <a href="http://liftweb.net/">Lift</a
+                      > web framework for a lot of web development work
+                      recently, and we’re very impressed some of its features.
+                      Lift’s Comet support, in particular, is a blessing for the
+                      kind of data-crunching back-end web sites we typically get
+                      involved in.
+                    </p>
+                    <p>
+                      Importing data from uploaded files, for example,
+                      frequently causes trouble. An import can take from a few
+                      seconds to a few minutes depending on the size of the file
+                      and the complexity of the data processing and validation
+                      involved. If the import takes more than a few seconds
+                      there is an increasing risk that the web browser will time
+                      out. If this happens we fail, because the user won’t know
+                      whether the import succeeded or not. Lift’s Comet actors
+                      provide a simple way around this problem. But before
+                      describing how they work, let’s quickly go over <a
+                        href="http://en.wikipedia.org/wiki/Comet_(programming)"
+                        >Comet</a
+                      > and <a href="http://en.wikipedia.org/wiki/Actor_model"
+                        >actors</a
+                      >.
+                    </p>
+                    <p>
+                      Comet is a way of doing push notifications over HTTP,
+                      which on the face of it appears to only support pull.
+                      Without the jargon, this means a way of allowing the
+                      server to send information to the web browser when that
+                      information is ready, not when the web browser checks for
+                      it. This gives us a better interface, as the UI can
+                      instantly reflect new data, and better resource
+                      consumption, as the client doesn’t have to continuously
+                      poll the server.
+                    </p>
+                    <p>
+                      There are two or three common ways of <a
+                        href="http://en.wikipedia.org/wiki/Comet_(programming)#Implementations"
+                        >implementing Comet</a
+                      >. Lift uses a mechanism called “long polling”, which
+                      implements Comet using plain old AJAX. As soon as the web
+                      page loads, the web browser sends an XMLHTTP request to
+                      the server. Instead of replying immediately the server
+                      keeps the connection around until it has information to
+                      push back. When information is available, the web server
+                      responds to the HTTP request, and the browser processes
+                      the response and immediately makes another request.  In
+                      other words, long polling uses HTTP’s pull mechanism to
+                      simulate push communication. This is all well and good,
+                      but it immediately raises two issues: how do we manage a
+                      large number of open, but idle, connections without
+                      swamping the server, and what programming model do we use
+                      to manage the additional complexity of Comet applications.
+                    </p>
+                    <p>
+                      Handing many idle open connections is relatively simple.
+                      The traditional model is to use one thread per request,
+                      but this doesn’t scale when many requests are idle for
+                      long periods. All modern operating systems provide a
+                      scalable event notification system, such as <a
+                        href="http://en.wikipedia.org/wiki/Epoll"
+                        >epoll</a
+                      > or <a href="http://en.wikipedia.org/wiki/Kqueue"
+                        >kqueue</a
+                      >, allowing a single thread to simultaneously monitor many
+                      connections for data. The JVM provides access to these
+                      systems via the <a
+                        href="http://download.oracle.com/javase/6/docs/api/java/nio/channels/Selector.html"
+                        >Selector</a
+                      > abstraction in the <a
+                        href="http://en.wikipedia.org/wiki/New_I/O"
+                        >NIO</a
+                      > package. All this is taken care of in the web framework,
+                      so the application programmer does not need to be aware of
+                      it. (Note that other languages present the same facilities
+                      in different ways. Erlang, for example, presents all IO
+                      operations as blocking, but the implementation uses the
+                      same scalable non-blocking OS services as the JVM. Erlang
+                      can do this as it doesn’t use as many resources per thread
+                      as the JVM does. This is an appealing choice as it
+                      provides a uniformity not found on the JVM, but impacts
+                      how Erlang handles multicore.)
+                    </p>
+                    <p>
+                      More relevant to the application programmer is the
+                      programming model used for Comet, and this is where actors
+                      come in. An actor is basically a thread with the important
+                      restriction that it only communicates with the outside
+                      world via messages. To ask an actor to do something, you
+                      send it a message. This is rather like a method call,
+                      except that the actor queues the message and processes it
+                      asynchronously. When an actor wants to communicate with
+                      another resource, it sends that resource a message. Since
+                      actors never share state with each other, there is never a
+                      need to lock resources to avoid concurrent access. This is
+                      a great model because all the complexities of programming
+                      with locks disappear. If you are interested in more
+                      information on the actor model in Scala try <a
+                        href="http://lamp.epfl.ch/~phaller/actors.html"
+                        >here for the original papers</a
+                      >, <a href="http://akkasource.org/"
+                        >here for the Akka framework</a
+                      > and <a
+                        href="http://blog.lostlake.org/index.php?/archives/96-Migrating-from-Scala-Actors-to-Lift-Actors.html"
+                        >here for a bit on Lift’s actors</a
+                      >.
+                    </p>
+                    <p>
+                      Actors are a natural fit for Comet. On the server each
+                      Comet connection is handled by a <em>Comet actor,</em
+                      > whose job it is to manage communication with a connected
+                      browser. Each actor is bound to a single user’s session,
+                      but actors persist across web requests. We can
+                      asynchronously send an actor messages (whether the user is
+                      looking at the web page or not), and have the actor buffer
+                      them for transmission to the browser. This means we’ve got
+                      almost all of our file upload functionality straight out
+                      of the box, without having to do any particularly tricky
+                      development.
+                    </p>
+                    <p>
+                      We put a proof-of-concept of the file uploader <a
+                        href="https://github.com/junglebarry/CometImport"
+                        >on Github</a
+                      >. The basic structure of the code is:
+                    </p>
+                    <ul>
+                      <li>
+                        When a file is uploaded it is handed off to a thread for
+                        processing, and a Comet actor is started to communicate
+                        with the client.
+                      </li>
+                      <li>
+                        The processing thread periodically sends messages to the
+                        actor, informing it of progress on the file upload.
+                      </li>
+                      <li>
+                        The Comet actor in turn communicates progress to the
+                        client.
+                      </li>
+                    </ul>
+                    <p>
+                      The great thing about this arrangement is that the user
+                      can navigate away from the page without aborting the file
+                      upload, and if they later return to the page they will get
+                      a progress update. It makes for a very pleasant UI.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >,
+                    <a
+                      href="/untyping/category/functional-programming/"
+                      rel="category tag"
+                      >Functional Programming</a
+                    >,
+                    <a href="/untyping/category/scala/" rel="category tag"
+                      >Scala</a
+                    >,
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on File upload using Comet Actors</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <nav>
+              <div class="row">
+                <div class="span8 offset2">
+                  <span class="newer"></span>
+                  <span class="older"></span>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="span2">
+            <div id="sidebar" class="small column two-of-two width300">
+              <ul>
+                <li id="search-2" class="widget widget_search">
+                  <form
+                    role="search"
+                    method="get"
+                    id="searchform"
+                    class="searchform"
+                    action="/"
+                  >
+                    <div>
+                      <label class="screen-reader-text" for="s"
+                        >Search for:</label
+                      >
+                      <input type="text" value="" name="s" id="s" />
+                      <input type="submit" id="searchsubmit" value="Search" />
+                    </div>
+                  </form>
+                </li>
+                <li id="recent-posts-2" class="widget widget_recent_entries">
+                  <h2 class="widgettitle">Recent Posts</h2>
+                  <ul>
+                    <li>
+                      <a
+                        href="/untyping/2013/08/07/writing-documentation-using-grunt-and-jekyll/"
+                        >Writing Documentation using Grunt and Jekyll</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2012/10/19/meanwhile-at-untyped-hq/"
+                        >Meanwhile, at Untyped HQ&#8230;</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2012/08/28/new-site/">New site</a>
+                    </li>
+                    <li>
+                      <a
+                        href="/untyping/2012/06/06/myna-for-wordpress-available-now/"
+                        aria-current="page"
+                        >Myna for WordPress available now!</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2011/10/20/the-circus-is-in-town/"
+                        >The Circus is in Town</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  id="recent-comments-2"
+                  class="widget widget_recent_comments"
+                >
+                  <h2 class="widgettitle">Recent Comments</h2>
+                  <ul id="recentcomments"></ul>
+                </li>
+                <li id="archives-2" class="widget widget_archive">
+                  <h2 class="widgettitle">Archives</h2>
+                  <ul>
+                    <li><a href="/untyping/2013/08/">August 2013</a></li>
+                    <li><a href="/untyping/2012/10/">October 2012</a></li>
+                    <li><a href="/untyping/2012/08/">August 2012</a></li>
+                    <li><a href="/untyping/2012/06/">June 2012</a></li>
+                    <li><a href="/untyping/2011/10/">October 2011</a></li>
+                    <li><a href="/untyping/2011/09/">September 2011</a></li>
+                    <li><a href="/untyping/2011/08/">August 2011</a></li>
+                    <li><a href="/untyping/2011/05/">May 2011</a></li>
+                    <li><a href="/untyping/2011/03/">March 2011</a></li>
+                    <li><a href="/untyping/2011/02/">February 2011</a></li>
+                    <li><a href="/untyping/2011/01/">January 2011</a></li>
+                    <li><a href="/untyping/2010/12/">December 2010</a></li>
+                    <li><a href="/untyping/2010/11/">November 2010</a></li>
+                    <li><a href="/untyping/2010/10/">October 2010</a></li>
+                    <li><a href="/untyping/2010/07/">July 2010</a></li>
+                    <li><a href="/untyping/2010/06/">June 2010</a></li>
+                    <li><a href="/untyping/2010/05/">May 2010</a></li>
+                    <li><a href="/untyping/2010/04/">April 2010</a></li>
+                    <li><a href="/untyping/2010/03/">March 2010</a></li>
+                    <li><a href="/untyping/2010/02/">February 2010</a></li>
+                    <li><a href="/untyping/2010/01/">January 2010</a></li>
+                    <li><a href="/untyping/2009/07/">July 2009</a></li>
+                    <li><a href="/untyping/2009/06/">June 2009</a></li>
+                    <li><a href="/untyping/2009/04/">April 2009</a></li>
+                    <li><a href="/untyping/2009/03/">March 2009</a></li>
+                    <li><a href="/untyping/2009/01/">January 2009</a></li>
+                    <li><a href="/untyping/2008/11/">November 2008</a></li>
+                    <li><a href="/untyping/2008/10/">October 2008</a></li>
+                    <li><a href="/untyping/2008/09/">September 2008</a></li>
+                    <li><a href="/untyping/2008/08/">August 2008</a></li>
+                    <li><a href="/untyping/2008/07/">July 2008</a></li>
+                    <li><a href="/untyping/2008/06/">June 2008</a></li>
+                    <li><a href="/untyping/2008/05/">May 2008</a></li>
+                    <li><a href="/untyping/2008/04/">April 2008</a></li>
+                    <li><a href="/untyping/2008/03/">March 2008</a></li>
+                    <li><a href="/untyping/2008/02/">February 2008</a></li>
+                    <li><a href="/untyping/2008/01/">January 2008</a></li>
+                    <li><a href="/untyping/2007/12/">December 2007</a></li>
+                    <li><a href="/untyping/2007/11/">November 2007</a></li>
+                    <li><a href="/untyping/2007/10/">October 2007</a></li>
+                    <li><a href="/untyping/2007/09/">September 2007</a></li>
+                    <li><a href="/untyping/2007/08/">August 2007</a></li>
+                    <li><a href="/untyping/2007/07/">July 2007</a></li>
+                    <li><a href="/untyping/2007/06/">June 2007</a></li>
+                    <li><a href="/untyping/2007/05/">May 2007</a></li>
+                    <li><a href="/untyping/2007/04/">April 2007</a></li>
+                    <li><a href="/untyping/2007/03/">March 2007</a></li>
+                    <li><a href="/untyping/2007/02/">February 2007</a></li>
+                    <li><a href="/untyping/2007/01/">January 2007</a></li>
+                    <li><a href="/untyping/2006/12/">December 2006</a></li>
+                    <li><a href="/untyping/2006/11/">November 2006</a></li>
+                    <li><a href="/untyping/2006/10/">October 2006</a></li>
+                    <li><a href="/untyping/2006/09/">September 2006</a></li>
+                    <li><a href="/untyping/2006/08/">August 2006</a></li>
+                    <li><a href="/untyping/2006/07/">July 2006</a></li>
+                    <li><a href="/untyping/2006/06/">June 2006</a></li>
+                    <li><a href="/untyping/2006/05/">May 2006</a></li>
+                    <li><a href="/untyping/2006/04/">April 2006</a></li>
+                    <li><a href="/untyping/2006/03/">March 2006</a></li>
+                    <li><a href="/untyping/2006/02/">February 2006</a></li>
+                    <li><a href="/untyping/2006/01/">January 2006</a></li>
+                    <li><a href="/untyping/2005/12/">December 2005</a></li>
+                    <li><a href="/untyping/2005/11/">November 2005</a></li>
+                    <li><a href="/untyping/2005/10/">October 2005</a></li>
+                    <li><a href="/untyping/2005/09/">September 2005</a></li>
+                    <li><a href="/untyping/2005/08/">August 2005</a></li>
+                    <li><a href="/untyping/2005/07/">July 2005</a></li>
+                    <li><a href="/untyping/2005/06/">June 2005</a></li>
+                    <li><a href="/untyping/2005/05/">May 2005</a></li>
+                    <li><a href="/untyping/2005/04/">April 2005</a></li>
+                  </ul>
+                </li>
+                <li id="categories-2" class="widget widget_categories">
+                  <h2 class="widgettitle">Categories</h2>
+                  <ul>
+                    <li class="cat-item cat-item-10">
+                      <a href="/untyping/category/business/">Business</a>
+                    </li>
+                    <li class="cat-item cat-item-7">
+                      <a href="/untyping/category/code/">Code</a>
+                    </li>
+                    <li class="cat-item cat-item-11">
+                      <a href="/untyping/category/design/">Design</a>
+                    </li>
+                    <li class="cat-item cat-item-3">
+                      <a href="/untyping/category/front-page/">Front page</a>
+                    </li>
+                    <li class="cat-item cat-item-9">
+                      <a href="/untyping/category/fun/">Fun</a>
+                    </li>
+                    <li class="cat-item cat-item-6">
+                      <a href="/untyping/category/functional-programming/"
+                        >Functional Programming</a
+                      >
+                    </li>
+                    <li class="cat-item cat-item-1">
+                      <a href="/untyping/category/general/">General</a>
+                    </li>
+                    <li class="cat-item cat-item-12">
+                      <a href="/untyping/category/javascript/">Javascript</a>
+                    </li>
+                    <li class="cat-item cat-item-14">
+                      <a href="/untyping/category/kahu/">Kahu</a>
+                    </li>
+                    <li class="cat-item cat-item-4">
+                      <a href="/untyping/category/myna/">Myna</a>
+                    </li>
+                    <li class="cat-item cat-item-13">
+                      <a href="/untyping/category/racket/">Racket</a>
+                    </li>
+                    <li class="cat-item cat-item-8 current-cat">
+                      <a aria-current="page" href="/untyping/category/scala/"
+                        >Scala</a
+                      >
+                    </li>
+                    <li class="cat-item cat-item-5">
+                      <a href="/untyping/category/web-development/"
+                        >Web development</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li id="meta-2" class="widget widget_meta">
+                  <h2 class="widgettitle">Meta</h2>
+                  <ul>
+                    <li><a href="/wp-login.php">Log in</a></li>
+                    <li><a href="/feed/">Entries feed</a></li>
+                    <li><a href="/comments/feed/">Comments feed</a></li>
+
+                    <li>
+                      <a href="https://en-gb.wordpress.org/">WordPress.org</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/code/" rel="category tag">Code</a>, <a href="/untyping/category/front-page/" rel="category tag">Front page</a>, <a href="/untyping/category/javascript/" rel="category tag">Javascript</a>, <a href="/untyping/category/scala/" rel="category tag">Scala</a>, <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Javascript compilation for SBT</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-30" class="post-30 post type-post status-publish format-standard hentry category-code category-scala category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">2 Mar 2011</p>
-      <p class="author">by Dave</p>
     </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2011/03/02/setting-the-run-mode-in-lift-web-apps/" rel="bookmark" title="Permanent Link to Setting the run.mode in Lift web apps">Setting the run.mode in Lift web apps</a></h2>
+    <footer id="contact">
+      <div class="shadow top"></div>
 
-      <div class="entry">
-        <p><strong>Update: You can now set the run mode easy and conveniently using our <a href="https://github.com/untyped/sbt-plugins/tree/master/sbt-runmode">sbt-runmode</a> plugin for SBT.</strong></p>
-<div>
-<p>Setting the <a href="http://www.assembla.com/wiki/show/liftweb/Run_Modes"><code>run.mode</code></a> in Lift applications is the source of a surprising number of questions. The documentation recommends passing it as a parameter when the JVM is invoked. This can be hard to achieve for various reasons. In our case our deployment is automated using <a href="http://www.opscode.com/">Chef</a>, and scripts to start and stop the Jetty web server are installed by the package manager. We don’t really want to monkey around with these scripts, so we had to find another way. Jetty is written in Java, which means it must have a ridiculously complex XML configuration language. The Jetty developers turned it up to 11 by making their configuration language Turing complete, so we can actually set the system properties in a configuration file. The file we want to create is<code>WEB-INF/jetty-web.xml</code> and we want it to contain this:</p>
-<p>&nbsp;</p>
-<div id="gist-851037">
-<div>
-<div>
-<div>
-<div id="LC1">&lt;?xml version=&#8221;1.0&#8243;?&gt;</div>
-<div id="LC2">&lt;!DOCTYPE Configure PUBLIC &#8220;-//Mort Bay Consulting//DTD Configure//EN&#8221; &#8220;http://jetty.mortbay.org/configure.dtd&#8221;&gt;</div>
-<div id="LC3">&lt;Configure class=&#8221;org.mortbay.jetty.webapp.WebAppContext&#8221;&gt;</div>
-<div id="LC4">  &lt;Call class=&#8221;java.lang.System&#8221; name=&#8221;setProperty&#8221;&gt;</div>
-<div id="LC5">    &lt;Arg&gt;run.mode&lt;/Arg&gt;</div>
-<div id="LC6">    &lt;Arg&gt;production&lt;/Arg&gt;</div>
-<div id="LC7">  &lt;/Call&gt;</div>
-<div id="LC8">&lt;/Configure&gt;</div>
-</div>
-</div>
-<div>
-<a href="https://gist.github.com/raw/851037/c5a9010f6878f41cf1076b0b3ee93560c1aa374a/jetty-web.xml">view raw</a><a href="https://gist.github.com/851037#file_jetty_web.xml">jetty-web.xml</a><a href="https://gist.github.com/851037">This Gist</a> brought to you by <a href="http://github.com/">GitHub</a>.</div>
-</div>
-</div>
-<p>&nbsp;</p>
-<p>If we leave this around then our application will always run in production mode. We don’t want this when we’re developing as we won’t, for instance, get stack traces printed to the browser. Thus we should copy this file in when we package up the project, and remove it when the packaging step completes. Assuming you’re using SBT, store the above text in <code>project/jetty-web.xml</code> and add the following to your SBT project file to get this functionality:</p>
-<p>&nbsp;</p>
-<div id="gist-851037">
-<div>
-<div>
-<div>
-<div id="LC1">  val jettyWebPath = &#8220;src&#8221; / &#8220;main&#8221; / &#8220;webapp&#8221; / &#8220;WEB-INF&#8221; / &#8220;jetty-web.xml&#8221;</div>
-<div id="LC2"></div>
-<div id="LC3">  lazy val installProductionRunMode = task {</div>
-<div id="LC4">    FileUtilities.copyFile(&#8220;project&#8221; / &#8220;jetty-web.xml&#8221;,</div>
-<div id="LC5">                           jettyWebPath,</div>
-<div id="LC6">                           log)</div>
-<div id="LC7">    log.info(&#8220;Copied jetty-web.xml into place&#8221;)</div>
-<div id="LC8">    None</div>
-<div id="LC9">  } describedAs(&#8220;Install a jetty-web.xml that sets the run mode to production&#8221;)</div>
-<div id="LC10"></div>
-<div id="LC11">  lazy val superPackage = super.packageAction dependsOn(installProductionRunMode)</div>
-<div id="LC12"></div>
-<div id="LC13">  lazy val removeProductionRunMode = task {</div>
-<div id="LC14">    FileUtilities.clean(jettyWebPath, log)</div>
-<div id="LC15">    None</div>
-<div id="LC16">  } describedAs(&#8220;Remove jetty-web.xml and hence set run mode back to testing&#8221;)</div>
-<div id="LC17"></div>
-<div id="LC18">  override def packageAction = removeProductionRunMode dependsOn(superPackage) describedAs BasicWebScalaProject.PackageWarDescription</div>
-</div>
-</div>
-<div>
-<a href="https://gist.github.com/raw/851037/b5bb3e118e97dfe443d9b8b26a3fca011c8d25e7/Project.scala">view raw</a><a href="https://gist.github.com/851037#file_project.scala">Project.scala</a><a href="https://gist.github.com/851037">This Gist</a> brought to you by <a href="http://github.com/">GitHub</a>.</div>
-</div>
-</div>
-<p>&nbsp;</p>
-<p>This is pretty simple code. Basically it redefines the <code>package</code> action to first copy in the <code>jetty-web.xml</code> file, then it runs the original package action, and finally it deletes the <code>jetty-web.xml</code>. Now any <code>WAR</code>files you run under Jetty will automatically be in production mode, but calling<code>sbt jetty-run</code> will still give you development mode.</p>
-</div>
+      <div class="container">
+        <h2>Stay in touch</h2>
+
+        <dl>
+          <dt>Telephone</dt>
+          <dd><a href="callto:+441212857400">0121 285 7400</a></dd>
+
+          <dt>Email</dt>
+          <dd>
+            <span class="email"
+              ><span class="recipient">info</span> at
+              <span class="domain">untyped</span></span
+            >
+          </dd>
+
+          <dt>Twitter</dt>
+          <dd><a href="http://twitter.com/untyped">@untyped</a></dd>
+
+          <dt>Address</dt>
+          <dd>
+            <address>
+              Untyped<br />
+              The Skiff<br />
+              30 Cheapside<br />
+              Brighton BN1 4GD
+            </address>
+          </dd>
+
+          <dt>UK company number</dt>
+          <dd>06226466</dd>
+
+          <dt>UK VAT number</dt>
+          <dd>941 0528 46</dd>
+        </dl>
+
+        <p class="copyright">
+          Copyright 2009 to 2017 <a href="/">Untyped Ltd</a>. Powered by
+          <a href="http://wordpress.org/" class="nocolor">WordPress</a>.
+          <a href="/terms" class="nocolor">Terms of use</a>.
+        </p>
       </div>
+    </footer>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/code/" rel="category tag">Code</a>, <a href="/untyping/category/scala/" rel="category tag">Scala</a>, <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Setting the run.mode in Lift web apps</span></span>      </p>
-    </div>
-  </div>
-</section>
+    <script
+      src="http://www.google-analytics.com/urchin.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      _uacct = "UA-183641-1";
+      urchinTracker();
+    </script>
 
-<section id="post-46" class="post-46 post type-post status-publish format-standard hentry category-code category-functional-programming category-scala category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">1 Dec 2010</p>
-      <p class="author">by Dave</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2010/12/01/file-upload-using-comet-actors/" rel="bookmark" title="Permanent Link to File upload using Comet Actors">File upload using Comet Actors</a></h2>
-
-      <div class="entry">
-        <p>We’ve been using the <a href="http://liftweb.net/">Lift</a> web framework for a lot of web development work recently, and we’re very impressed some of its features. Lift’s Comet support, in particular, is a blessing for the kind of data-crunching back-end web sites we typically get involved in.</p>
-<p>Importing data from uploaded files, for example, frequently causes trouble. An import can take from a few seconds to a few minutes depending on the size of the file and the complexity of the data processing and validation involved. If the import takes more than a few seconds there is an increasing risk that the web browser will time out. If this happens we fail, because the user won’t know whether the import succeeded or not. Lift’s Comet actors provide a simple way around this problem. But before describing how they work, let’s quickly go over <a href="http://en.wikipedia.org/wiki/Comet_(programming)">Comet</a> and <a href="http://en.wikipedia.org/wiki/Actor_model">actors</a>.</p>
-<p>Comet is a way of doing push notifications over HTTP, which on the face of it appears to only support pull. Without the jargon, this means a way of allowing the server to send information to the web browser when that information is ready, not when the web browser checks for it. This gives us a better interface, as the UI can instantly reflect new data, and better resource consumption, as the client doesn’t have to continuously poll the server.</p>
-<p>There are two or three common ways of <a href="http://en.wikipedia.org/wiki/Comet_(programming)#Implementations">implementing Comet</a>. Lift uses a mechanism called “long polling”, which implements Comet using plain old AJAX. As soon as the web page loads, the web browser sends an XMLHTTP request to the server. Instead of replying immediately the server keeps the connection around until it has information to push back. When information is available, the web server responds to the HTTP request, and the browser processes the response and immediately makes another request.  In other words, long polling uses HTTP’s pull mechanism to simulate push communication. This is all well and good, but it immediately raises two issues: how do we manage a large number of open, but idle, connections without swamping the server, and what programming model do we use to manage the additional complexity of Comet applications.</p>
-<p>Handing many idle open connections is relatively simple. The traditional model is to use one thread per request, but this doesn’t scale when many requests are idle for long periods. All modern operating systems provide a scalable event notification system, such as <a href="http://en.wikipedia.org/wiki/Epoll">epoll</a> or <a href="http://en.wikipedia.org/wiki/Kqueue">kqueue</a>, allowing a single thread to simultaneously monitor many connections for data. The JVM provides access to these systems via the <a href="http://download.oracle.com/javase/6/docs/api/java/nio/channels/Selector.html">Selector</a> abstraction in the <a href="http://en.wikipedia.org/wiki/New_I/O">NIO</a> package. All this is taken care of in the web framework, so the application programmer does not need to be aware of it. (Note that other languages present the same facilities in different ways. Erlang, for example, presents all IO operations as blocking, but the implementation uses the same scalable non-blocking OS services as the JVM. Erlang can do this as it doesn’t use as many resources per thread as the JVM does. This is an appealing choice as it provides a uniformity not found on the JVM, but impacts how Erlang handles multicore.)</p>
-<p>More relevant to the application programmer is the programming model used for Comet, and this is where actors come in. An actor is basically a thread with the important restriction that it only communicates with the outside world via messages. To ask an actor to do something, you send it a message. This is rather like a method call, except that the actor queues the message and processes it asynchronously. When an actor wants to communicate with another resource, it sends that resource a message. Since actors never share state with each other, there is never a need to lock resources to avoid concurrent access. This is a great model because all the complexities of programming with locks disappear. If you are interested in more information on the actor model in Scala try <a href="http://lamp.epfl.ch/~phaller/actors.html">here for the original papers</a>, <a href="http://akkasource.org/">here for the Akka framework</a> and <a href="http://blog.lostlake.org/index.php?/archives/96-Migrating-from-Scala-Actors-to-Lift-Actors.html">here for a bit on Lift’s actors</a>.</p>
-<p>Actors are a natural fit for Comet. On the server each Comet connection is handled by a <em>Comet actor,</em> whose job it is to manage communication with a connected browser. Each actor is bound to a single user’s session, but actors persist across web requests. We can asynchronously send an actor messages (whether the user is looking at the web page or not), and have the actor buffer them for transmission to the browser. This means we’ve got almost all of our file upload functionality straight out of the box, without having to do any particularly tricky development.</p>
-<p>We put a proof-of-concept of the file uploader <a href="https://github.com/junglebarry/CometImport">on Github</a>. The basic structure of the code is:</p>
-<ul>
-<li>When a file is uploaded it is handed off to a thread for processing, and a Comet actor is started to communicate with the client.</li>
-<li>The processing thread periodically sends messages to the actor, informing it of progress on the file upload.</li>
-<li>The Comet actor in turn communicates progress to the client.</li>
-</ul>
-<p>The great thing about this arrangement is that the user can navigate away from the page without aborting the file upload, and if they later return to the page they will get a progress update. It makes for a very pleasant UI.</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/code/" rel="category tag">Code</a>, <a href="/untyping/category/functional-programming/" rel="category tag">Functional Programming</a>, <a href="/untyping/category/scala/" rel="category tag">Scala</a>, <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on File upload using Comet Actors</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<nav>
-  <div class="row">
-    <div class="span8 offset2">
-      <span class="newer"></span>
-      <span class="older"></span>
-      <div class="clear"></div>
-    </div>
-  </div>
-</nav>
-
-
-</div>
-<div class="span2">
-
-<div id="sidebar" class="small column two-of-two width300">
-
-<ul>
-<li id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
-				<div>
-					<label class="screen-reader-text" for="s">Search for:</label>
-					<input type="text" value="" name="s" id="s">
-					<input type="submit" id="searchsubmit" value="Search">
-				</div>
-			</form></li>
-		<li id="recent-posts-2" class="widget widget_recent_entries">
-		<h2 class="widgettitle">Recent Posts</h2>
-		<ul>
-											<li>
-					<a href="/untyping/2013/08/07/writing-documentation-using-grunt-and-jekyll/">Writing Documentation using Grunt and Jekyll</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/10/19/meanwhile-at-untyped-hq/">Meanwhile, at Untyped HQ&#8230;</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/08/28/new-site/">New site</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/06/06/myna-for-wordpress-available-now/" aria-current="page">Myna for WordPress available now!</a>
-									</li>
-											<li>
-					<a href="/untyping/2011/10/20/the-circus-is-in-town/">The Circus is in Town</a>
-									</li>
-					</ul>
-
-		</li>
-<li id="recent-comments-2" class="widget widget_recent_comments">
-<h2 class="widgettitle">Recent Comments</h2>
-<ul id="recentcomments"></ul>
-</li>
-<li id="archives-2" class="widget widget_archive">
-<h2 class="widgettitle">Archives</h2>
-			<ul>
-					<li><a href="/untyping/2013/08/">August 2013</a></li>
-	<li><a href="/untyping/2012/10/">October 2012</a></li>
-	<li><a href="/untyping/2012/08/">August 2012</a></li>
-	<li><a href="/untyping/2012/06/">June 2012</a></li>
-	<li><a href="/untyping/2011/10/">October 2011</a></li>
-	<li><a href="/untyping/2011/09/">September 2011</a></li>
-	<li><a href="/untyping/2011/08/">August 2011</a></li>
-	<li><a href="/untyping/2011/05/">May 2011</a></li>
-	<li><a href="/untyping/2011/03/">March 2011</a></li>
-	<li><a href="/untyping/2011/02/">February 2011</a></li>
-	<li><a href="/untyping/2011/01/">January 2011</a></li>
-	<li><a href="/untyping/2010/12/">December 2010</a></li>
-	<li><a href="/untyping/2010/11/">November 2010</a></li>
-	<li><a href="/untyping/2010/10/">October 2010</a></li>
-	<li><a href="/untyping/2010/07/">July 2010</a></li>
-	<li><a href="/untyping/2010/06/">June 2010</a></li>
-	<li><a href="/untyping/2010/05/">May 2010</a></li>
-	<li><a href="/untyping/2010/04/">April 2010</a></li>
-	<li><a href="/untyping/2010/03/">March 2010</a></li>
-	<li><a href="/untyping/2010/02/">February 2010</a></li>
-	<li><a href="/untyping/2010/01/">January 2010</a></li>
-	<li><a href="/untyping/2009/07/">July 2009</a></li>
-	<li><a href="/untyping/2009/06/">June 2009</a></li>
-	<li><a href="/untyping/2009/04/">April 2009</a></li>
-	<li><a href="/untyping/2009/03/">March 2009</a></li>
-	<li><a href="/untyping/2009/01/">January 2009</a></li>
-	<li><a href="/untyping/2008/11/">November 2008</a></li>
-	<li><a href="/untyping/2008/10/">October 2008</a></li>
-	<li><a href="/untyping/2008/09/">September 2008</a></li>
-	<li><a href="/untyping/2008/08/">August 2008</a></li>
-	<li><a href="/untyping/2008/07/">July 2008</a></li>
-	<li><a href="/untyping/2008/06/">June 2008</a></li>
-	<li><a href="/untyping/2008/05/">May 2008</a></li>
-	<li><a href="/untyping/2008/04/">April 2008</a></li>
-	<li><a href="/untyping/2008/03/">March 2008</a></li>
-	<li><a href="/untyping/2008/02/">February 2008</a></li>
-	<li><a href="/untyping/2008/01/">January 2008</a></li>
-	<li><a href="/untyping/2007/12/">December 2007</a></li>
-	<li><a href="/untyping/2007/11/">November 2007</a></li>
-	<li><a href="/untyping/2007/10/">October 2007</a></li>
-	<li><a href="/untyping/2007/09/">September 2007</a></li>
-	<li><a href="/untyping/2007/08/">August 2007</a></li>
-	<li><a href="/untyping/2007/07/">July 2007</a></li>
-	<li><a href="/untyping/2007/06/">June 2007</a></li>
-	<li><a href="/untyping/2007/05/">May 2007</a></li>
-	<li><a href="/untyping/2007/04/">April 2007</a></li>
-	<li><a href="/untyping/2007/03/">March 2007</a></li>
-	<li><a href="/untyping/2007/02/">February 2007</a></li>
-	<li><a href="/untyping/2007/01/">January 2007</a></li>
-	<li><a href="/untyping/2006/12/">December 2006</a></li>
-	<li><a href="/untyping/2006/11/">November 2006</a></li>
-	<li><a href="/untyping/2006/10/">October 2006</a></li>
-	<li><a href="/untyping/2006/09/">September 2006</a></li>
-	<li><a href="/untyping/2006/08/">August 2006</a></li>
-	<li><a href="/untyping/2006/07/">July 2006</a></li>
-	<li><a href="/untyping/2006/06/">June 2006</a></li>
-	<li><a href="/untyping/2006/05/">May 2006</a></li>
-	<li><a href="/untyping/2006/04/">April 2006</a></li>
-	<li><a href="/untyping/2006/03/">March 2006</a></li>
-	<li><a href="/untyping/2006/02/">February 2006</a></li>
-	<li><a href="/untyping/2006/01/">January 2006</a></li>
-	<li><a href="/untyping/2005/12/">December 2005</a></li>
-	<li><a href="/untyping/2005/11/">November 2005</a></li>
-	<li><a href="/untyping/2005/10/">October 2005</a></li>
-	<li><a href="/untyping/2005/09/">September 2005</a></li>
-	<li><a href="/untyping/2005/08/">August 2005</a></li>
-	<li><a href="/untyping/2005/07/">July 2005</a></li>
-	<li><a href="/untyping/2005/06/">June 2005</a></li>
-	<li><a href="/untyping/2005/05/">May 2005</a></li>
-	<li><a href="/untyping/2005/04/">April 2005</a></li>
-			</ul>
-
-			</li>
-<li id="categories-2" class="widget widget_categories">
-<h2 class="widgettitle">Categories</h2>
-			<ul>
-					<li class="cat-item cat-item-10">
-<a href="/untyping/category/business/">Business</a>
-</li>
-	<li class="cat-item cat-item-7">
-<a href="/untyping/category/code/">Code</a>
-</li>
-	<li class="cat-item cat-item-11">
-<a href="/untyping/category/design/">Design</a>
-</li>
-	<li class="cat-item cat-item-3">
-<a href="/untyping/category/front-page/">Front page</a>
-</li>
-	<li class="cat-item cat-item-9">
-<a href="/untyping/category/fun/">Fun</a>
-</li>
-	<li class="cat-item cat-item-6">
-<a href="/untyping/category/functional-programming/">Functional Programming</a>
-</li>
-	<li class="cat-item cat-item-1">
-<a href="/untyping/category/general/">General</a>
-</li>
-	<li class="cat-item cat-item-12">
-<a href="/untyping/category/javascript/">Javascript</a>
-</li>
-	<li class="cat-item cat-item-14">
-<a href="/untyping/category/kahu/">Kahu</a>
-</li>
-	<li class="cat-item cat-item-4">
-<a href="/untyping/category/myna/">Myna</a>
-</li>
-	<li class="cat-item cat-item-13">
-<a href="/untyping/category/racket/">Racket</a>
-</li>
-	<li class="cat-item cat-item-8 current-cat">
-<a aria-current="page" href="/untyping/category/scala/">Scala</a>
-</li>
-	<li class="cat-item cat-item-5">
-<a href="/untyping/category/web-development/">Web development</a>
-</li>
-			</ul>
-
-			</li>
-<li id="meta-2" class="widget widget_meta">
-<h2 class="widgettitle">Meta</h2>
-		<ul>
-						<li><a href="/wp-login.php">Log in</a></li>
-			<li><a href="/feed/">Entries feed</a></li>
-			<li><a href="/comments/feed/">Comments feed</a></li>
-
-			<li><a href="https://en-gb.wordpress.org/">WordPress.org</a></li>
-		</ul>
-
-		</li>
-</ul>
-</div>
-
-
-</div>
-</div>
-</div>
-
-</div>
-
-<footer id="contact">
-  <div class="shadow top"></div>
-
-  <div class="container">
-    <h2>Stay in touch</h2>
-
-    <dl>
-      <dt>Telephone</dt>
-      <dd><a href="callto:+441212857400">0121 285 7400</a></dd>
-
-      <dt>Email</dt>
-      <dd><span class="email"><span class="recipient">info</span> at <span class="domain">untyped</span></span></dd>
-
-      <dt>Twitter</dt>
-      <dd><a href="http://twitter.com/untyped">@untyped</a></dd>
-
-      <dt>Address</dt>
-      <dd>
-        <address>
-          Untyped<br>
-          The Skiff<br>
-          30 Cheapside<br>
-          Brighton BN1 4GD
-        </address>
-      </dd>
-
-      <dt>UK company number</dt>
-      <dd>06226466</dd>
-
-      <dt>UK VAT number</dt>
-      <dd>941 0528 46</dd>
-    </dl>
-
-    <p class="copyright">
-      Copyright 2009 to 2017 <a href="/">Untyped Ltd</a>.
-      Powered by <a href="http://wordpress.org/" class="nocolor">WordPress</a>.
-      <a href="/terms" class="nocolor">Terms of use</a>.
-    </p>
-  </div>
-</footer>
-
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">_uacct = "UA-183641-1";
-urchinTracker();</script>
-
-<script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
-<script src="/scripts/untyped.js"></script>
-
-</body>
+    <script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="/scripts/untyped.js"></script>
+  </body>
 </html>

@@ -1,683 +1,1846 @@
 <!DOCTYPE html>
 <html id="untyping" lang="en">
+  <head>
+    <title>Untyping &#8211; Untyping</title>
 
-<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Untyping &#8211;  Untyping</title>
+    <link rel="stylesheet" type="text/css" href="/styles/screen.css" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="/styles/ie8.css" />
+      <script src="/scripts/html5shiv.js"></script>
+    <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="/styles/screen.css">
+    <!--<link rel="stylesheet" href="/styles/pygments.css" type="text/css" media="screen">-->
 
-<!--[if lt IE 9]>
-<link rel="stylesheet" href="/styles/ie8.css">
-<script src="/scripts/html5shiv.js"></script>
-<![endif]-->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Untyped RSS Feed"
+      href="/feed/"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Untyped Atom Feed"
+      href="/feed/atom/"
+    />
+    <link rel="pingback" href="/xmlrpc.php" />
 
-<!--<link rel="stylesheet" href="/styles/pygments.css" type="text/css" media="screen">-->
+    <meta name="robots" content="max-image-preview:large" />
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji: "\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2",
+        },
+      };
+      /*! This file is auto-generated */
+      !(function (i, n) {
+        var o, s, e;
+        function c(e) {
+          try {
+            var t = { supportTests: e, timestamp: new Date().valueOf() };
+            sessionStorage.setItem(o, JSON.stringify(t));
+          } catch (e) {}
+        }
+        function p(e, t, n) {
+          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0);
+          var t = new Uint32Array(
+              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+            ),
+            r =
+              (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+              e.fillText(n, 0, 0),
+              new Uint32Array(
+                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+              ));
+          return t.every(function (e, t) {
+            return e === r[t];
+          });
+        }
+        function u(e, t, n) {
+          switch (t) {
+            case "flag":
+              return n(e, "🏳️‍⚧️", "🏳️​⚧️")
+                ? !1
+                : !n(e, "🇺🇳", "🇺​🇳") && !n(e, "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");
+            case "emoji":
+              return !n(e, "🐦‍⬛", "🐦​⬛");
+          }
+          return !1;
+        }
+        function f(e, t, n) {
+          var r =
+              "undefined" != typeof WorkerGlobalScope &&
+              self instanceof WorkerGlobalScope
+                ? new OffscreenCanvas(300, 150)
+                : i.createElement("canvas"),
+            a = r.getContext("2d", { willReadFrequently: !0 }),
+            o = ((a.textBaseline = "top"), (a.font = "600 32px Arial"), {});
+          return (
+            e.forEach(function (e) {
+              o[e] = t(a, e, n);
+            }),
+            o
+          );
+        }
+        function t(e) {
+          var t = i.createElement("script");
+          (t.src = e), (t.defer = !0), i.head.appendChild(t);
+        }
+        "undefined" != typeof Promise &&
+          ((o = "wpEmojiSettingsSupports"),
+          (s = ["flag", "emoji"]),
+          (n.supports = { everything: !0, everythingExceptFlag: !0 }),
+          (e = new Promise(function (e) {
+            i.addEventListener("DOMContentLoaded", e, { once: !0 });
+          })),
+          new Promise(function (t) {
+            var n = (function () {
+              try {
+                var e = JSON.parse(sessionStorage.getItem(o));
+                if (
+                  "object" == typeof e &&
+                  "number" == typeof e.timestamp &&
+                  new Date().valueOf() < e.timestamp + 604800 &&
+                  "object" == typeof e.supportTests
+                )
+                  return e.supportTests;
+              } catch (e) {}
+              return null;
+            })();
+            if (!n) {
+              if (
+                "undefined" != typeof Worker &&
+                "undefined" != typeof OffscreenCanvas &&
+                "undefined" != typeof URL &&
+                URL.createObjectURL &&
+                "undefined" != typeof Blob
+              )
+                try {
+                  var e =
+                      "postMessage(" +
+                      f.toString() +
+                      "(" +
+                      [JSON.stringify(s), u.toString(), p.toString()].join(
+                        ","
+                      ) +
+                      "));",
+                    r = new Blob([e], { type: "text/javascript" }),
+                    a = new Worker(URL.createObjectURL(r), {
+                      name: "wpTestEmojiSupports",
+                    });
+                  return void (a.onmessage = function (e) {
+                    c((n = e.data)), a.terminate(), t(n);
+                  });
+                } catch (e) {}
+              c((n = f(s, u, p)));
+            }
+            t(n);
+          })
+            .then(function (e) {
+              for (var t in e)
+                (n.supports[t] = e[t]),
+                  (n.supports.everything =
+                    n.supports.everything && n.supports[t]),
+                  "flag" !== t &&
+                    (n.supports.everythingExceptFlag =
+                      n.supports.everythingExceptFlag && n.supports[t]);
+              (n.supports.everythingExceptFlag =
+                n.supports.everythingExceptFlag && !n.supports.flag),
+                (n.DOMReady = !1),
+                (n.readyCallback = function () {
+                  n.DOMReady = !0;
+                });
+            })
+            .then(function () {
+              return e;
+            })
+            .then(function () {
+              var e;
+              n.supports.everything ||
+                (n.readyCallback(),
+                (e = n.source || {}).concatemoji
+                  ? t(e.concatemoji)
+                  : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
+            }));
+      })((window, document), window._wpemojiSettings);
+      /* ]]> */
+    </script>
+    <style id="wp-emoji-styles-inline-css" type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="wp-block-library-css"
+      href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2"
+      type="text/css"
+      media="all"
+    />
+    <style id="classic-theme-styles-inline-css" type="text/css">
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em;
+      }
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+      :root {
+        --wp--preset--aspect-ratio--square: 1;
+        --wp--preset--aspect-ratio--4-3: 4/3;
+        --wp--preset--aspect-ratio--3-4: 3/4;
+        --wp--preset--aspect-ratio--3-2: 3/2;
+        --wp--preset--aspect-ratio--2-3: 2/3;
+        --wp--preset--aspect-ratio--16-9: 16/9;
+        --wp--preset--aspect-ratio--9-16: 9/16;
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+          6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+      }
+      :where(.is-layout-flex) {
+        gap: 0.5em;
+      }
+      :where(.is-layout-grid) {
+        gap: 0.5em;
+      }
+      body .is-layout-flex {
+        display: flex;
+      }
+      .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .is-layout-flex > :is(*, div) {
+        margin: 0;
+      }
+      body .is-layout-grid {
+        display: grid;
+      }
+      .is-layout-grid > :is(*, div) {
+        margin: 0;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :root :where(.wp-block-pullquote) {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+    </style>
+    <link rel="https://api.w.org/" href="/wp-json/" />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      title="RSD"
+      href="/xmlrpc.php?rsd"
+    />
+    <style type="text/css">
+      .recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    </style>
+  </head>
 
-<link rel="alternate" type="application/rss+xml" title="Untyped RSS Feed" href="/feed/">
-<link rel="alternate" type="application/atom+xml" title="Untyped Atom Feed" href="/feed/atom/">
-<link rel="pingback" href="/xmlrpc.php">
-
-
-<meta name="robots" content="max-image-preview:large">
-<script type="text/javascript">
-/* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
-/*! This file is auto-generated */
-!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-/* ]]> */
-</script>
-<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}</style>
-<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2" type="text/css" media="all">
-<style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
-<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
-:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
-<link rel="https://api.w.org/" href="/wp-json/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-</head>
-
-<body class="myna" data-goal="load">
-
-<header id="top">
-  <div class="container">
-    <div class="row">
-      <div class="span5 offset7">
-        <div class="overlay title">
-          <a href="/untyping">
-            <h1><img src="/styles/images/untyping-logo.png" alt="Untyping"></h1>
-            <span class="strapline">The Untyped Weblog.</span>
-          </a>
-        </div>
-
-        <div class="overlay about">
-          Read on and leave a comment<br>
-          or <a href="/">return to our portfolio.</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="shadow bottom"></div>
-</header>
-
-<div id="navbar-wrapper">
-  <nav id="navbar" class="navbar">
-    <div class="navbar-inner">
+  <body class="myna" data-goal="load">
+    <header id="top">
       <div class="container">
-        <ul class="nav">
-          <li><a href="/#top">Home</a></li>
-          <li><a href="/jobs">Jobs</a></li>
-          <li><a href="/untyping">Weblog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
+        <div class="row">
+          <div class="span5 offset7">
+            <div class="overlay title">
+              <a href="/untyping">
+                <h1>
+                  <img src="/styles/images/untyping-logo.png" alt="Untyping" />
+                </h1>
+                <span class="strapline">The Untyped Weblog.</span>
+              </a>
+            </div>
 
-<div class="shadow-wrapper">
-  <div class="shadow top light"></div>
-
-<div class="container">
-<div class="row">
-<div id="blog" class="span10">
-<section id="post-326" class="post-326 post type-post status-publish format-standard hentry category-fun">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">22 Jan 2006</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2006/01/22/a-game-a-week/" rel="bookmark" title="Permanent Link to A Game A Week">A Game A Week</a></h2>
-
-      <div class="entry">
-        <p>At the <a href="http://www.experimentalgameplay.com/">Experimental Gameplay Project</a> at CMU the participants were challenged to create a game about a particular theme every week. The results are impressive, but more interesting are <a href="http://www.gamasutra.com/features/20051026/gabler_01.shtml">the insights</a><a href="http://www.etc.cmu.edu/projects/experimentalgameplay/images/ExperimentalGameplayPostmortem.pdf">derived from observing the process</a>. It’s not about games. It’s about using extreme resource constraints to force innovation. It’s about accepting failure as a necessary part of creativity. It should be read by anyone who wants to turn a big idea into reality.</p>
+            <div class="overlay about">
+              Read on and leave a comment<br />
+              or <a href="/">return to our portfolio.</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/fun/" rel="category tag">Fun</a> |
-                <span>Comments Off<span class="screen-reader-text"> on A Game A Week</span></span>      </p>
+      <div class="shadow bottom"></div>
+    </header>
+
+    <div id="navbar-wrapper">
+      <nav id="navbar" class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li><a href="/#top">Home</a></li>
+              <li><a href="/untyping">Weblog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-  </div>
-</section>
 
-<section id="post-328" class="post-328 post type-post status-publish format-standard hentry category-business">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">21 Jan 2006</p>
-      <p class="author">by Noel</p>
-    </div>
+    <div class="shadow-wrapper">
+      <div class="shadow top light"></div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2006/01/21/untyped-hosting/" rel="bookmark" title="Permanent Link to Untyped hosting?">Untyped hosting?</a></h2>
+      <div class="container">
+        <div class="row">
+          <div id="blog" class="span10">
+            <section
+              id="post-326"
+              class="post-326 post type-post status-publish format-standard hentry category-fun"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">22 Jan 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
 
-      <div class="entry">
-        <p><em>In chatting with <a href="http://www.crypticscriber.com/">Nick</a> about hosting, I began to realize how complex the ISP game can be. These are some thoughts, all provide starting points for further brainstorming and discussion.</em></p>
-<p>We’re building our new machine for ourselves, make no mistake. We took this route because it looked cost effective for the needs we had for ourselves. However, we can, in theory, provide services to others as well—as our server is more than capable of supporting more than just untyped.</p>
-<p>But what services would we offer, and at what cost?</p>
-<p>We currently run Apache, Exim/Courier, Postgres and MySQL, Subversion… in general, a full assortment of services that users might want to make use of. Through judicious use of LDAP, we’re hoping to expose some of these services (email, WWW) without needing to provide full (shell) accounts on the server. Likewise, we’re planning and building scripts to automate many of our maintenance tasks on the machine; we’re stopping short of CPanel, however.</p>
-<p>So if we have the means to support other users, why would I be hesitant? Because we are not an ISP. We are people who enjoy making software. Our machine is like our workbench—it provides the essential services we need to make that software. Therefore, we have no interest in trying to compete with your run-of-the-mill ISPs… you can get a $5/month web account anywhere. So what kind of hosting will we provide?</p>
-<p>At the least, I imagine we might offer hosting for “odd” servers and languages. By “odd”, I mean “anything not Apache.” For example, we know that there might be some interest in the PLT Scheme; likewise, I imagine that allowing servers written in Erlang may be of interest as well. Beyond that… how much bandwidth can someone expect to get hosting with us? Do we provide backup services? What kind of quota does a user’s account come with? What kind of response time to user requests are we going to try and make good on?</p>
-<h3>Bandwidth</h3>
-<p>We will probably have 50GB of traffic per month in our colo agreement. We will be charged beyond that as per Bytemark’s policies. Therefore, I could simply pass on costs to clients. Really, though, we’re not prepared to deal with the administrative overhead of billing clients for bandwidth, etc.; we’ll barely be in a position to administer billing for basic services. Again, we’re back to the mantra “we are not an ISP.”</p>
-<p>We’ll have bandwidth accounting in place; how you charge for bandwidth, I don’t know. Just having to administer this takes time, and time is money (“We are not an ISP…”). Perhaps there’s a simple way to handle this… perhaps not. I need to think more on this one; insights are welcome.</p>
-<h3>Backup</h3>
-<p>Backup is expensive. It takes careful scripting on the host, regular movement of data from the server to a remote site (see “Bandwidth,” above), and it takes time to archive that to some kind of storage media. I don’t have a tape jukebox anywhere near the server, nor can I afford one (“We are not an ISP” ). Therefore, backup is an issue of me having a second machine that runs a cron job, and regularly pulls backups off the server. Then, I’ll have to manually burn DVDs and/or make digital tapes archives of that data. There are time and media costs involved in this that are non-trivial.</p>
-<p>Backup is something that typically is not offered with a shell account, period. Taking a look at <a href="http://www.mythic-beasts.com/pricelist.html">Mythic Beasts</a>, their shell accounts start at £15 per quarter, they offer 200MB of disk space, and there is no mention of backup. I found some backup services while investigating storage (below), and they charge a lot per month for 1GB of backup (£25). This says to me that most hosting facilities assume the following:</p>
-<ul>
-<li>You backup your own data</li>
-<li>If the server dies, you’re on your own</li>
-</ul>
-<p>I’m not committed to either route at this point, but it’s clear that I should charge money for backup services. I’m willing to spend my time to guarantee my own data’s safety, but I’m not willing to do that for others, for free.</p>
-<h3>Storage</h3>
-<p>What kind of quotas should we provide users? What can I get shopping around the internet?</p>
-<p>&nbsp;</p>
-<p></p>
-<center>&nbsp;
-<table width="80%">
-<tbody>
-<tr>
-<td><strong>Site</strong></td>
-<td><strong>Capacity</strong></td>
-<td><strong>Monthly</strong></td>
-</tr>
-<tr>
-<td><a href="http://www.storegate.com/">storegate.com</a></td>
-<td>50MB</td>
-<td>£1.50</td>
-</tr>
-<tr>
-<td><a href="http://www.box.net/">box.net</a></td>
-<td>1GB</td>
-<td>£1.70</td>
-</tr>
-<tr>
-<td><a href="http://www.box.net/">box.net</a></td>
-<td>5GB</td>
-<td>£4.50</td>
-</tr>
-<tr>
-<td><a href="http://www.storegate.com/">storegate.com</a></td>
-<td>1GB</td>
-<td>£5.00</td>
-</tr>
-<tr>
-<td><a href="http://www.xdrive.com/">xdrive.com</a></td>
-<td>5GB</td>
-<td>£5.60</td>
-</tr>
-<tr>
-<td><a href="http://www.ibackup.com/">ibackup.com</a></td>
-<td>5GB</td>
-<td>£5.60</td>
-</tr>
-<tr>
-<td><a href="http://www.datafort.co.uk/">www.datafort.co.uk</a></td>
-<td>1GB (compressed)</td>
-<td>£25</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-<p></p>
-</center>&nbsp;
-<p><a href="http://www.epinions.com/webs-Web_Services-All-Online_Storage">Epinions</a> has more commentary on online storage than I care to duplicate here. I myself have a 1GB <a href="http://www.box.net/">Box.net</a> account, and am quite pleased with it—their pricing is competitive, and the interface to the site, as well as features (instant photo albums, passwords, RSS feeds) are great.</p>
-<p>Point being? If I’m going to offer space, I have to charge at least £1.75/GB; and since we’re not really in this market space to compete, I’d probably have to charge more than that (due to the administrative overheads, and limited resources on our own machine). Furthermore, that’s assuming it’s a gigabyte of <em>unarchived storage</em>. It looks like sites that actually offer backup of a gigabyte of data charge around £25/month for a gigabyte of content that gets archived monthly. This doesn’t surprise me in the least—offering security is an expensive proposition, both in terms of tools and in terms of time.</p>
-<p>Again, comparing, <a href="http://www.mythic-beasts.com/pricelist.html">Mythic Beasts</a> charge £30 per month for a “developer” account with 1GB of disk (no backup). The reality is (because we’re not an ISP), we only have one server, with limited disk space. I can resell storage from Bytemark, which eases the stress on my own disks… but as can be seen, having active disk space that you can serve out to the world costs money.</p>
-<h3>Administration</h3>
-<p>All these services take time to administer. Yes, we have to do it for ourselves… but it’s another thing entirely to have customers who want guarantees, and support when things go wrong (regardless of whether it is at our end or their end). What does administration cost? I can look at other ISPs and see what they charge for adding a subdomain, or configuring databases, or any of a host of things… and I don’t want to get trapped in a situation where we offer to do these things “for free,” and end up playing sysadmin to a bunch of customers without any recompense.</p>
-<p>Again, this is a tough one.</p>
-<h3>In Conclusion… or, something like that</h3>
-<p>This isn’t necessarily the kind of laundry a small business should air in public. Typically, this is the kind of uncertainty that would be kept private, resolved off-line, and then published to the world as policy. However, these are probably the kind of questions that others have wrestled with in their time, and it’s possible someone who reads untyping may have some insights into these issues that we don’t have. Given that we only have one machine (“We are not an ISP”), it may be that we should avoid hosting altogether. Or perhaps we can come up with some reasonable terms of service and pricing structures that reflect the quality and nature of services we will offer. Who knows? Either way, they’re challenging questions.</p>
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/01/22/a-game-a-week/"
+                      rel="bookmark"
+                      title="Permanent Link to A Game A Week"
+                      >A Game A Week</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      At the <a href="http://www.experimentalgameplay.com/"
+                        >Experimental Gameplay Project</a
+                      > at CMU the participants were challenged to create a game
+                      about a particular theme every week. The results are
+                      impressive, but more interesting are <a
+                        href="http://www.gamasutra.com/features/20051026/gabler_01.shtml"
+                        >the insights</a
+                      ><a
+                        href="http://www.etc.cmu.edu/projects/experimentalgameplay/images/ExperimentalGameplayPostmortem.pdf"
+                        >derived from observing the process</a
+                      >. It’s not about games. It’s about using extreme resource
+                      constraints to force innovation. It’s about accepting
+                      failure as a necessary part of creativity. It should be
+                      read by anyone who wants to turn a big idea into reality.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/fun/" rel="category tag">Fun</a>
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on A Game A Week</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-328"
+              class="post-328 post type-post status-publish format-standard hentry category-business"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">21 Jan 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/01/21/untyped-hosting/"
+                      rel="bookmark"
+                      title="Permanent Link to Untyped hosting?"
+                      >Untyped hosting?</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      <em
+                        >In chatting with <a
+                          href="http://www.crypticscriber.com/"
+                          >Nick</a
+                        > about hosting, I began to realize how complex the ISP
+                        game can be. These are some thoughts, all provide
+                        starting points for further brainstorming and
+                        discussion.</em
+                      >
+                    </p>
+                    <p>
+                      We’re building our new machine for ourselves, make no
+                      mistake. We took this route because it looked cost
+                      effective for the needs we had for ourselves. However, we
+                      can, in theory, provide services to others as well—as our
+                      server is more than capable of supporting more than just
+                      untyped.
+                    </p>
+                    <p>But what services would we offer, and at what cost?</p>
+                    <p>
+                      We currently run Apache, Exim/Courier, Postgres and MySQL,
+                      Subversion… in general, a full assortment of services that
+                      users might want to make use of. Through judicious use of
+                      LDAP, we’re hoping to expose some of these services
+                      (email, WWW) without needing to provide full (shell)
+                      accounts on the server. Likewise, we’re planning and
+                      building scripts to automate many of our maintenance tasks
+                      on the machine; we’re stopping short of CPanel, however.
+                    </p>
+                    <p>
+                      So if we have the means to support other users, why would
+                      I be hesitant? Because we are not an ISP. We are people
+                      who enjoy making software. Our machine is like our
+                      workbench—it provides the essential services we need to
+                      make that software. Therefore, we have no interest in
+                      trying to compete with your run-of-the-mill ISPs… you can
+                      get a $5/month web account anywhere. So what kind of
+                      hosting will we provide?
+                    </p>
+                    <p>
+                      At the least, I imagine we might offer hosting for “odd”
+                      servers and languages. By “odd”, I mean “anything not
+                      Apache.” For example, we know that there might be some
+                      interest in the PLT Scheme; likewise, I imagine that
+                      allowing servers written in Erlang may be of interest as
+                      well. Beyond that… how much bandwidth can someone expect
+                      to get hosting with us? Do we provide backup services?
+                      What kind of quota does a user’s account come with? What
+                      kind of response time to user requests are we going to try
+                      and make good on?
+                    </p>
+                    <h3>Bandwidth</h3>
+                    <p>
+                      We will probably have 50GB of traffic per month in our
+                      colo agreement. We will be charged beyond that as per
+                      Bytemark’s policies. Therefore, I could simply pass on
+                      costs to clients. Really, though, we’re not prepared to
+                      deal with the administrative overhead of billing clients
+                      for bandwidth, etc.; we’ll barely be in a position to
+                      administer billing for basic services. Again, we’re back
+                      to the mantra “we are not an ISP.”
+                    </p>
+                    <p>
+                      We’ll have bandwidth accounting in place; how you charge
+                      for bandwidth, I don’t know. Just having to administer
+                      this takes time, and time is money (“We are not an ISP…”).
+                      Perhaps there’s a simple way to handle this… perhaps not.
+                      I need to think more on this one; insights are welcome.
+                    </p>
+                    <h3>Backup</h3>
+                    <p>
+                      Backup is expensive. It takes careful scripting on the
+                      host, regular movement of data from the server to a remote
+                      site (see “Bandwidth,” above), and it takes time to
+                      archive that to some kind of storage media. I don’t have a
+                      tape jukebox anywhere near the server, nor can I afford
+                      one (“We are not an ISP” ). Therefore, backup is an issue
+                      of me having a second machine that runs a cron job, and
+                      regularly pulls backups off the server. Then, I’ll have to
+                      manually burn DVDs and/or make digital tapes archives of
+                      that data. There are time and media costs involved in this
+                      that are non-trivial.
+                    </p>
+                    <p>
+                      Backup is something that typically is not offered with a
+                      shell account, period. Taking a look at <a
+                        href="http://www.mythic-beasts.com/pricelist.html"
+                        >Mythic Beasts</a
+                      >, their shell accounts start at £15 per quarter, they
+                      offer 200MB of disk space, and there is no mention of
+                      backup. I found some backup services while investigating
+                      storage (below), and they charge a lot per month for 1GB
+                      of backup (£25). This says to me that most hosting
+                      facilities assume the following:
+                    </p>
+                    <ul>
+                      <li>You backup your own data</li>
+                      <li>If the server dies, you’re on your own</li>
+                    </ul>
+                    <p>
+                      I’m not committed to either route at this point, but it’s
+                      clear that I should charge money for backup services. I’m
+                      willing to spend my time to guarantee my own data’s
+                      safety, but I’m not willing to do that for others, for
+                      free.
+                    </p>
+                    <h3>Storage</h3>
+                    <p>
+                      What kind of quotas should we provide users? What can I
+                      get shopping around the internet?
+                    </p>
+                    <p>&nbsp;</p>
+                    <p></p>
+                    <center>
+                      &nbsp;
+                      <table width="80%">
+                        <tbody>
+                          <tr>
+                            <td><strong>Site</strong></td>
+                            <td><strong>Capacity</strong></td>
+                            <td><strong>Monthly</strong></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="http://www.storegate.com/"
+                                >storegate.com</a
+                              >
+                            </td>
+                            <td>50MB</td>
+                            <td>£1.50</td>
+                          </tr>
+                          <tr>
+                            <td><a href="http://www.box.net/">box.net</a></td>
+                            <td>1GB</td>
+                            <td>£1.70</td>
+                          </tr>
+                          <tr>
+                            <td><a href="http://www.box.net/">box.net</a></td>
+                            <td>5GB</td>
+                            <td>£4.50</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="http://www.storegate.com/"
+                                >storegate.com</a
+                              >
+                            </td>
+                            <td>1GB</td>
+                            <td>£5.00</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="http://www.xdrive.com/">xdrive.com</a>
+                            </td>
+                            <td>5GB</td>
+                            <td>£5.60</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="http://www.ibackup.com/">ibackup.com</a>
+                            </td>
+                            <td>5GB</td>
+                            <td>£5.60</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="http://www.datafort.co.uk/"
+                                >www.datafort.co.uk</a
+                              >
+                            </td>
+                            <td>1GB (compressed)</td>
+                            <td>£25</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p>&nbsp;</p>
+                      <p></p>
+                    </center>
+                    &nbsp;
+                    <p>
+                      <a
+                        href="http://www.epinions.com/webs-Web_Services-All-Online_Storage"
+                        >Epinions</a
+                      > has more commentary on online storage than I care to
+                      duplicate here. I myself have a 1GB <a
+                        href="http://www.box.net/"
+                        >Box.net</a
+                      > account, and am quite pleased with it—their pricing is
+                      competitive, and the interface to the site, as well as
+                      features (instant photo albums, passwords, RSS feeds) are
+                      great.
+                    </p>
+                    <p>
+                      Point being? If I’m going to offer space, I have to charge
+                      at least £1.75/GB; and since we’re not really in this
+                      market space to compete, I’d probably have to charge more
+                      than that (due to the administrative overheads, and
+                      limited resources on our own machine). Furthermore, that’s
+                      assuming it’s a gigabyte of <em>unarchived storage</em>.
+                      It looks like sites that actually offer backup of a
+                      gigabyte of data charge around £25/month for a gigabyte of
+                      content that gets archived monthly. This doesn’t surprise
+                      me in the least—offering security is an expensive
+                      proposition, both in terms of tools and in terms of time.
+                    </p>
+                    <p>
+                      Again, comparing, <a
+                        href="http://www.mythic-beasts.com/pricelist.html"
+                        >Mythic Beasts</a
+                      > charge £30 per month for a “developer” account with 1GB
+                      of disk (no backup). The reality is (because we’re not an
+                      ISP), we only have one server, with limited disk space. I
+                      can resell storage from Bytemark, which eases the stress
+                      on my own disks… but as can be seen, having active disk
+                      space that you can serve out to the world costs money.
+                    </p>
+                    <h3>Administration</h3>
+                    <p>
+                      All these services take time to administer. Yes, we have
+                      to do it for ourselves… but it’s another thing entirely to
+                      have customers who want guarantees, and support when
+                      things go wrong (regardless of whether it is at our end or
+                      their end). What does administration cost? I can look at
+                      other ISPs and see what they charge for adding a
+                      subdomain, or configuring databases, or any of a host of
+                      things… and I don’t want to get trapped in a situation
+                      where we offer to do these things “for free,” and end up
+                      playing sysadmin to a bunch of customers without any
+                      recompense.
+                    </p>
+                    <p>Again, this is a tough one.</p>
+                    <h3>In Conclusion… or, something like that</h3>
+                    <p>
+                      This isn’t necessarily the kind of laundry a small
+                      business should air in public. Typically, this is the kind
+                      of uncertainty that would be kept private, resolved
+                      off-line, and then published to the world as policy.
+                      However, these are probably the kind of questions that
+                      others have wrestled with in their time, and it’s possible
+                      someone who reads untyping may have some insights into
+                      these issues that we don’t have. Given that we only have
+                      one machine (“We are not an ISP”), it may be that we
+                      should avoid hosting altogether. Or perhaps we can come up
+                      with some reasonable terms of service and pricing
+                      structures that reflect the quality and nature of services
+                      we will offer. Who knows? Either way, they’re challenging
+                      questions.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/business/" rel="category tag"
+                      >Business</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Untyped hosting?</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-280"
+              class="post-280 post type-post status-publish format-standard hentry category-business"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">20 Jan 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/01/20/we-have-lift-off/"
+                      rel="bookmark"
+                      title="Permanent Link to We Have Lift Off!"
+                      >We Have Lift Off!</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <div>
+                      <p>
+                        As we’ve been hinting on the blog our current project
+                        has been close to delivery. Truth is, once we got a new
+                        server set up the deadline passed without incident.
+                        We’ve been waiting a few days to ensure there are no
+                        problems, but it’s been long enough so we’re now happy
+                        to announce the project is complete.
+                      </p>
+                      <p>
+                        This work has been done for <a
+                          href="http://www.sbcs.qmul.ac.uk/"
+                          >the School of Biological and Chemical Sciences</a
+                        > at Queen Mary University of London. We have
+                        implemented a preregistration system for them: a website
+                        by which students can be registered for courses and
+                        modules, replacing a tedious and error-prone manual
+                        system. Unfortunately there is no publically available
+                        front-end so we can’t show off our work. However we have
+                        a few projects that should be completed in the next
+                        months that will have publically visible components.
+                      </p>
+                      <p>
+                        The whole site runs on <a
+                          href="http://www.plt-scheme.org/"
+                          >PLT Scheme</a
+                        >, with <a href="http://www.sqlite.org/">SQLite</a> for
+                        the database. This is, to our knowledge, the first large
+                        site to run the PLT Scheme web server continuously for
+                        any length of time. Over the next few days we’ll provide
+                        a few more details about the more intricate parts of our
+                        setup so other intrepid pioneers can learn from our
+                        work.
+                      </p>
+                      <div></div>
+                    </div>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/business/" rel="category tag"
+                      >Business</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on We Have Lift Off!</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-330"
+              class="post-330 post type-post status-publish format-standard hentry category-general"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">17 Jan 2006</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2006/01/17/building-a-server/"
+                      rel="bookmark"
+                      title="Permanent Link to Building a server"
+                      >Building a server</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      Currently, untyped lives on a virtual machine provided
+                      by <a href="http://www.bytemark.co.uk/index.html"
+                        >Bytemark</a
+                      >. The service they provide is excellent, and we recommend
+                      them highly. While we are building our own server we hope
+                      to continue to host with Bytemark, but instead of being on
+                      a VM, we’ll be on our own hardware. We’ll see how that
+                      goes.
+                    </p>
+                    <p>
+                      Today, Christian and I spent a few hours working on the
+                      most fundamental part of a server: the filesystem. Before
+                      I go into any detail about the decisions we made, I’ll
+                      give you a sense for what we’re working with:
+                    </p>
+                    <table width="60%">
+                      <tbody>
+                        <tr>
+                          <td colspan="2" bgcolor="#CCCCFF">
+                            Untyped’s new home
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Chassis</strong></td>
+                          <td>Intel SR1200</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Processors</strong></td>
+                          <td>2x PIII 1.4GHz</td>
+                        </tr>
+                        <tr>
+                          <td><strong>RAM</strong></td>
+                          <td>2GB 133MHz ECC</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Hard disks</strong></td>
+                          <td>2x 250GB IDE</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      This server has seen use before, but we’ve replaced all
+                      the moving parts; we’re quite pleased with its condition,
+                      and think it will provide us with a number of years of
+                      good service. And, we hope that we don’t need to do a
+                      low-level install again in the next few years.
+                    </p>
+                    <p>
+                      The first thing we did was to grab a Debian 3.1r1 <a
+                        href="http://www.debian.org/devel/debian-installer/"
+                        >“testing” net install</a
+                      >CD image. We had to boot the 2.4 kernel, as the 2.6
+                      kernel fails to load appropriate CD drivers from the
+                      install CD; this didn’t really matter. Then, we came
+                      around to our filesystem layout; what we knew was that we
+                      wanted to partition off different parts of the directory
+                      tree (/, /boot, /var, /usr, /tmp, /home); we didn’t know
+                      exactly how much space to give each part of the
+                      filesystem, however. Do we makehome 40GB, or 60GB? What
+                      about usr? The list goes on and on.
+                    </p>
+                    <p>
+                      We started by setting up a 4GB swap partition at the end
+                      of each drive, a 400MB boot partition at the front of each
+                      drive, and setting aside the remaining 245GB or so for the
+                      main parts of the filesystem. We then used the Debian
+                      installer to turn the 400MB partitions into one RAID set,
+                      and the 245GB partition into another. This way, both our
+                      boot partition and the main part of the drive are in RAID,
+                      but we’re guaranteed that our boot partition is at the
+                      front of the disk.
+                    </p>
+                    <p>
+                      (What is RAID? I’ll stick with the <a
+                        href="http://en.wikipedia.org/wiki/Redundant_array_of_independent_disks"
+                        >Wikipedia</a
+                      > on that one. It keeps our two disk drives in perfect
+                      sync; this way, if one of them fails, we might be able to
+                      replace it before the second one does, thus keeping our
+                      system running with little or no interruption. This is a
+                      Good Thing.)
+                    </p>
+                    <p>
+                      Then, we dove into that big, 245GB space. We used
+                      LVM—the <a
+                        href="http://en.wikipedia.org/wiki/Logical_Volume_Manager_%28Linux%29"
+                        >Logical Volume Manager</a
+                      >–to partition the rest of the disk. LVM is great because
+                      it essentially ignores the physical layout of your disks,
+                      and allows you to dynamically resize partitions without
+                      any great gnashing of teeth. So, we laid out 40GB
+                      for /home and /data, 20GB for /usr, and 4GB each
+                      for /, /var, and /tmp.
+                    </p>
+                    <p>
+                      Note that this is only 112GB of space; we had (roughly)
+                      245GB of space in that big RAID set. Our intention is to
+                      grow those partitions as we need to. For now, we chose
+                      large, but reasonable values for each of these partitions.
+                      In time, we may decide to increase the amount of space
+                      allocated to /home—perhaps from 40GB to 80GB. The point
+                      is, we have around 116GB of space to “grow into”, and we
+                      can allocate it to any of the partitions we currently
+                      have… or we can create new partitions. In either case,
+                      these operations don’t require us to shutdown the machine,
+                      or even take it entirely offline—we only need to “stop”
+                      the logical volume that the partition is on.
+                    </p>
+                    <p>
+                      While we could do this more quickly the second time
+                      around, this took us between one and two hours; we were
+                      careful to check our assumptions, and rehashed and
+                      discussed a lot of the decisions in light of how we might
+                      want to use the server in the future.
+                    </p>
+                    <p>
+                      Once the filesystem was set up, the rest of the
+                      installation went quickly; things were pulled in
+                      automatically over the network, and we rebooted into our
+                      new machine. The filesystem looks great, and we expect
+                      that the decisions we made will serve us well in the
+                      future. Now, we’ll work on upgrading the kernel to a 2.6
+                      series (with SMP support), and then begin replicating
+                      those services that currently exist on the VM to the
+                      server.
+                    </p>
+                    <p>Links that came in handy:</p>
+                    <ul>
+                      <li>
+                        <a
+                          href="http://www.die.net/doc/linux/HOWTO/LVM-HOWTO-4.html"
+                          >http://www.die.net/doc/linux/HOWTO/LVM-HOWTO-4.html</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="http://www.die.net/doc/linux/HOWTO/LVM-HOWTO-9.html#ss9.9"
+                          >http://www.die.net/doc/linux/HOWTO/LVM-HOWTO-9.html#ss9.9</a
+                        >
+                      </li>
+                      <li>
+                        <a href="http://aplawrence.com/Linux/lvm.html"
+                          >http://aplawrence.com/Linux/lvm.html</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Building a server</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-335"
+              class="post-335 post type-post status-publish format-standard hentry category-general"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">22 Dec 2005</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2005/12/22/the-implications-of-the-internet/"
+                      rel="bookmark"
+                      title="Permanent Link to The Implications of the Internet"
+                      >The Implications of the Internet</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <blockquote>
+                      <p>
+                        If you are a civilian like me (an anthropologist, that
+                        is, without much technical savvy), it’s a little
+                        mystifying. Will Internet 2.0 change everything or just
+                        some things? Is this a revolutionary moment or an
+                        evolutionary one? Is everything I know wrong, or just
+                        this, that and the other thing? Is this 2.0h! or merely
+                        2.0. …
+                      </p>
+                      <p>
+                        Here are three models that sort out the possibilities
+                        for me.
+                      </p>
+                    </blockquote>
+                    <p>
+                      <a
+                        href="http://www.cultureby.com/trilogy/2005/12/internet_20_the.html"
+                        >Read it</a
+                      >, it’s good stuff.
+                    </p>
+                    <p>
+                      My take: these changes will take place, but it will take
+                      another generation, that grows up with the Internet, for
+                      them to be fully realised.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on The Implications of the Internet</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-333"
+              class="post-333 post type-post status-publish format-standard hentry category-javascript category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">22 Dec 2005</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2005/12/22/printf-in-ajax-sorry-thats-not-debugging/"
+                      rel="bookmark"
+                      title="Permanent Link to Printf in AJAX? Sorry, that’s not debugging."
+                      >Printf in AJAX? Sorry, that’s not debugging.</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      <em
+                        >This post is one in a continuing series where we
+                        internally debate the merits of the over-hyped promise
+                        of AJAX…</em
+                      >
+                    </p>
+                    <blockquote>
+                      <p>
+                        <a
+                          href="http://ajaxian.com/archives/2005/12/debugging_ajax.html"
+                          >Debugging Ajax Requests in Prototype</a
+                        >:
+                      </p>
+                      <p>
+                        How do we debug our Ajax applications? The <a
+                          href="http://rails.techno-weenie.net/"
+                          >Rails Weenie</a
+                        > has taken the Ajax Responder feature in Prototype…
+                      </p>
+                    </blockquote>
+                    <p>
+                      I’d like to remind Noel that the distance of the Atlantic
+                      and business of the Christmas holidays are not going to
+                      keep me from pointing out that AJAX is an immature and
+                      dangerous platform to build a business on. Yes, I’m glad
+                      that GMail is there… and I suppose the Yahoo! Mail beta.
+                      However, these are fragile technologies to build upon.
+                    </p>
+                    <p>
+                      How do we debug things written using the Prototype
+                      framework?<code>printf</code>. I mean, I’m glad that with
+                      AJAX and Rails I can whip something up quickly that “just
+                      works.” However, it doesn’t “just have test cases,” or
+                      “just get internationalized”, or “just stand up under
+                      load.” They’re rapid-prototyping tools, certainly nothing
+                      more. AJAX breaks usability standards, pushes data and
+                      computation to an unreliable substrate (the client’s web
+                      browser), and as the post above provides some evidence
+                      for, there are no good debugging or tracing tools
+                      available for developers working in heterogeneous browser
+                      environments in Javascript.
+                    </p>
+                    <p>
+                      So, Noel, riddle me this: why should developers be willing
+                      to take eight steps backwards and be shafted
+                      with <code>printf</code> as their primary debugging tool
+                      when working with AJAX?
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/javascript/" rel="category tag"
+                      >Javascript</a
+                    >,
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Printf in AJAX? Sorry, that’s not debugging.</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-337"
+              class="post-337 post type-post status-publish format-standard hentry category-fun"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">12 Dec 2005</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2005/12/12/population-of-the-world/"
+                      rel="bookmark"
+                      title="Permanent Link to Population of the World"
+                      >Population of the World</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      A <a href="http://www.odt.org/Pictures/poplcart.jpg"
+                        >cartogram of the world by population</a
+                      > gives some perspective. This green and pleasant isle
+                      really is quite crowded. Canada, on the other hand, is
+                      somewhat devoid of human inhabitants.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/fun/" rel="category tag">Fun</a>
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Population of the World</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-339"
+              class="post-339 post type-post status-publish format-standard hentry category-fun category-general"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">6 Dec 2005</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2005/12/06/happy-birthday/"
+                      rel="bookmark"
+                      title="Permanent Link to Happy Birthday!"
+                      >Happy Birthday!</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      A great big Happy Birthday! to <a
+                        href="http://www.untyped.com/about/geoffrey.php"
+                        >Geoff</a
+                      >, who turns 21 again today!
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/fun/" rel="category tag">Fun</a
+                    >,
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Happy Birthday!</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-344"
+              class="post-344 post type-post status-publish format-standard hentry category-fun"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">24 Nov 2005</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2005/11/24/the-rise-of-intelligence/"
+                      rel="bookmark"
+                      title="Permanent Link to The Rise of Intelligence"
+                      >The Rise of Intelligence</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      <a href="http://www.buzz.bham.ac.uk/Buzz_69.pdf"
+                        >A recent study</a
+                      > of human skulls covering a period of about 600 years
+                      shows the human skull has changed significantly. Facial
+                      features, particularly the lower jaw, have decreased
+                      markedly in size, and more intriguingly the size of the
+                      cranial vault has increased “by more than a centimetre”
+                      (presumably they mean a cubic centimetre). What does this
+                      mean? I don’t think anyone knows, but I’d guess the
+                      increase in processed foods means less need for strong
+                      jaws, and the increased brain size might explain why <a
+                        href="http://www.gt-cybersource.org/Record.aspx?NavID=2_0&amp;rid=11277"
+                        >IQ scores are increasing over time</a
+                      >.
+                    </p>
+                    <p>
+                      <strong>Update:</strong> The increase in IQ over time is
+                      known as the Flynn effect. There are some good links <a
+                        href="http://www.marginalrevolution.com/marginalrevolution/2003/12/should_we_renor.html"
+                        >here</a
+                      >. Cranial capacity is proportional to body size, as
+                      discussed <a
+                        href="http://www.talkorigins.org/faqs/homs/a_brains.html"
+                        >here</a
+                      >. I haven’t been able to find the publications of the
+                      original study, so I can’t tell if they controlled for
+                      increases in body size. If not, then the increase in
+                      cranial capacity is likely not significant, as people
+                      today are generally larger than in the Middle Ages.
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/fun/" rel="category tag">Fun</a>
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on The Rise of Intelligence</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="post-342"
+              class="post-342 post type-post status-publish format-standard hentry category-fun"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">24 Nov 2005</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2005/11/24/frag/"
+                      rel="bookmark"
+                      title="Permanent Link to Frag!"
+                      >Frag!</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      From <a href="http://theschemeway.blogspot.com/"
+                        >The Scheme Way</a
+                      > is a link to <a href="http://haskell.org/hawiki/Frag"
+                        >Frag</a
+                      >, a first-person shooter programmed in Haskell. Neat!
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/fun/" rel="category tag">Fun</a>
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Frag!</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <nav>
+              <div class="row">
+                <div class="span8 offset2">
+                  <span class="newer"
+                    ><a href="/untyping/page/15/"
+                      >&laquo; Newer Entries</a
+                    ></span
+                  >
+                  <span class="older"
+                    ><a href="/untyping/page/17/"
+                      >Older Entries &raquo;</a
+                    ></span
+                  >
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="span2">
+            <div id="sidebar" class="small column two-of-two width300">
+              <ul>
+                <li id="search-2" class="widget widget_search">
+                  <form
+                    role="search"
+                    method="get"
+                    id="searchform"
+                    class="searchform"
+                    action="/"
+                  >
+                    <div>
+                      <label class="screen-reader-text" for="s"
+                        >Search for:</label
+                      >
+                      <input type="text" value="" name="s" id="s" />
+                      <input type="submit" id="searchsubmit" value="Search" />
+                    </div>
+                  </form>
+                </li>
+                <li id="recent-posts-2" class="widget widget_recent_entries">
+                  <h2 class="widgettitle">Recent Posts</h2>
+                  <ul>
+                    <li>
+                      <a
+                        href="/untyping/2013/08/07/writing-documentation-using-grunt-and-jekyll/"
+                        >Writing Documentation using Grunt and Jekyll</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2012/10/19/meanwhile-at-untyped-hq/"
+                        >Meanwhile, at Untyped HQ&#8230;</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2012/08/28/new-site/">New site</a>
+                    </li>
+                    <li>
+                      <a
+                        href="/untyping/2012/06/06/myna-for-wordpress-available-now/"
+                        >Myna for WordPress available now!</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2011/10/20/the-circus-is-in-town/"
+                        >The Circus is in Town</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  id="recent-comments-2"
+                  class="widget widget_recent_comments"
+                >
+                  <h2 class="widgettitle">Recent Comments</h2>
+                  <ul id="recentcomments"></ul>
+                </li>
+                <li id="archives-2" class="widget widget_archive">
+                  <h2 class="widgettitle">Archives</h2>
+                  <ul>
+                    <li><a href="/untyping/2013/08/">August 2013</a></li>
+                    <li><a href="/untyping/2012/10/">October 2012</a></li>
+                    <li><a href="/untyping/2012/08/">August 2012</a></li>
+                    <li><a href="/untyping/2012/06/">June 2012</a></li>
+                    <li><a href="/untyping/2011/10/">October 2011</a></li>
+                    <li><a href="/untyping/2011/09/">September 2011</a></li>
+                    <li><a href="/untyping/2011/08/">August 2011</a></li>
+                    <li><a href="/untyping/2011/05/">May 2011</a></li>
+                    <li><a href="/untyping/2011/03/">March 2011</a></li>
+                    <li><a href="/untyping/2011/02/">February 2011</a></li>
+                    <li><a href="/untyping/2011/01/">January 2011</a></li>
+                    <li><a href="/untyping/2010/12/">December 2010</a></li>
+                    <li><a href="/untyping/2010/11/">November 2010</a></li>
+                    <li><a href="/untyping/2010/10/">October 2010</a></li>
+                    <li><a href="/untyping/2010/07/">July 2010</a></li>
+                    <li><a href="/untyping/2010/06/">June 2010</a></li>
+                    <li><a href="/untyping/2010/05/">May 2010</a></li>
+                    <li><a href="/untyping/2010/04/">April 2010</a></li>
+                    <li><a href="/untyping/2010/03/">March 2010</a></li>
+                    <li><a href="/untyping/2010/02/">February 2010</a></li>
+                    <li><a href="/untyping/2010/01/">January 2010</a></li>
+                    <li><a href="/untyping/2009/07/">July 2009</a></li>
+                    <li><a href="/untyping/2009/06/">June 2009</a></li>
+                    <li><a href="/untyping/2009/04/">April 2009</a></li>
+                    <li><a href="/untyping/2009/03/">March 2009</a></li>
+                    <li><a href="/untyping/2009/01/">January 2009</a></li>
+                    <li><a href="/untyping/2008/11/">November 2008</a></li>
+                    <li><a href="/untyping/2008/10/">October 2008</a></li>
+                    <li><a href="/untyping/2008/09/">September 2008</a></li>
+                    <li><a href="/untyping/2008/08/">August 2008</a></li>
+                    <li><a href="/untyping/2008/07/">July 2008</a></li>
+                    <li><a href="/untyping/2008/06/">June 2008</a></li>
+                    <li><a href="/untyping/2008/05/">May 2008</a></li>
+                    <li><a href="/untyping/2008/04/">April 2008</a></li>
+                    <li><a href="/untyping/2008/03/">March 2008</a></li>
+                    <li><a href="/untyping/2008/02/">February 2008</a></li>
+                    <li><a href="/untyping/2008/01/">January 2008</a></li>
+                    <li><a href="/untyping/2007/12/">December 2007</a></li>
+                    <li><a href="/untyping/2007/11/">November 2007</a></li>
+                    <li><a href="/untyping/2007/10/">October 2007</a></li>
+                    <li><a href="/untyping/2007/09/">September 2007</a></li>
+                    <li><a href="/untyping/2007/08/">August 2007</a></li>
+                    <li><a href="/untyping/2007/07/">July 2007</a></li>
+                    <li><a href="/untyping/2007/06/">June 2007</a></li>
+                    <li><a href="/untyping/2007/05/">May 2007</a></li>
+                    <li><a href="/untyping/2007/04/">April 2007</a></li>
+                    <li><a href="/untyping/2007/03/">March 2007</a></li>
+                    <li><a href="/untyping/2007/02/">February 2007</a></li>
+                    <li><a href="/untyping/2007/01/">January 2007</a></li>
+                    <li><a href="/untyping/2006/12/">December 2006</a></li>
+                    <li><a href="/untyping/2006/11/">November 2006</a></li>
+                    <li><a href="/untyping/2006/10/">October 2006</a></li>
+                    <li><a href="/untyping/2006/09/">September 2006</a></li>
+                    <li><a href="/untyping/2006/08/">August 2006</a></li>
+                    <li><a href="/untyping/2006/07/">July 2006</a></li>
+                    <li><a href="/untyping/2006/06/">June 2006</a></li>
+                    <li><a href="/untyping/2006/05/">May 2006</a></li>
+                    <li><a href="/untyping/2006/04/">April 2006</a></li>
+                    <li><a href="/untyping/2006/03/">March 2006</a></li>
+                    <li><a href="/untyping/2006/02/">February 2006</a></li>
+                    <li><a href="/untyping/2006/01/">January 2006</a></li>
+                    <li><a href="/untyping/2005/12/">December 2005</a></li>
+                    <li><a href="/untyping/2005/11/">November 2005</a></li>
+                    <li><a href="/untyping/2005/10/">October 2005</a></li>
+                    <li><a href="/untyping/2005/09/">September 2005</a></li>
+                    <li><a href="/untyping/2005/08/">August 2005</a></li>
+                    <li><a href="/untyping/2005/07/">July 2005</a></li>
+                    <li><a href="/untyping/2005/06/">June 2005</a></li>
+                    <li><a href="/untyping/2005/05/">May 2005</a></li>
+                    <li><a href="/untyping/2005/04/">April 2005</a></li>
+                  </ul>
+                </li>
+                <li id="categories-2" class="widget widget_categories">
+                  <h2 class="widgettitle">Categories</h2>
+                  <ul>
+                    <li class="cat-item cat-item-10">
+                      <a href="/untyping/category/business/">Business</a>
+                    </li>
+                    <li class="cat-item cat-item-7">
+                      <a href="/untyping/category/code/">Code</a>
+                    </li>
+                    <li class="cat-item cat-item-11">
+                      <a href="/untyping/category/design/">Design</a>
+                    </li>
+                    <li class="cat-item cat-item-3">
+                      <a href="/untyping/category/front-page/">Front page</a>
+                    </li>
+                    <li class="cat-item cat-item-9">
+                      <a href="/untyping/category/fun/">Fun</a>
+                    </li>
+                    <li class="cat-item cat-item-6">
+                      <a href="/untyping/category/functional-programming/"
+                        >Functional Programming</a
+                      >
+                    </li>
+                    <li class="cat-item cat-item-1">
+                      <a href="/untyping/category/general/">General</a>
+                    </li>
+                    <li class="cat-item cat-item-12">
+                      <a href="/untyping/category/javascript/">Javascript</a>
+                    </li>
+                    <li class="cat-item cat-item-14">
+                      <a href="/untyping/category/kahu/">Kahu</a>
+                    </li>
+                    <li class="cat-item cat-item-4">
+                      <a href="/untyping/category/myna/">Myna</a>
+                    </li>
+                    <li class="cat-item cat-item-13">
+                      <a href="/untyping/category/racket/">Racket</a>
+                    </li>
+                    <li class="cat-item cat-item-8">
+                      <a href="/untyping/category/scala/">Scala</a>
+                    </li>
+                    <li class="cat-item cat-item-5">
+                      <a href="/untyping/category/web-development/"
+                        >Web development</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li id="meta-2" class="widget widget_meta">
+                  <h2 class="widgettitle">Meta</h2>
+                  <ul>
+                    <li><a href="/wp-login.php">Log in</a></li>
+                    <li><a href="/feed/">Entries feed</a></li>
+                    <li><a href="/comments/feed/">Comments feed</a></li>
+
+                    <li>
+                      <a href="https://en-gb.wordpress.org/">WordPress.org</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/business/" rel="category tag">Business</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Untyped hosting?</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-280" class="post-280 post type-post status-publish format-standard hentry category-business">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">20 Jan 2006</p>
-      <p class="author">by Noel</p>
     </div>
 
-    <div class="span8">
-      <h2><a href="/untyping/2006/01/20/we-have-lift-off/" rel="bookmark" title="Permanent Link to We Have Lift Off!">We Have Lift Off!</a></h2>
+    <footer id="contact">
+      <div class="shadow top"></div>
 
-      <div class="entry">
-        <div>
-<p>As we’ve been hinting on the blog our current project has been close to delivery. Truth is, once we got a new server set up the deadline passed without incident. We’ve been waiting a few days to ensure there are no problems, but it’s been long enough so we’re now happy to announce the project is complete.</p>
-<p>This work has been done for <a href="http://www.sbcs.qmul.ac.uk/">the School of Biological and Chemical Sciences</a> at Queen Mary University of London. We have implemented a preregistration system for them: a website by which students can be registered for courses and modules, replacing a tedious and error-prone manual system. Unfortunately there is no publically available front-end so we can’t show off our work. However we have a few projects that should be completed in the next months that will have publically visible components.</p>
-<p>The whole site runs on <a href="http://www.plt-scheme.org/">PLT Scheme</a>, with <a href="http://www.sqlite.org/">SQLite</a> for the database. This is, to our knowledge, the first large site to run the PLT Scheme web server continuously for any length of time. Over the next few days we’ll provide a few more details about the more intricate parts of our setup so other intrepid pioneers can learn from our work.</p>
-<div></div>
-</div>
+      <div class="container">
+        <h2>Stay in touch</h2>
+
+        <dl>
+          <dt>Telephone</dt>
+          <dd><a href="callto:+441212857400">0121 285 7400</a></dd>
+
+          <dt>Email</dt>
+          <dd>
+            <span class="email"
+              ><span class="recipient">info</span> at
+              <span class="domain">untyped</span></span
+            >
+          </dd>
+
+          <dt>Twitter</dt>
+          <dd><a href="http://twitter.com/untyped">@untyped</a></dd>
+
+          <dt>Address</dt>
+          <dd>
+            <address>
+              Untyped<br />
+              The Skiff<br />
+              30 Cheapside<br />
+              Brighton BN1 4GD
+            </address>
+          </dd>
+
+          <dt>UK company number</dt>
+          <dd>06226466</dd>
+
+          <dt>UK VAT number</dt>
+          <dd>941 0528 46</dd>
+        </dl>
+
+        <p class="copyright">
+          Copyright 2009 to 2017 <a href="/">Untyped Ltd</a>. Powered by
+          <a href="http://wordpress.org/" class="nocolor">WordPress</a>.
+          <a href="/terms" class="nocolor">Terms of use</a>.
+        </p>
       </div>
+    </footer>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/business/" rel="category tag">Business</a> |
-                <span>Comments Off<span class="screen-reader-text"> on We Have Lift Off!</span></span>      </p>
-    </div>
-  </div>
-</section>
+    <script
+      src="http://www.google-analytics.com/urchin.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      _uacct = "UA-183641-1";
+      urchinTracker();
+    </script>
 
-<section id="post-330" class="post-330 post type-post status-publish format-standard hentry category-general">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">17 Jan 2006</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2006/01/17/building-a-server/" rel="bookmark" title="Permanent Link to Building a server">Building a server</a></h2>
-
-      <div class="entry">
-        <p>Currently, untyped lives on a virtual machine provided by <a href="http://www.bytemark.co.uk/index.html">Bytemark</a>. The service they provide is excellent, and we recommend them highly. While we are building our own server we hope to continue to host with Bytemark, but instead of being on a VM, we’ll be on our own hardware. We’ll see how that goes.</p>
-<p>Today, Christian and I spent a few hours working on the most fundamental part of a server: the filesystem. Before I go into any detail about the decisions we made, I’ll give you a sense for what we’re working with:</p>
-<table width="60%">
-<tbody>
-<tr>
-<td colspan="2" bgcolor="#CCCCFF">Untyped’s new home</td>
-</tr>
-<tr>
-<td><strong>Chassis</strong></td>
-<td>Intel SR1200</td>
-</tr>
-<tr>
-<td><strong>Processors</strong></td>
-<td>2x PIII 1.4GHz</td>
-</tr>
-<tr>
-<td><strong>RAM</strong></td>
-<td>2GB 133MHz ECC</td>
-</tr>
-<tr>
-<td><strong>Hard disks</strong></td>
-<td>2x 250GB IDE</td>
-</tr>
-</tbody>
-</table>
-<p>This server has seen use before, but we’ve replaced all the moving parts; we’re quite pleased with its condition, and think it will provide us with a number of years of good service. And, we hope that we don’t need to do a low-level install again in the next few years.</p>
-<p>The first thing we did was to grab a Debian 3.1r1 <a href="http://www.debian.org/devel/debian-installer/">“testing” net install</a>CD image. We had to boot the 2.4 kernel, as the 2.6 kernel fails to load appropriate CD drivers from the install CD; this didn’t really matter. Then, we came around to our filesystem layout; what we knew was that we wanted to partition off different parts of the directory tree (/, /boot, /var, /usr, /tmp, /home); we didn’t know exactly how much space to give each part of the filesystem, however. Do we makehome 40GB, or 60GB? What about usr? The list goes on and on.</p>
-<p>We started by setting up a 4GB swap partition at the end of each drive, a 400MB boot partition at the front of each drive, and setting aside the remaining 245GB or so for the main parts of the filesystem. We then used the Debian installer to turn the 400MB partitions into one RAID set, and the 245GB partition into another. This way, both our boot partition and the main part of the drive are in RAID, but we’re guaranteed that our boot partition is at the front of the disk.</p>
-<p>(What is RAID? I’ll stick with the <a href="http://en.wikipedia.org/wiki/Redundant_array_of_independent_disks">Wikipedia</a> on that one. It keeps our two disk drives in perfect sync; this way, if one of them fails, we might be able to replace it before the second one does, thus keeping our system running with little or no interruption. This is a Good Thing.)</p>
-<p>Then, we dove into that big, 245GB space. We used LVM—the <a href="http://en.wikipedia.org/wiki/Logical_Volume_Manager_%28Linux%29">Logical Volume Manager</a>–to partition the rest of the disk. LVM is great because it essentially ignores the physical layout of your disks, and allows you to dynamically resize partitions without any great gnashing of teeth. So, we laid out 40GB for /home and /data, 20GB for /usr, and 4GB each for /, /var, and /tmp.</p>
-<p>Note that this is only 112GB of space; we had (roughly) 245GB of space in that big RAID set. Our intention is to grow those partitions as we need to. For now, we chose large, but reasonable values for each of these partitions. In time, we may decide to increase the amount of space allocated to /home—perhaps from 40GB to 80GB. The point is, we have around 116GB of space to “grow into”, and we can allocate it to any of the partitions we currently have… or we can create new partitions. In either case, these operations don’t require us to shutdown the machine, or even take it entirely offline—we only need to “stop” the logical volume that the partition is on.</p>
-<p>While we could do this more quickly the second time around, this took us between one and two hours; we were careful to check our assumptions, and rehashed and discussed a lot of the decisions in light of how we might want to use the server in the future.</p>
-<p>Once the filesystem was set up, the rest of the installation went quickly; things were pulled in automatically over the network, and we rebooted into our new machine. The filesystem looks great, and we expect that the decisions we made will serve us well in the future. Now, we’ll work on upgrading the kernel to a 2.6 series (with SMP support), and then begin replicating those services that currently exist on the VM to the server.</p>
-<p>Links that came in handy:</p>
-<ul>
-<li><a href="http://www.die.net/doc/linux/HOWTO/LVM-HOWTO-4.html">http://www.die.net/doc/linux/HOWTO/LVM-HOWTO-4.html</a></li>
-<li><a href="http://www.die.net/doc/linux/HOWTO/LVM-HOWTO-9.html#ss9.9">http://www.die.net/doc/linux/HOWTO/LVM-HOWTO-9.html#ss9.9</a></li>
-<li><a href="http://aplawrence.com/Linux/lvm.html">http://aplawrence.com/Linux/lvm.html</a></li>
-</ul>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/general/" rel="category tag">General</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Building a server</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-335" class="post-335 post type-post status-publish format-standard hentry category-general">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">22 Dec 2005</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2005/12/22/the-implications-of-the-internet/" rel="bookmark" title="Permanent Link to The Implications of the Internet">The Implications of the Internet</a></h2>
-
-      <div class="entry">
-        <blockquote>
-<p>If you are a civilian like me (an anthropologist, that is, without much technical savvy), it’s a little mystifying. Will Internet 2.0 change everything or just some things? Is this a revolutionary moment or an evolutionary one? Is everything I know wrong, or just this, that and the other thing? Is this 2.0h! or merely 2.0. …</p>
-<p>Here are three models that sort out the possibilities for me.</p>
-</blockquote>
-<p><a href="http://www.cultureby.com/trilogy/2005/12/internet_20_the.html">Read it</a>, it’s good stuff.</p>
-<p>My take: these changes will take place, but it will take another generation, that grows up with the Internet, for them to be fully realised.</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/general/" rel="category tag">General</a> |
-                <span>Comments Off<span class="screen-reader-text"> on The Implications of the Internet</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-333" class="post-333 post type-post status-publish format-standard hentry category-javascript category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">22 Dec 2005</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2005/12/22/printf-in-ajax-sorry-thats-not-debugging/" rel="bookmark" title="Permanent Link to Printf in AJAX? Sorry, that’s not debugging.">Printf in AJAX? Sorry, that’s not debugging.</a></h2>
-
-      <div class="entry">
-        <p><em>This post is one in a continuing series where we internally debate the merits of the over-hyped promise of AJAX…</em></p>
-<blockquote>
-<p><a href="http://ajaxian.com/archives/2005/12/debugging_ajax.html">Debugging Ajax Requests in Prototype</a>:</p>
-<p>How do we debug our Ajax applications? The <a href="http://rails.techno-weenie.net/">Rails Weenie</a> has taken the Ajax Responder feature in Prototype…</p>
-</blockquote>
-<p>I’d like to remind Noel that the distance of the Atlantic and business of the Christmas holidays are not going to keep me from pointing out that AJAX is an immature and dangerous platform to build a business on. Yes, I’m glad that GMail is there… and I suppose the Yahoo! Mail beta. However, these are fragile technologies to build upon.</p>
-<p>How do we debug things written using the Prototype framework?<code>printf</code>. I mean, I’m glad that with AJAX and Rails I can whip something up quickly that “just works.” However, it doesn’t “just have test cases,” or “just get internationalized”, or “just stand up under load.” They’re rapid-prototyping tools, certainly nothing more. AJAX breaks usability standards, pushes data and computation to an unreliable substrate (the client’s web browser), and as the post above provides some evidence for, there are no good debugging or tracing tools available for developers working in heterogeneous browser environments in Javascript.</p>
-<p>So, Noel, riddle me this: why should developers be willing to take eight steps backwards and be shafted with <code>printf</code> as their primary debugging tool when working with AJAX?</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/javascript/" rel="category tag">Javascript</a>, <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Printf in AJAX? Sorry, that’s not debugging.</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-337" class="post-337 post type-post status-publish format-standard hentry category-fun">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">12 Dec 2005</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2005/12/12/population-of-the-world/" rel="bookmark" title="Permanent Link to Population of the World">Population of the World</a></h2>
-
-      <div class="entry">
-        <p>A <a href="http://www.odt.org/Pictures/poplcart.jpg">cartogram of the world by population</a> gives some perspective. This green and pleasant isle really is quite crowded. Canada, on the other hand, is somewhat devoid of human inhabitants.</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/fun/" rel="category tag">Fun</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Population of the World</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-339" class="post-339 post type-post status-publish format-standard hentry category-fun category-general">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">6 Dec 2005</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2005/12/06/happy-birthday/" rel="bookmark" title="Permanent Link to Happy Birthday!">Happy Birthday!</a></h2>
-
-      <div class="entry">
-        <p>A great big Happy Birthday! to <a href="http://www.untyped.com/about/geoffrey.php">Geoff</a>, who turns 21 again today!</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/fun/" rel="category tag">Fun</a>, <a href="/untyping/category/general/" rel="category tag">General</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Happy Birthday!</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-344" class="post-344 post type-post status-publish format-standard hentry category-fun">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">24 Nov 2005</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2005/11/24/the-rise-of-intelligence/" rel="bookmark" title="Permanent Link to The Rise of Intelligence">The Rise of Intelligence</a></h2>
-
-      <div class="entry">
-        <p><a href="http://www.buzz.bham.ac.uk/Buzz_69.pdf">A recent study</a> of human skulls covering a period of about 600 years shows the human skull has changed significantly. Facial features, particularly the lower jaw, have decreased markedly in size, and more intriguingly the size of the cranial vault has increased “by more than a centimetre” (presumably they mean a cubic centimetre). What does this mean? I don’t think anyone knows, but I’d guess the increase in processed foods means less need for strong jaws, and the increased brain size might explain why <a href="http://www.gt-cybersource.org/Record.aspx?NavID=2_0&amp;rid=11277">IQ scores are increasing over time</a>.</p>
-<p><strong>Update:</strong> The increase in IQ over time is known as the Flynn effect. There are some good links <a href="http://www.marginalrevolution.com/marginalrevolution/2003/12/should_we_renor.html">here</a>. Cranial capacity is proportional to body size, as discussed <a href="http://www.talkorigins.org/faqs/homs/a_brains.html">here</a>. I haven’t been able to find the publications of the original study, so I can’t tell if they controlled for increases in body size. If not, then the increase in cranial capacity is likely not significant, as people today are generally larger than in the Middle Ages.</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/fun/" rel="category tag">Fun</a> |
-                <span>Comments Off<span class="screen-reader-text"> on The Rise of Intelligence</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<section id="post-342" class="post-342 post type-post status-publish format-standard hentry category-fun">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">24 Nov 2005</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2005/11/24/frag/" rel="bookmark" title="Permanent Link to Frag!">Frag!</a></h2>
-
-      <div class="entry">
-        <p>From <a href="http://theschemeway.blogspot.com/">The Scheme Way</a> is a link to <a href="http://haskell.org/hawiki/Frag">Frag</a>, a first-person shooter programmed in Haskell. Neat!</p>
-      </div>
-
-      <p class="tags">
-                Posted in <a href="/untyping/category/fun/" rel="category tag">Fun</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Frag!</span></span>      </p>
-    </div>
-  </div>
-</section>
-
-<nav>
-  <div class="row">
-    <div class="span8 offset2">
-      <span class="newer"><a href="/untyping/page/15/">&laquo; Newer Entries</a></span>
-      <span class="older"><a href="/untyping/page/17/">Older Entries &raquo;</a></span>
-      <div class="clear"></div>
-    </div>
-  </div>
-</nav>
-
-
-</div>
-<div class="span2">
-
-<div id="sidebar" class="small column two-of-two width300">
-
-<ul>
-<li id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
-				<div>
-					<label class="screen-reader-text" for="s">Search for:</label>
-					<input type="text" value="" name="s" id="s">
-					<input type="submit" id="searchsubmit" value="Search">
-				</div>
-			</form></li>
-		<li id="recent-posts-2" class="widget widget_recent_entries">
-		<h2 class="widgettitle">Recent Posts</h2>
-		<ul>
-											<li>
-					<a href="/untyping/2013/08/07/writing-documentation-using-grunt-and-jekyll/">Writing Documentation using Grunt and Jekyll</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/10/19/meanwhile-at-untyped-hq/">Meanwhile, at Untyped HQ&#8230;</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/08/28/new-site/">New site</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/06/06/myna-for-wordpress-available-now/">Myna for WordPress available now!</a>
-									</li>
-											<li>
-					<a href="/untyping/2011/10/20/the-circus-is-in-town/">The Circus is in Town</a>
-									</li>
-					</ul>
-
-		</li>
-<li id="recent-comments-2" class="widget widget_recent_comments">
-<h2 class="widgettitle">Recent Comments</h2>
-<ul id="recentcomments"></ul>
-</li>
-<li id="archives-2" class="widget widget_archive">
-<h2 class="widgettitle">Archives</h2>
-			<ul>
-					<li><a href="/untyping/2013/08/">August 2013</a></li>
-	<li><a href="/untyping/2012/10/">October 2012</a></li>
-	<li><a href="/untyping/2012/08/">August 2012</a></li>
-	<li><a href="/untyping/2012/06/">June 2012</a></li>
-	<li><a href="/untyping/2011/10/">October 2011</a></li>
-	<li><a href="/untyping/2011/09/">September 2011</a></li>
-	<li><a href="/untyping/2011/08/">August 2011</a></li>
-	<li><a href="/untyping/2011/05/">May 2011</a></li>
-	<li><a href="/untyping/2011/03/">March 2011</a></li>
-	<li><a href="/untyping/2011/02/">February 2011</a></li>
-	<li><a href="/untyping/2011/01/">January 2011</a></li>
-	<li><a href="/untyping/2010/12/">December 2010</a></li>
-	<li><a href="/untyping/2010/11/">November 2010</a></li>
-	<li><a href="/untyping/2010/10/">October 2010</a></li>
-	<li><a href="/untyping/2010/07/">July 2010</a></li>
-	<li><a href="/untyping/2010/06/">June 2010</a></li>
-	<li><a href="/untyping/2010/05/">May 2010</a></li>
-	<li><a href="/untyping/2010/04/">April 2010</a></li>
-	<li><a href="/untyping/2010/03/">March 2010</a></li>
-	<li><a href="/untyping/2010/02/">February 2010</a></li>
-	<li><a href="/untyping/2010/01/">January 2010</a></li>
-	<li><a href="/untyping/2009/07/">July 2009</a></li>
-	<li><a href="/untyping/2009/06/">June 2009</a></li>
-	<li><a href="/untyping/2009/04/">April 2009</a></li>
-	<li><a href="/untyping/2009/03/">March 2009</a></li>
-	<li><a href="/untyping/2009/01/">January 2009</a></li>
-	<li><a href="/untyping/2008/11/">November 2008</a></li>
-	<li><a href="/untyping/2008/10/">October 2008</a></li>
-	<li><a href="/untyping/2008/09/">September 2008</a></li>
-	<li><a href="/untyping/2008/08/">August 2008</a></li>
-	<li><a href="/untyping/2008/07/">July 2008</a></li>
-	<li><a href="/untyping/2008/06/">June 2008</a></li>
-	<li><a href="/untyping/2008/05/">May 2008</a></li>
-	<li><a href="/untyping/2008/04/">April 2008</a></li>
-	<li><a href="/untyping/2008/03/">March 2008</a></li>
-	<li><a href="/untyping/2008/02/">February 2008</a></li>
-	<li><a href="/untyping/2008/01/">January 2008</a></li>
-	<li><a href="/untyping/2007/12/">December 2007</a></li>
-	<li><a href="/untyping/2007/11/">November 2007</a></li>
-	<li><a href="/untyping/2007/10/">October 2007</a></li>
-	<li><a href="/untyping/2007/09/">September 2007</a></li>
-	<li><a href="/untyping/2007/08/">August 2007</a></li>
-	<li><a href="/untyping/2007/07/">July 2007</a></li>
-	<li><a href="/untyping/2007/06/">June 2007</a></li>
-	<li><a href="/untyping/2007/05/">May 2007</a></li>
-	<li><a href="/untyping/2007/04/">April 2007</a></li>
-	<li><a href="/untyping/2007/03/">March 2007</a></li>
-	<li><a href="/untyping/2007/02/">February 2007</a></li>
-	<li><a href="/untyping/2007/01/">January 2007</a></li>
-	<li><a href="/untyping/2006/12/">December 2006</a></li>
-	<li><a href="/untyping/2006/11/">November 2006</a></li>
-	<li><a href="/untyping/2006/10/">October 2006</a></li>
-	<li><a href="/untyping/2006/09/">September 2006</a></li>
-	<li><a href="/untyping/2006/08/">August 2006</a></li>
-	<li><a href="/untyping/2006/07/">July 2006</a></li>
-	<li><a href="/untyping/2006/06/">June 2006</a></li>
-	<li><a href="/untyping/2006/05/">May 2006</a></li>
-	<li><a href="/untyping/2006/04/">April 2006</a></li>
-	<li><a href="/untyping/2006/03/">March 2006</a></li>
-	<li><a href="/untyping/2006/02/">February 2006</a></li>
-	<li><a href="/untyping/2006/01/">January 2006</a></li>
-	<li><a href="/untyping/2005/12/">December 2005</a></li>
-	<li><a href="/untyping/2005/11/">November 2005</a></li>
-	<li><a href="/untyping/2005/10/">October 2005</a></li>
-	<li><a href="/untyping/2005/09/">September 2005</a></li>
-	<li><a href="/untyping/2005/08/">August 2005</a></li>
-	<li><a href="/untyping/2005/07/">July 2005</a></li>
-	<li><a href="/untyping/2005/06/">June 2005</a></li>
-	<li><a href="/untyping/2005/05/">May 2005</a></li>
-	<li><a href="/untyping/2005/04/">April 2005</a></li>
-			</ul>
-
-			</li>
-<li id="categories-2" class="widget widget_categories">
-<h2 class="widgettitle">Categories</h2>
-			<ul>
-					<li class="cat-item cat-item-10">
-<a href="/untyping/category/business/">Business</a>
-</li>
-	<li class="cat-item cat-item-7">
-<a href="/untyping/category/code/">Code</a>
-</li>
-	<li class="cat-item cat-item-11">
-<a href="/untyping/category/design/">Design</a>
-</li>
-	<li class="cat-item cat-item-3">
-<a href="/untyping/category/front-page/">Front page</a>
-</li>
-	<li class="cat-item cat-item-9">
-<a href="/untyping/category/fun/">Fun</a>
-</li>
-	<li class="cat-item cat-item-6">
-<a href="/untyping/category/functional-programming/">Functional Programming</a>
-</li>
-	<li class="cat-item cat-item-1">
-<a href="/untyping/category/general/">General</a>
-</li>
-	<li class="cat-item cat-item-12">
-<a href="/untyping/category/javascript/">Javascript</a>
-</li>
-	<li class="cat-item cat-item-14">
-<a href="/untyping/category/kahu/">Kahu</a>
-</li>
-	<li class="cat-item cat-item-4">
-<a href="/untyping/category/myna/">Myna</a>
-</li>
-	<li class="cat-item cat-item-13">
-<a href="/untyping/category/racket/">Racket</a>
-</li>
-	<li class="cat-item cat-item-8">
-<a href="/untyping/category/scala/">Scala</a>
-</li>
-	<li class="cat-item cat-item-5">
-<a href="/untyping/category/web-development/">Web development</a>
-</li>
-			</ul>
-
-			</li>
-<li id="meta-2" class="widget widget_meta">
-<h2 class="widgettitle">Meta</h2>
-		<ul>
-						<li><a href="/wp-login.php">Log in</a></li>
-			<li><a href="/feed/">Entries feed</a></li>
-			<li><a href="/comments/feed/">Comments feed</a></li>
-
-			<li><a href="https://en-gb.wordpress.org/">WordPress.org</a></li>
-		</ul>
-
-		</li>
-</ul>
-</div>
-
-
-</div>
-</div>
-</div>
-
-</div>
-
-<footer id="contact">
-  <div class="shadow top"></div>
-
-  <div class="container">
-    <h2>Stay in touch</h2>
-
-    <dl>
-      <dt>Telephone</dt>
-      <dd><a href="callto:+441212857400">0121 285 7400</a></dd>
-
-      <dt>Email</dt>
-      <dd><span class="email"><span class="recipient">info</span> at <span class="domain">untyped</span></span></dd>
-
-      <dt>Twitter</dt>
-      <dd><a href="http://twitter.com/untyped">@untyped</a></dd>
-
-      <dt>Address</dt>
-      <dd>
-        <address>
-          Untyped<br>
-          The Skiff<br>
-          30 Cheapside<br>
-          Brighton BN1 4GD
-        </address>
-      </dd>
-
-      <dt>UK company number</dt>
-      <dd>06226466</dd>
-
-      <dt>UK VAT number</dt>
-      <dd>941 0528 46</dd>
-    </dl>
-
-    <p class="copyright">
-      Copyright 2009 to 2017 <a href="/">Untyped Ltd</a>.
-      Powered by <a href="http://wordpress.org/" class="nocolor">WordPress</a>.
-      <a href="/terms" class="nocolor">Terms of use</a>.
-    </p>
-  </div>
-</footer>
-
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">_uacct = "UA-183641-1";
-urchinTracker();</script>
-
-<script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
-<script src="/scripts/untyped.js"></script>
-
-</body>
+    <script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="/scripts/untyped.js"></script>
+  </body>
 </html>

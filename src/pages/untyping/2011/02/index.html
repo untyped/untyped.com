@@ -1,398 +1,1193 @@
 <!DOCTYPE html>
 <html id="untyping" lang="en">
+  <head>
+    <title>February &#8211; 2011 &#8211; Untyping</title>
 
-<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>February &#8211; 2011 &#8211;  Untyping</title>
+    <link rel="stylesheet" type="text/css" href="/styles/screen.css" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="/styles/ie8.css" />
+      <script src="/scripts/html5shiv.js"></script>
+    <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="/styles/screen.css">
+    <!--<link rel="stylesheet" href="/styles/pygments.css" type="text/css" media="screen">-->
 
-<!--[if lt IE 9]>
-<link rel="stylesheet" href="/styles/ie8.css">
-<script src="/scripts/html5shiv.js"></script>
-<![endif]-->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Untyped RSS Feed"
+      href="/feed/"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Untyped Atom Feed"
+      href="/feed/atom/"
+    />
+    <link rel="pingback" href="/xmlrpc.php" />
 
-<!--<link rel="stylesheet" href="/styles/pygments.css" type="text/css" media="screen">-->
+    <meta name="robots" content="max-image-preview:large" />
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji: "\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2",
+        },
+      };
+      /*! This file is auto-generated */
+      !(function (i, n) {
+        var o, s, e;
+        function c(e) {
+          try {
+            var t = { supportTests: e, timestamp: new Date().valueOf() };
+            sessionStorage.setItem(o, JSON.stringify(t));
+          } catch (e) {}
+        }
+        function p(e, t, n) {
+          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0);
+          var t = new Uint32Array(
+              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+            ),
+            r =
+              (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+              e.fillText(n, 0, 0),
+              new Uint32Array(
+                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+              ));
+          return t.every(function (e, t) {
+            return e === r[t];
+          });
+        }
+        function u(e, t, n) {
+          switch (t) {
+            case "flag":
+              return n(e, "🏳️‍⚧️", "🏳️​⚧️")
+                ? !1
+                : !n(e, "🇺🇳", "🇺​🇳") && !n(e, "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");
+            case "emoji":
+              return !n(e, "🐦‍⬛", "🐦​⬛");
+          }
+          return !1;
+        }
+        function f(e, t, n) {
+          var r =
+              "undefined" != typeof WorkerGlobalScope &&
+              self instanceof WorkerGlobalScope
+                ? new OffscreenCanvas(300, 150)
+                : i.createElement("canvas"),
+            a = r.getContext("2d", { willReadFrequently: !0 }),
+            o = ((a.textBaseline = "top"), (a.font = "600 32px Arial"), {});
+          return (
+            e.forEach(function (e) {
+              o[e] = t(a, e, n);
+            }),
+            o
+          );
+        }
+        function t(e) {
+          var t = i.createElement("script");
+          (t.src = e), (t.defer = !0), i.head.appendChild(t);
+        }
+        "undefined" != typeof Promise &&
+          ((o = "wpEmojiSettingsSupports"),
+          (s = ["flag", "emoji"]),
+          (n.supports = { everything: !0, everythingExceptFlag: !0 }),
+          (e = new Promise(function (e) {
+            i.addEventListener("DOMContentLoaded", e, { once: !0 });
+          })),
+          new Promise(function (t) {
+            var n = (function () {
+              try {
+                var e = JSON.parse(sessionStorage.getItem(o));
+                if (
+                  "object" == typeof e &&
+                  "number" == typeof e.timestamp &&
+                  new Date().valueOf() < e.timestamp + 604800 &&
+                  "object" == typeof e.supportTests
+                )
+                  return e.supportTests;
+              } catch (e) {}
+              return null;
+            })();
+            if (!n) {
+              if (
+                "undefined" != typeof Worker &&
+                "undefined" != typeof OffscreenCanvas &&
+                "undefined" != typeof URL &&
+                URL.createObjectURL &&
+                "undefined" != typeof Blob
+              )
+                try {
+                  var e =
+                      "postMessage(" +
+                      f.toString() +
+                      "(" +
+                      [JSON.stringify(s), u.toString(), p.toString()].join(
+                        ","
+                      ) +
+                      "));",
+                    r = new Blob([e], { type: "text/javascript" }),
+                    a = new Worker(URL.createObjectURL(r), {
+                      name: "wpTestEmojiSupports",
+                    });
+                  return void (a.onmessage = function (e) {
+                    c((n = e.data)), a.terminate(), t(n);
+                  });
+                } catch (e) {}
+              c((n = f(s, u, p)));
+            }
+            t(n);
+          })
+            .then(function (e) {
+              for (var t in e)
+                (n.supports[t] = e[t]),
+                  (n.supports.everything =
+                    n.supports.everything && n.supports[t]),
+                  "flag" !== t &&
+                    (n.supports.everythingExceptFlag =
+                      n.supports.everythingExceptFlag && n.supports[t]);
+              (n.supports.everythingExceptFlag =
+                n.supports.everythingExceptFlag && !n.supports.flag),
+                (n.DOMReady = !1),
+                (n.readyCallback = function () {
+                  n.DOMReady = !0;
+                });
+            })
+            .then(function () {
+              return e;
+            })
+            .then(function () {
+              var e;
+              n.supports.everything ||
+                (n.readyCallback(),
+                (e = n.source || {}).concatemoji
+                  ? t(e.concatemoji)
+                  : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
+            }));
+      })((window, document), window._wpemojiSettings);
+      /* ]]> */
+    </script>
+    <style id="wp-emoji-styles-inline-css" type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="wp-block-library-css"
+      href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2"
+      type="text/css"
+      media="all"
+    />
+    <style id="classic-theme-styles-inline-css" type="text/css">
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em;
+      }
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+      :root {
+        --wp--preset--aspect-ratio--square: 1;
+        --wp--preset--aspect-ratio--4-3: 4/3;
+        --wp--preset--aspect-ratio--3-4: 3/4;
+        --wp--preset--aspect-ratio--3-2: 3/2;
+        --wp--preset--aspect-ratio--2-3: 2/3;
+        --wp--preset--aspect-ratio--16-9: 16/9;
+        --wp--preset--aspect-ratio--9-16: 9/16;
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+          6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+      }
+      :where(.is-layout-flex) {
+        gap: 0.5em;
+      }
+      :where(.is-layout-grid) {
+        gap: 0.5em;
+      }
+      body .is-layout-flex {
+        display: flex;
+      }
+      .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .is-layout-flex > :is(*, div) {
+        margin: 0;
+      }
+      body .is-layout-grid {
+        display: grid;
+      }
+      .is-layout-grid > :is(*, div) {
+        margin: 0;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :root :where(.wp-block-pullquote) {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+    </style>
+    <link rel="https://api.w.org/" href="/wp-json/" />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      title="RSD"
+      href="/xmlrpc.php?rsd"
+    />
+    <style type="text/css">
+      .recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    </style>
+  </head>
 
-<link rel="alternate" type="application/rss+xml" title="Untyped RSS Feed" href="/feed/">
-<link rel="alternate" type="application/atom+xml" title="Untyped Atom Feed" href="/feed/atom/">
-<link rel="pingback" href="/xmlrpc.php">
-
-
-<meta name="robots" content="max-image-preview:large">
-<script type="text/javascript">
-/* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
-/*! This file is auto-generated */
-!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-/* ]]> */
-</script>
-<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}</style>
-<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2" type="text/css" media="all">
-<style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
-<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
-:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
-<link rel="https://api.w.org/" href="/wp-json/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-</head>
-
-<body class="myna" data-goal="load">
-
-<header id="top">
-  <div class="container">
-    <div class="row">
-      <div class="span5 offset7">
-        <div class="overlay title">
-          <a href="/untyping">
-            <h1><img src="/styles/images/untyping-logo.png" alt="Untyping"></h1>
-            <span class="strapline">The Untyped Weblog.</span>
-          </a>
-        </div>
-
-        <div class="overlay about">
-          Read on and leave a comment<br>
-          or <a href="/">return to our portfolio.</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="shadow bottom"></div>
-</header>
-
-<div id="navbar-wrapper">
-  <nav id="navbar" class="navbar">
-    <div class="navbar-inner">
+  <body class="myna" data-goal="load">
+    <header id="top">
       <div class="container">
-        <ul class="nav">
-          <li><a href="/#top">Home</a></li>
-          <li><a href="/jobs">Jobs</a></li>
-          <li><a href="/untyping">Weblog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
+        <div class="row">
+          <div class="span5 offset7">
+            <div class="overlay title">
+              <a href="/untyping">
+                <h1>
+                  <img src="/styles/images/untyping-logo.png" alt="Untyping" />
+                </h1>
+                <span class="strapline">The Untyped Weblog.</span>
+              </a>
+            </div>
 
-<div class="shadow-wrapper">
-  <div class="shadow top light"></div>
-
-<div class="container">
-
-<h1 class="pagetitle">Archive for February, 2011</h1>
-
-<div class="row">
-<div id="blog" class="span10">
-<section id="post-34" class="post-34 post type-post status-publish format-standard hentry category-business category-code category-design category-front-page category-general category-myna category-web-development">
-  <div class="row">
-    <div class="span2 meta">
-      <p class="date">11 Feb 2011</p>
-      <p class="author">by Noel</p>
-    </div>
-
-    <div class="span8">
-      <h2><a href="/untyping/2011/02/11/stop-ab-testing-and-make-out-like-a-bandit/" rel="bookmark" title="Permanent Link to Stop A/B Testing and Make Out Like a Bandit">Stop A/B Testing and Make Out Like a Bandit</a></h2>
-
-      <div class="entry">
-        <p><strong>This is the blog post that led to <a href="https://mynaweb.com/?utm_source=untyping&amp;utm_medium=post&amp;utm_campaign=myna">Myna</a>. Sign up now and help us beta test the world’s fastest A/B testing product!</strong></p>
-<p>Were I a betting man, I would wager this: the supermarket nearest to you is laid out with fresh fruit and vegetables near the entrance, and dairy and bread towards the back of the shop. I’m quite certain I’d win this bet enough times to make it worthwhile. This layout is, of course, no accident. By placing essentials in the corners, the store forces shoppers to traverse the entire floor to get their weekly shop. This increases the chance of an impulse purchase and hence the store’s revenue.</p>
-<p>I don’t know who developed this layout, but at some point someone must have tested it and it obviously worked. The same idea applies online, where it is incredibly easy to change the “layout” of a store. Where the supermarket might shuffle around displays or change the lighting, the online retailer might change the navigational structure or wording of their landing page. I call this process <em>content optimisation</em>.</p>
-<p>Any prospective change should be tested to ensure it has a positive effect on revenue (or some other measure, such as clickthroughs). The industry standard method for doing this is <a href="http://untyped.wpengine.com/2010/07/22/epistemology-and-ab-testing/">A/B testing</a>. However, it is well known in the academic community that <em>A/B testing is significantly suboptimal</em>. In this post I’m going to explain why, and how you can do better.</p>
-<p>There are several problems with A/B testing:</p>
-<ul>
-<li>A/B testing is suboptimal. It simply doesn’t increase revenue as much as better methods.</li>
-<li>A/B testing is inflexible. You can’t, for example, add a new choice to an already running test.</li>
-<li>A/B testing has a tedious workflow. To do it correctly, you have to make lots of seemingly arbitrary choices (p-value, experiment size) to run an experiment.</li>
-</ul>
-<p>The methods I’m going to describe, which are known as <a href="http://en.wikipedia.org/wiki/Multi-armed_bandit">bandit algorithms</a>, solve all these problems. But first, let’s look at the problems of A/B testing in more detail.</p>
-<h2>Suboptimal Performance</h2>
-<p>Explaining the suboptimal performance of A/B testing is tricky without getting into a bit of statistics. Instead of doing that, I’m going to describe the essence of the problem in a (hopefully) intuitive way. Let’s start by outlining the basic A/B testing scenario, so there is no confusion. In the simplest situation are two choices, A and B, under test. Normally one of them is already running on the site (let’s call that one A), and the other (B) is what we’re considering replacing A with. We run an experiment and then look for a significant difference, where I mean <a href="http://en.wikipedia.org/wiki/Statistical_significance">significance</a> in the statistical sense. If B is significantly better we replace A with B, otherwise we keep A on the site.</p>
-<p>The key problem with A/B testing is it doesn’t respect what the significance test is actually saying. When a test shows B is significantly better than A, it is right to throw out A. However, when there is no significant difference the test is <em>not</em> saying that B is no better than A, but rather that the data does not support any conclusion. A might be better than B, B might be better than A, or they might be the same. We just can’t tell with the data that is available*. It might seem we could just run the test until a significant result appears, but that runs into the problem of <a href="http://www.evanmiller.org/how-not-to-run-an-ab-test.html">repeated significance testing errors</a>. Oh dear! Whatever we do, if we stick exclusively with A/B testing we’re going to make mistakes, and probably more than we realise.</p>
-<p>A/B testing is also suboptimal in another way — it doesn’t take advantage of information gained during the trial. Every time you display a choice you get information, such as a click, a purchase, or an indifferent user leaving your site. This information is really valuable, and you could make use of it in your test, but A/B testing simply discards it. There are good statistical reasons to not use information gained during a trial within the A/B testing framework, but if we step outside that framework we can.</p>
-<p>* Technically, the reason for this is that the probability of a type II error increases as the probability of a type I error decreases. We control the probability of a type I error with the p-value, and this is typically set low. So if we drop option B when the test is not significant we have a high probability of making a type II error.</p>
-<h2>Inflexible</h2>
-<p>The A/B testing setup is very rigid. You can’t add new choices to the test, so you can’t, say, test the best news item to display on the front page of a site. You can’t dynamically adjust what you display based on information you have about the user — say, what they purchased last time they visited. You also can’t easily test more than two choices.</p>
-<h2>Workflow</h2>
-<p>To setup an A/B experiment you need to choose the significance level and the number of trials. These choices are often arbitrary, but they can have a major impact on results. You then need to monitor the experiment and, when it concludes, implement the results. There are a lot of manual steps in this workflow.</p>
-<h2>Make out like a Bandit</h2>
-<p>Algorithms for solving the so-called bandit problem address all the problems with A/B testing. To summarise, they give optimal results (to within constant factors), they are very flexible, and they have a fire-and-forget workflow.</p>
-<p>So, what is the bandit problem? You have a set of choices you can make. On the web these could be different images to display, or different wordings for a button, and so on. Each time you make a choice you get a reward. For example, you might get a reward of 1 if a button is clicked, and reward of 0 otherwise. Your goal is to maximise your total reward over time. This clearly fits the content optimisation problem.</p>
-<p>The bandit problem has been studied for over 50 years, but only in the last ten years have practical algorithms been developed. We studied one such <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.98.9211&amp;rep=rep1&amp;type=pdf">paper</a> in <a href="http://untyped.wpengine.com/2011/01/10/the-university-of-untyped/">UU</a>. The particular details of the algorithm we studied are not important (if you are interested, read the paper – it’s very simple); here I want to focus on the general principles of bandit algorithms.</p>
-<p>The first point is that the bandit problem explicitly includes the idea that we make use of information as it arrives. This leads to what is called the exploration-exploitation dilemma: do we try many different choices to gain a better estimate of their reward (exploration) or try the choices that have worked well in the past (exploitation)?</p>
-<p>The performance of an algorithm is typically measured by its <a href="http://en.wikipedia.org/wiki/Regret_(decision_theory)">regret</a>, which is the average difference between its actual performance and the best possible performance. <a href="http://dx.doi.org/10.1016/0196-8858(85)90002-8">It has been shown</a> that the best possible regret increases logarithmically with the number of choices made, and <em>modern bandit algorithms are optimal</em> (see <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.98.9211&amp;rep=rep1&amp;type=pdf">the UU paper</a>, for instance).</p>
-<p>Bandit algorithms are very flexible. They can deal with as many choices as necessary. Variants of the basic algorithms can handle addition and removal of choices, selection of the best <em>k</em> choices, and exploitation of information known about the visitor.</p>
-<p>Bandits are also simple to use. Many of the algorithms have no parameters to set, and unlike A/B testing there is no need to monitor them — they will continue working indefinitely.</p>
-<p>Finally, we know bandits work on the web, as much of the current research on them is coming out of <a href="http://www.cs.toronto.edu/~tl/papers/context-aistats.pdf">Google</a>, <a href="http://research.microsoft.com/en-us/projects/bandits/">Microsoft</a>, <a href="http://labs.yahoo.com/files/Explore-exploit-ICDM09.pdf">Yahoo!</a>, and other big Internet companies.</p>
-<p>So there you have it. Stop wasting time on A/B testing and make out like a bandit!</p>
-<h2>Join Our Merry Band</h2>
-<p>Finally, you probably won’t be surprised to hear we are developing a content optimisation system based on bandit algorithms. I am giving a talk on this at the Multipack Show and Tell in Birmingham this Saturday.</p>
-<p>We are currently building a prototype, and are looking for people to help us evaluate it. If you want more information, or would like to get involved, <a href="mailto:info@untyped.com">get in touch</a> and we’ll let you know when we’re ready to go.</p>
-<p><strong>Update: In case you missed it at the top, <a href="http://www.mynaweb.com/">Myna</a> is our content optimisation system based on bandit algorithms and we’re accepting beta users right now!</strong></p>
+            <div class="overlay about">
+              Read on and leave a comment<br />
+              or <a href="/">return to our portfolio.</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="tags">
-                Posted in <a href="/untyping/category/business/" rel="category tag">Business</a>, <a href="/untyping/category/code/" rel="category tag">Code</a>, <a href="/untyping/category/design/" rel="category tag">Design</a>, <a href="/untyping/category/front-page/" rel="category tag">Front page</a>, <a href="/untyping/category/general/" rel="category tag">General</a>, <a href="/untyping/category/myna/" rel="category tag">Myna</a>, <a href="/untyping/category/web-development/" rel="category tag">Web development</a> |
-                <span>Comments Off<span class="screen-reader-text"> on Stop A/B Testing and Make Out Like a Bandit</span></span>      </p>
+      <div class="shadow bottom"></div>
+    </header>
+
+    <div id="navbar-wrapper">
+      <nav id="navbar" class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li><a href="/#top">Home</a></li>
+              <li><a href="/untyping">Weblog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-  </div>
-</section>
 
-<nav>
-  <div class="row">
-    <div class="span8 offset2">
-      <span class="newer"></span>
-      <span class="older"></span>
-      <div class="clear"></div>
+    <div class="shadow-wrapper">
+      <div class="shadow top light"></div>
+
+      <div class="container">
+        <h1 class="pagetitle">Archive for February, 2011</h1>
+
+        <div class="row">
+          <div id="blog" class="span10">
+            <section
+              id="post-34"
+              class="post-34 post type-post status-publish format-standard hentry category-business category-code category-design category-front-page category-general category-myna category-web-development"
+            >
+              <div class="row">
+                <div class="span2 meta">
+                  <p class="date">11 Feb 2011</p>
+                  <p class="author">by Noel</p>
+                </div>
+
+                <div class="span8">
+                  <h2>
+                    <a
+                      href="/untyping/2011/02/11/stop-ab-testing-and-make-out-like-a-bandit/"
+                      rel="bookmark"
+                      title="Permanent Link to Stop A/B Testing and Make Out Like a Bandit"
+                      >Stop A/B Testing and Make Out Like a Bandit</a
+                    >
+                  </h2>
+
+                  <div class="entry">
+                    <p>
+                      <strong
+                        >This is the blog post that led to <a
+                          href="https://mynaweb.com/?utm_source=untyping&amp;utm_medium=post&amp;utm_campaign=myna"
+                          >Myna</a
+                        >. Sign up now and help us beta test the world’s fastest
+                        A/B testing product!</strong
+                      >
+                    </p>
+                    <p>
+                      Were I a betting man, I would wager this: the supermarket
+                      nearest to you is laid out with fresh fruit and vegetables
+                      near the entrance, and dairy and bread towards the back of
+                      the shop. I’m quite certain I’d win this bet enough times
+                      to make it worthwhile. This layout is, of course, no
+                      accident. By placing essentials in the corners, the store
+                      forces shoppers to traverse the entire floor to get their
+                      weekly shop. This increases the chance of an impulse
+                      purchase and hence the store’s revenue.
+                    </p>
+                    <p>
+                      I don’t know who developed this layout, but at some point
+                      someone must have tested it and it obviously worked. The
+                      same idea applies online, where it is incredibly easy to
+                      change the “layout” of a store. Where the supermarket
+                      might shuffle around displays or change the lighting, the
+                      online retailer might change the navigational structure or
+                      wording of their landing page. I call this process <em
+                        >content optimisation</em
+                      >.
+                    </p>
+                    <p>
+                      Any prospective change should be tested to ensure it has a
+                      positive effect on revenue (or some other measure, such as
+                      clickthroughs). The industry standard method for doing
+                      this is <a
+                        href="http://untyped.wpengine.com/2010/07/22/epistemology-and-ab-testing/"
+                        >A/B testing</a
+                      >. However, it is well known in the academic community
+                      that <em>A/B testing is significantly suboptimal</em>. In
+                      this post I’m going to explain why, and how you can do
+                      better.
+                    </p>
+                    <p>There are several problems with A/B testing:</p>
+                    <ul>
+                      <li>
+                        A/B testing is suboptimal. It simply doesn’t increase
+                        revenue as much as better methods.
+                      </li>
+                      <li>
+                        A/B testing is inflexible. You can’t, for example, add a
+                        new choice to an already running test.
+                      </li>
+                      <li>
+                        A/B testing has a tedious workflow. To do it correctly,
+                        you have to make lots of seemingly arbitrary choices
+                        (p-value, experiment size) to run an experiment.
+                      </li>
+                    </ul>
+                    <p>
+                      The methods I’m going to describe, which are known as <a
+                        href="http://en.wikipedia.org/wiki/Multi-armed_bandit"
+                        >bandit algorithms</a
+                      >, solve all these problems. But first, let’s look at the
+                      problems of A/B testing in more detail.
+                    </p>
+                    <h2>Suboptimal Performance</h2>
+                    <p>
+                      Explaining the suboptimal performance of A/B testing is
+                      tricky without getting into a bit of statistics. Instead
+                      of doing that, I’m going to describe the essence of the
+                      problem in a (hopefully) intuitive way. Let’s start by
+                      outlining the basic A/B testing scenario, so there is no
+                      confusion. In the simplest situation are two choices, A
+                      and B, under test. Normally one of them is already running
+                      on the site (let’s call that one A), and the other (B) is
+                      what we’re considering replacing A with. We run an
+                      experiment and then look for a significant difference,
+                      where I mean <a
+                        href="http://en.wikipedia.org/wiki/Statistical_significance"
+                        >significance</a
+                      > in the statistical sense. If B is significantly better
+                      we replace A with B, otherwise we keep A on the site.
+                    </p>
+                    <p>
+                      The key problem with A/B testing is it doesn’t respect
+                      what the significance test is actually saying. When a test
+                      shows B is significantly better than A, it is right to
+                      throw out A. However, when there is no significant
+                      difference the test is <em>not</em> saying that B is no
+                      better than A, but rather that the data does not support
+                      any conclusion. A might be better than B, B might be
+                      better than A, or they might be the same. We just can’t
+                      tell with the data that is available*. It might seem we
+                      could just run the test until a significant result
+                      appears, but that runs into the problem of <a
+                        href="http://www.evanmiller.org/how-not-to-run-an-ab-test.html"
+                        >repeated significance testing errors</a
+                      >. Oh dear! Whatever we do, if we stick exclusively with
+                      A/B testing we’re going to make mistakes, and probably
+                      more than we realise.
+                    </p>
+                    <p>
+                      A/B testing is also suboptimal in another way — it doesn’t
+                      take advantage of information gained during the trial.
+                      Every time you display a choice you get information, such
+                      as a click, a purchase, or an indifferent user leaving
+                      your site. This information is really valuable, and you
+                      could make use of it in your test, but A/B testing simply
+                      discards it. There are good statistical reasons to not use
+                      information gained during a trial within the A/B testing
+                      framework, but if we step outside that framework we can.
+                    </p>
+                    <p>
+                      * Technically, the reason for this is that the probability
+                      of a type II error increases as the probability of a type
+                      I error decreases. We control the probability of a type I
+                      error with the p-value, and this is typically set low. So
+                      if we drop option B when the test is not significant we
+                      have a high probability of making a type II error.
+                    </p>
+                    <h2>Inflexible</h2>
+                    <p>
+                      The A/B testing setup is very rigid. You can’t add new
+                      choices to the test, so you can’t, say, test the best news
+                      item to display on the front page of a site. You can’t
+                      dynamically adjust what you display based on information
+                      you have about the user — say, what they purchased last
+                      time they visited. You also can’t easily test more than
+                      two choices.
+                    </p>
+                    <h2>Workflow</h2>
+                    <p>
+                      To setup an A/B experiment you need to choose the
+                      significance level and the number of trials. These choices
+                      are often arbitrary, but they can have a major impact on
+                      results. You then need to monitor the experiment and, when
+                      it concludes, implement the results. There are a lot of
+                      manual steps in this workflow.
+                    </p>
+                    <h2>Make out like a Bandit</h2>
+                    <p>
+                      Algorithms for solving the so-called bandit problem
+                      address all the problems with A/B testing. To summarise,
+                      they give optimal results (to within constant factors),
+                      they are very flexible, and they have a fire-and-forget
+                      workflow.
+                    </p>
+                    <p>
+                      So, what is the bandit problem? You have a set of choices
+                      you can make. On the web these could be different images
+                      to display, or different wordings for a button, and so on.
+                      Each time you make a choice you get a reward. For example,
+                      you might get a reward of 1 if a button is clicked, and
+                      reward of 0 otherwise. Your goal is to maximise your total
+                      reward over time. This clearly fits the content
+                      optimisation problem.
+                    </p>
+                    <p>
+                      The bandit problem has been studied for over 50 years, but
+                      only in the last ten years have practical algorithms been
+                      developed. We studied one such <a
+                        href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.98.9211&amp;rep=rep1&amp;type=pdf"
+                        >paper</a
+                      > in <a
+                        href="http://untyped.wpengine.com/2011/01/10/the-university-of-untyped/"
+                        >UU</a
+                      >. The particular details of the algorithm we studied are
+                      not important (if you are interested, read the paper –
+                      it’s very simple); here I want to focus on the general
+                      principles of bandit algorithms.
+                    </p>
+                    <p>
+                      The first point is that the bandit problem explicitly
+                      includes the idea that we make use of information as it
+                      arrives. This leads to what is called the
+                      exploration-exploitation dilemma: do we try many different
+                      choices to gain a better estimate of their reward
+                      (exploration) or try the choices that have worked well in
+                      the past (exploitation)?
+                    </p>
+                    <p>
+                      The performance of an algorithm is typically measured by
+                      its <a
+                        href="http://en.wikipedia.org/wiki/Regret_(decision_theory)"
+                        >regret</a
+                      >, which is the average difference between its actual
+                      performance and the best possible performance. <a
+                        href="http://dx.doi.org/10.1016/0196-8858(85)90002-8"
+                        >It has been shown</a
+                      > that the best possible regret increases logarithmically
+                      with the number of choices made, and <em
+                        >modern bandit algorithms are optimal</em
+                      > (see <a
+                        href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.98.9211&amp;rep=rep1&amp;type=pdf"
+                        >the UU paper</a
+                      >, for instance).
+                    </p>
+                    <p>
+                      Bandit algorithms are very flexible. They can deal with as
+                      many choices as necessary. Variants of the basic
+                      algorithms can handle addition and removal of choices,
+                      selection of the best <em>k</em> choices, and exploitation
+                      of information known about the visitor.
+                    </p>
+                    <p>
+                      Bandits are also simple to use. Many of the algorithms
+                      have no parameters to set, and unlike A/B testing there is
+                      no need to monitor them — they will continue working
+                      indefinitely.
+                    </p>
+                    <p>
+                      Finally, we know bandits work on the web, as much of the
+                      current research on them is coming out of <a
+                        href="http://www.cs.toronto.edu/~tl/papers/context-aistats.pdf"
+                        >Google</a
+                      >, <a
+                        href="http://research.microsoft.com/en-us/projects/bandits/"
+                        >Microsoft</a
+                      >, <a
+                        href="http://labs.yahoo.com/files/Explore-exploit-ICDM09.pdf"
+                        >Yahoo!</a
+                      >, and other big Internet companies.
+                    </p>
+                    <p>
+                      So there you have it. Stop wasting time on A/B testing and
+                      make out like a bandit!
+                    </p>
+                    <h2>Join Our Merry Band</h2>
+                    <p>
+                      Finally, you probably won’t be surprised to hear we are
+                      developing a content optimisation system based on bandit
+                      algorithms. I am giving a talk on this at the Multipack
+                      Show and Tell in Birmingham this Saturday.
+                    </p>
+                    <p>
+                      We are currently building a prototype, and are looking for
+                      people to help us evaluate it. If you want more
+                      information, or would like to get involved, <a
+                        href="mailto:info@untyped.com"
+                        >get in touch</a
+                      > and we’ll let you know when we’re ready to go.
+                    </p>
+                    <p>
+                      <strong
+                        >Update: In case you missed it at the top, <a
+                          href="http://www.mynaweb.com/"
+                          >Myna</a
+                        > is our content optimisation system based on bandit
+                        algorithms and we’re accepting beta users right
+                        now!</strong
+                      >
+                    </p>
+                  </div>
+
+                  <p class="tags">
+                    Posted in
+                    <a href="/untyping/category/business/" rel="category tag"
+                      >Business</a
+                    >,
+                    <a href="/untyping/category/code/" rel="category tag"
+                      >Code</a
+                    >,
+                    <a href="/untyping/category/design/" rel="category tag"
+                      >Design</a
+                    >,
+                    <a href="/untyping/category/front-page/" rel="category tag"
+                      >Front page</a
+                    >,
+                    <a href="/untyping/category/general/" rel="category tag"
+                      >General</a
+                    >,
+                    <a href="/untyping/category/myna/" rel="category tag"
+                      >Myna</a
+                    >,
+                    <a
+                      href="/untyping/category/web-development/"
+                      rel="category tag"
+                      >Web development</a
+                    >
+                    |
+                    <span
+                      >Comments Off<span class="screen-reader-text">
+                        on Stop A/B Testing and Make Out Like a Bandit</span
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <nav>
+              <div class="row">
+                <div class="span8 offset2">
+                  <span class="newer"></span>
+                  <span class="older"></span>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="span2">
+            <div id="sidebar" class="small column two-of-two width300">
+              <ul>
+                <li id="search-2" class="widget widget_search">
+                  <form
+                    role="search"
+                    method="get"
+                    id="searchform"
+                    class="searchform"
+                    action="/"
+                  >
+                    <div>
+                      <label class="screen-reader-text" for="s"
+                        >Search for:</label
+                      >
+                      <input type="text" value="" name="s" id="s" />
+                      <input type="submit" id="searchsubmit" value="Search" />
+                    </div>
+                  </form>
+                </li>
+                <li id="recent-posts-2" class="widget widget_recent_entries">
+                  <h2 class="widgettitle">Recent Posts</h2>
+                  <ul>
+                    <li>
+                      <a
+                        href="/untyping/2013/08/07/writing-documentation-using-grunt-and-jekyll/"
+                        >Writing Documentation using Grunt and Jekyll</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2012/10/19/meanwhile-at-untyped-hq/"
+                        >Meanwhile, at Untyped HQ&#8230;</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2012/08/28/new-site/">New site</a>
+                    </li>
+                    <li>
+                      <a
+                        href="/untyping/2012/06/06/myna-for-wordpress-available-now/"
+                        >Myna for WordPress available now!</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/untyping/2011/10/20/the-circus-is-in-town/"
+                        >The Circus is in Town</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  id="recent-comments-2"
+                  class="widget widget_recent_comments"
+                >
+                  <h2 class="widgettitle">Recent Comments</h2>
+                  <ul id="recentcomments"></ul>
+                </li>
+                <li id="archives-2" class="widget widget_archive">
+                  <h2 class="widgettitle">Archives</h2>
+                  <ul>
+                    <li><a href="/untyping/2013/08/">August 2013</a></li>
+                    <li><a href="/untyping/2012/10/">October 2012</a></li>
+                    <li><a href="/untyping/2012/08/">August 2012</a></li>
+                    <li><a href="/untyping/2012/06/">June 2012</a></li>
+                    <li><a href="/untyping/2011/10/">October 2011</a></li>
+                    <li><a href="/untyping/2011/09/">September 2011</a></li>
+                    <li><a href="/untyping/2011/08/">August 2011</a></li>
+                    <li><a href="/untyping/2011/05/">May 2011</a></li>
+                    <li><a href="/untyping/2011/03/">March 2011</a></li>
+                    <li>
+                      <a href="/untyping/2011/02/" aria-current="page"
+                        >February 2011</a
+                      >
+                    </li>
+                    <li><a href="/untyping/2011/01/">January 2011</a></li>
+                    <li><a href="/untyping/2010/12/">December 2010</a></li>
+                    <li><a href="/untyping/2010/11/">November 2010</a></li>
+                    <li><a href="/untyping/2010/10/">October 2010</a></li>
+                    <li><a href="/untyping/2010/07/">July 2010</a></li>
+                    <li><a href="/untyping/2010/06/">June 2010</a></li>
+                    <li><a href="/untyping/2010/05/">May 2010</a></li>
+                    <li><a href="/untyping/2010/04/">April 2010</a></li>
+                    <li><a href="/untyping/2010/03/">March 2010</a></li>
+                    <li><a href="/untyping/2010/02/">February 2010</a></li>
+                    <li><a href="/untyping/2010/01/">January 2010</a></li>
+                    <li><a href="/untyping/2009/07/">July 2009</a></li>
+                    <li><a href="/untyping/2009/06/">June 2009</a></li>
+                    <li><a href="/untyping/2009/04/">April 2009</a></li>
+                    <li><a href="/untyping/2009/03/">March 2009</a></li>
+                    <li><a href="/untyping/2009/01/">January 2009</a></li>
+                    <li><a href="/untyping/2008/11/">November 2008</a></li>
+                    <li><a href="/untyping/2008/10/">October 2008</a></li>
+                    <li><a href="/untyping/2008/09/">September 2008</a></li>
+                    <li><a href="/untyping/2008/08/">August 2008</a></li>
+                    <li><a href="/untyping/2008/07/">July 2008</a></li>
+                    <li><a href="/untyping/2008/06/">June 2008</a></li>
+                    <li><a href="/untyping/2008/05/">May 2008</a></li>
+                    <li><a href="/untyping/2008/04/">April 2008</a></li>
+                    <li><a href="/untyping/2008/03/">March 2008</a></li>
+                    <li><a href="/untyping/2008/02/">February 2008</a></li>
+                    <li><a href="/untyping/2008/01/">January 2008</a></li>
+                    <li><a href="/untyping/2007/12/">December 2007</a></li>
+                    <li><a href="/untyping/2007/11/">November 2007</a></li>
+                    <li><a href="/untyping/2007/10/">October 2007</a></li>
+                    <li><a href="/untyping/2007/09/">September 2007</a></li>
+                    <li><a href="/untyping/2007/08/">August 2007</a></li>
+                    <li><a href="/untyping/2007/07/">July 2007</a></li>
+                    <li><a href="/untyping/2007/06/">June 2007</a></li>
+                    <li><a href="/untyping/2007/05/">May 2007</a></li>
+                    <li><a href="/untyping/2007/04/">April 2007</a></li>
+                    <li><a href="/untyping/2007/03/">March 2007</a></li>
+                    <li><a href="/untyping/2007/02/">February 2007</a></li>
+                    <li><a href="/untyping/2007/01/">January 2007</a></li>
+                    <li><a href="/untyping/2006/12/">December 2006</a></li>
+                    <li><a href="/untyping/2006/11/">November 2006</a></li>
+                    <li><a href="/untyping/2006/10/">October 2006</a></li>
+                    <li><a href="/untyping/2006/09/">September 2006</a></li>
+                    <li><a href="/untyping/2006/08/">August 2006</a></li>
+                    <li><a href="/untyping/2006/07/">July 2006</a></li>
+                    <li><a href="/untyping/2006/06/">June 2006</a></li>
+                    <li><a href="/untyping/2006/05/">May 2006</a></li>
+                    <li><a href="/untyping/2006/04/">April 2006</a></li>
+                    <li><a href="/untyping/2006/03/">March 2006</a></li>
+                    <li><a href="/untyping/2006/02/">February 2006</a></li>
+                    <li><a href="/untyping/2006/01/">January 2006</a></li>
+                    <li><a href="/untyping/2005/12/">December 2005</a></li>
+                    <li><a href="/untyping/2005/11/">November 2005</a></li>
+                    <li><a href="/untyping/2005/10/">October 2005</a></li>
+                    <li><a href="/untyping/2005/09/">September 2005</a></li>
+                    <li><a href="/untyping/2005/08/">August 2005</a></li>
+                    <li><a href="/untyping/2005/07/">July 2005</a></li>
+                    <li><a href="/untyping/2005/06/">June 2005</a></li>
+                    <li><a href="/untyping/2005/05/">May 2005</a></li>
+                    <li><a href="/untyping/2005/04/">April 2005</a></li>
+                  </ul>
+                </li>
+                <li id="categories-2" class="widget widget_categories">
+                  <h2 class="widgettitle">Categories</h2>
+                  <ul>
+                    <li class="cat-item cat-item-10">
+                      <a href="/untyping/category/business/">Business</a>
+                    </li>
+                    <li class="cat-item cat-item-7">
+                      <a href="/untyping/category/code/">Code</a>
+                    </li>
+                    <li class="cat-item cat-item-11">
+                      <a href="/untyping/category/design/">Design</a>
+                    </li>
+                    <li class="cat-item cat-item-3">
+                      <a href="/untyping/category/front-page/">Front page</a>
+                    </li>
+                    <li class="cat-item cat-item-9">
+                      <a href="/untyping/category/fun/">Fun</a>
+                    </li>
+                    <li class="cat-item cat-item-6">
+                      <a href="/untyping/category/functional-programming/"
+                        >Functional Programming</a
+                      >
+                    </li>
+                    <li class="cat-item cat-item-1">
+                      <a href="/untyping/category/general/">General</a>
+                    </li>
+                    <li class="cat-item cat-item-12">
+                      <a href="/untyping/category/javascript/">Javascript</a>
+                    </li>
+                    <li class="cat-item cat-item-14">
+                      <a href="/untyping/category/kahu/">Kahu</a>
+                    </li>
+                    <li class="cat-item cat-item-4">
+                      <a href="/untyping/category/myna/">Myna</a>
+                    </li>
+                    <li class="cat-item cat-item-13">
+                      <a href="/untyping/category/racket/">Racket</a>
+                    </li>
+                    <li class="cat-item cat-item-8">
+                      <a href="/untyping/category/scala/">Scala</a>
+                    </li>
+                    <li class="cat-item cat-item-5">
+                      <a href="/untyping/category/web-development/"
+                        >Web development</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li id="meta-2" class="widget widget_meta">
+                  <h2 class="widgettitle">Meta</h2>
+                  <ul>
+                    <li><a href="/wp-login.php">Log in</a></li>
+                    <li><a href="/feed/">Entries feed</a></li>
+                    <li><a href="/comments/feed/">Comments feed</a></li>
+
+                    <li>
+                      <a href="https://en-gb.wordpress.org/">WordPress.org</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
 
+    <footer id="contact">
+      <div class="shadow top"></div>
 
-</div>
-<div class="span2">
+      <div class="container">
+        <h2>Stay in touch</h2>
 
-<div id="sidebar" class="small column two-of-two width300">
+        <dl>
+          <dt>Telephone</dt>
+          <dd><a href="callto:+441212857400">0121 285 7400</a></dd>
 
-<ul>
-<li id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
-				<div>
-					<label class="screen-reader-text" for="s">Search for:</label>
-					<input type="text" value="" name="s" id="s">
-					<input type="submit" id="searchsubmit" value="Search">
-				</div>
-			</form></li>
-		<li id="recent-posts-2" class="widget widget_recent_entries">
-		<h2 class="widgettitle">Recent Posts</h2>
-		<ul>
-											<li>
-					<a href="/untyping/2013/08/07/writing-documentation-using-grunt-and-jekyll/">Writing Documentation using Grunt and Jekyll</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/10/19/meanwhile-at-untyped-hq/">Meanwhile, at Untyped HQ&#8230;</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/08/28/new-site/">New site</a>
-									</li>
-											<li>
-					<a href="/untyping/2012/06/06/myna-for-wordpress-available-now/">Myna for WordPress available now!</a>
-									</li>
-											<li>
-					<a href="/untyping/2011/10/20/the-circus-is-in-town/">The Circus is in Town</a>
-									</li>
-					</ul>
+          <dt>Email</dt>
+          <dd>
+            <span class="email"
+              ><span class="recipient">info</span> at
+              <span class="domain">untyped</span></span
+            >
+          </dd>
 
-		</li>
-<li id="recent-comments-2" class="widget widget_recent_comments">
-<h2 class="widgettitle">Recent Comments</h2>
-<ul id="recentcomments"></ul>
-</li>
-<li id="archives-2" class="widget widget_archive">
-<h2 class="widgettitle">Archives</h2>
-			<ul>
-					<li><a href="/untyping/2013/08/">August 2013</a></li>
-	<li><a href="/untyping/2012/10/">October 2012</a></li>
-	<li><a href="/untyping/2012/08/">August 2012</a></li>
-	<li><a href="/untyping/2012/06/">June 2012</a></li>
-	<li><a href="/untyping/2011/10/">October 2011</a></li>
-	<li><a href="/untyping/2011/09/">September 2011</a></li>
-	<li><a href="/untyping/2011/08/">August 2011</a></li>
-	<li><a href="/untyping/2011/05/">May 2011</a></li>
-	<li><a href="/untyping/2011/03/">March 2011</a></li>
-	<li><a href="/untyping/2011/02/" aria-current="page">February 2011</a></li>
-	<li><a href="/untyping/2011/01/">January 2011</a></li>
-	<li><a href="/untyping/2010/12/">December 2010</a></li>
-	<li><a href="/untyping/2010/11/">November 2010</a></li>
-	<li><a href="/untyping/2010/10/">October 2010</a></li>
-	<li><a href="/untyping/2010/07/">July 2010</a></li>
-	<li><a href="/untyping/2010/06/">June 2010</a></li>
-	<li><a href="/untyping/2010/05/">May 2010</a></li>
-	<li><a href="/untyping/2010/04/">April 2010</a></li>
-	<li><a href="/untyping/2010/03/">March 2010</a></li>
-	<li><a href="/untyping/2010/02/">February 2010</a></li>
-	<li><a href="/untyping/2010/01/">January 2010</a></li>
-	<li><a href="/untyping/2009/07/">July 2009</a></li>
-	<li><a href="/untyping/2009/06/">June 2009</a></li>
-	<li><a href="/untyping/2009/04/">April 2009</a></li>
-	<li><a href="/untyping/2009/03/">March 2009</a></li>
-	<li><a href="/untyping/2009/01/">January 2009</a></li>
-	<li><a href="/untyping/2008/11/">November 2008</a></li>
-	<li><a href="/untyping/2008/10/">October 2008</a></li>
-	<li><a href="/untyping/2008/09/">September 2008</a></li>
-	<li><a href="/untyping/2008/08/">August 2008</a></li>
-	<li><a href="/untyping/2008/07/">July 2008</a></li>
-	<li><a href="/untyping/2008/06/">June 2008</a></li>
-	<li><a href="/untyping/2008/05/">May 2008</a></li>
-	<li><a href="/untyping/2008/04/">April 2008</a></li>
-	<li><a href="/untyping/2008/03/">March 2008</a></li>
-	<li><a href="/untyping/2008/02/">February 2008</a></li>
-	<li><a href="/untyping/2008/01/">January 2008</a></li>
-	<li><a href="/untyping/2007/12/">December 2007</a></li>
-	<li><a href="/untyping/2007/11/">November 2007</a></li>
-	<li><a href="/untyping/2007/10/">October 2007</a></li>
-	<li><a href="/untyping/2007/09/">September 2007</a></li>
-	<li><a href="/untyping/2007/08/">August 2007</a></li>
-	<li><a href="/untyping/2007/07/">July 2007</a></li>
-	<li><a href="/untyping/2007/06/">June 2007</a></li>
-	<li><a href="/untyping/2007/05/">May 2007</a></li>
-	<li><a href="/untyping/2007/04/">April 2007</a></li>
-	<li><a href="/untyping/2007/03/">March 2007</a></li>
-	<li><a href="/untyping/2007/02/">February 2007</a></li>
-	<li><a href="/untyping/2007/01/">January 2007</a></li>
-	<li><a href="/untyping/2006/12/">December 2006</a></li>
-	<li><a href="/untyping/2006/11/">November 2006</a></li>
-	<li><a href="/untyping/2006/10/">October 2006</a></li>
-	<li><a href="/untyping/2006/09/">September 2006</a></li>
-	<li><a href="/untyping/2006/08/">August 2006</a></li>
-	<li><a href="/untyping/2006/07/">July 2006</a></li>
-	<li><a href="/untyping/2006/06/">June 2006</a></li>
-	<li><a href="/untyping/2006/05/">May 2006</a></li>
-	<li><a href="/untyping/2006/04/">April 2006</a></li>
-	<li><a href="/untyping/2006/03/">March 2006</a></li>
-	<li><a href="/untyping/2006/02/">February 2006</a></li>
-	<li><a href="/untyping/2006/01/">January 2006</a></li>
-	<li><a href="/untyping/2005/12/">December 2005</a></li>
-	<li><a href="/untyping/2005/11/">November 2005</a></li>
-	<li><a href="/untyping/2005/10/">October 2005</a></li>
-	<li><a href="/untyping/2005/09/">September 2005</a></li>
-	<li><a href="/untyping/2005/08/">August 2005</a></li>
-	<li><a href="/untyping/2005/07/">July 2005</a></li>
-	<li><a href="/untyping/2005/06/">June 2005</a></li>
-	<li><a href="/untyping/2005/05/">May 2005</a></li>
-	<li><a href="/untyping/2005/04/">April 2005</a></li>
-			</ul>
+          <dt>Twitter</dt>
+          <dd><a href="http://twitter.com/untyped">@untyped</a></dd>
 
-			</li>
-<li id="categories-2" class="widget widget_categories">
-<h2 class="widgettitle">Categories</h2>
-			<ul>
-					<li class="cat-item cat-item-10">
-<a href="/untyping/category/business/">Business</a>
-</li>
-	<li class="cat-item cat-item-7">
-<a href="/untyping/category/code/">Code</a>
-</li>
-	<li class="cat-item cat-item-11">
-<a href="/untyping/category/design/">Design</a>
-</li>
-	<li class="cat-item cat-item-3">
-<a href="/untyping/category/front-page/">Front page</a>
-</li>
-	<li class="cat-item cat-item-9">
-<a href="/untyping/category/fun/">Fun</a>
-</li>
-	<li class="cat-item cat-item-6">
-<a href="/untyping/category/functional-programming/">Functional Programming</a>
-</li>
-	<li class="cat-item cat-item-1">
-<a href="/untyping/category/general/">General</a>
-</li>
-	<li class="cat-item cat-item-12">
-<a href="/untyping/category/javascript/">Javascript</a>
-</li>
-	<li class="cat-item cat-item-14">
-<a href="/untyping/category/kahu/">Kahu</a>
-</li>
-	<li class="cat-item cat-item-4">
-<a href="/untyping/category/myna/">Myna</a>
-</li>
-	<li class="cat-item cat-item-13">
-<a href="/untyping/category/racket/">Racket</a>
-</li>
-	<li class="cat-item cat-item-8">
-<a href="/untyping/category/scala/">Scala</a>
-</li>
-	<li class="cat-item cat-item-5">
-<a href="/untyping/category/web-development/">Web development</a>
-</li>
-			</ul>
+          <dt>Address</dt>
+          <dd>
+            <address>
+              Untyped<br />
+              The Skiff<br />
+              30 Cheapside<br />
+              Brighton BN1 4GD
+            </address>
+          </dd>
 
-			</li>
-<li id="meta-2" class="widget widget_meta">
-<h2 class="widgettitle">Meta</h2>
-		<ul>
-						<li><a href="/wp-login.php">Log in</a></li>
-			<li><a href="/feed/">Entries feed</a></li>
-			<li><a href="/comments/feed/">Comments feed</a></li>
+          <dt>UK company number</dt>
+          <dd>06226466</dd>
 
-			<li><a href="https://en-gb.wordpress.org/">WordPress.org</a></li>
-		</ul>
+          <dt>UK VAT number</dt>
+          <dd>941 0528 46</dd>
+        </dl>
 
-		</li>
-</ul>
-</div>
+        <p class="copyright">
+          Copyright 2009 to 2017 <a href="/">Untyped Ltd</a>. Powered by
+          <a href="http://wordpress.org/" class="nocolor">WordPress</a>.
+          <a href="/terms" class="nocolor">Terms of use</a>.
+        </p>
+      </div>
+    </footer>
 
+    <script
+      src="http://www.google-analytics.com/urchin.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      _uacct = "UA-183641-1";
+      urchinTracker();
+    </script>
 
-</div>
-</div>
-</div>
-
-</div>
-
-<footer id="contact">
-  <div class="shadow top"></div>
-
-  <div class="container">
-    <h2>Stay in touch</h2>
-
-    <dl>
-      <dt>Telephone</dt>
-      <dd><a href="callto:+441212857400">0121 285 7400</a></dd>
-
-      <dt>Email</dt>
-      <dd><span class="email"><span class="recipient">info</span> at <span class="domain">untyped</span></span></dd>
-
-      <dt>Twitter</dt>
-      <dd><a href="http://twitter.com/untyped">@untyped</a></dd>
-
-      <dt>Address</dt>
-      <dd>
-        <address>
-          Untyped<br>
-          The Skiff<br>
-          30 Cheapside<br>
-          Brighton BN1 4GD
-        </address>
-      </dd>
-
-      <dt>UK company number</dt>
-      <dd>06226466</dd>
-
-      <dt>UK VAT number</dt>
-      <dd>941 0528 46</dd>
-    </dl>
-
-    <p class="copyright">
-      Copyright 2009 to 2017 <a href="/">Untyped Ltd</a>.
-      Powered by <a href="http://wordpress.org/" class="nocolor">WordPress</a>.
-      <a href="/terms" class="nocolor">Terms of use</a>.
-    </p>
-  </div>
-</footer>
-
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">_uacct = "UA-183641-1";
-urchinTracker();</script>
-
-<script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
-<script src="/scripts/untyped.js"></script>
-
-</body>
+    <script src="//code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="/scripts/untyped.js"></script>
+  </body>
 </html>
