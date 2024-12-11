@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-npx local-web-server --open
-
